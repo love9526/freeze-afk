@@ -113,6 +113,71 @@ def _turnstile_value(sb):
         return ""
 
 
+def dump_page_state(sb, tag):
+    """页面全状态转储：URL/标题/正文/iframe/按钮/关键元素（诊断核弹）"""
+    try:
+        j = sb.execute_script(
+            "var o={};"
+            "o.url=(location.href||'').substring(0,140);"
+            "o.title=(document.title||'').substring(0,80);"
+            "o.text=(document.body?document.body.innerText:'')."
+            "replace(/\\s+/g,' ').substring(0,400);"
+            "var fs=document.querySelectorAll('iframe'),srcs=[];"
+            "for(var i=0;i<fs.length&&i<8;i++){"
+            "srcs.push((fs[i].src||fs[i].name||'').substring(0,90));}"
+            "o.iframes=srcs;"
+            "o.start_afk=!!document.getElementById('start-afk-btn');"
+            "o.login_btn=!!document.getElementById('login-btn');"
+            "o.cf=!!document.querySelector('.cf-turnstile,.cf-turnstile-wrapper,"
+            "[class*=\"turnstile\"],iframe[src*=\"challenges.cloudflare.com\"],"
+            "[name=cf-turnstile-response]');"
+            "o.adb=!!document.getElementById('freeze-adblock-blocker');"
+            "o.adb_active=!!document.querySelector('#freeze-adblock-blocker.active');"
+            "o.adb_flag=(window.adblockerDetected===true);"
+            "o.ws=(typeof ws!=='undefined'&&ws)?ws.readyState:-1;"
+            "var btns=[],all=document.querySelectorAll('button');"
+            "for(var j=0;j<all.length&&j<10;j++){"
+            "var t=(all[j].innerText||'').trim().replace(/\\s+/g,' ').substring(0,35);"
+            "if(t)btns.push(t);}"
+            "o.buttons=btns;"
+            "return JSON.stringify(o);"
+        )
+        log("  [页面状态 %s] %s" % (tag, str(j)[:700]))
+    except BaseException as e:
+        log("  [页面状态 %s] 获取失败: %s" % (tag, str(e)[:100]))
+
+
+def bypass_adblock(sb):
+    """提早绕过站点反广告拦截：伪造探针 + 清遮罩 + 守护定时器"""
+    try:
+        sb.execute_script("""
+window.adblockerDetected=false;window._adblockerDetected=false;
+if(!window.__fhFetchShim){
+  window.__fhFetchShim=true;
+  var _of=window.fetch;
+  window.fetch=function(u,o){
+    var s=String(u);
+    if(s.indexOf('/assets/js/advertisement')>=0||s.indexOf('pagead2.googlesyndication.com')>=0){
+      return Promise.resolve({ok:true,status:200,statusText:'OK'});
+    }
+    return _of.apply(this,arguments);
+  };
+  window.checkAdblocker=function(){return Promise.resolve(false);};
+  setInterval(function(){
+    window.adblockerDetected=false;window._adblockerDetected=false;
+    var x=document.getElementById('freeze-adblock-blocker');
+    if(x&&x.classList.contains('active')){x.classList.remove('active');x.style.display='none';}
+    var s=document.getElementById('freeze-adblock-lock-style');if(s)s.remove();
+  },1000);
+}
+var b=document.getElementById('freeze-adblock-blocker');
+if(b){b.classList.remove('active');b.style.display='none';}
+""")
+        log("反广告拦截绕过已注入")
+    except BaseException as e:
+        log("反广告拦截绕过注入失败: %s" % str(e)[:100])
+
+
 def _widget_state(sb):
     """返回验证码部件状态快照，用于诊断"""
     try:
@@ -142,13 +207,25 @@ def click_turnstile_once(sb):
         return False
 
 
-def wait_turnstile(sb, timeout=CHALLENGE_TIMEOUT):
+def wait_turnstile(sb, timeout=CHALLENGE_TIMEOUT, home="https://free.freezehost.pro"):
     """返回验证码 token；失败返回 None"""
     start = time.time()
     last_click = 0.0
     click_count = 0
     solved_tried = False
     last_diag = 0.0
+
+    def _still_on_site():
+        """等待期间页面若被踢走（如跳去 Discord OAuth），立刻上报并短路"""
+        try:
+            u = sb.get_current_url()
+            if not u.startswith(home):
+                log("等待期间页面跳离站点: %s" % u[:100])
+                dump_page_state(sb, "跳离站点")
+                return False
+        except BaseException:
+            pass
+        return True
 
     def _diag(tag):
         nonlocal last_diag
@@ -164,6 +241,8 @@ def wait_turnstile(sb, timeout=CHALLENGE_TIMEOUT):
         if v and len(v) > 20:
             log("Turnstile 自动通过！（静置方式）")
             return v
+        if not _still_on_site():
+            return None
         _diag("静置中")
         time.sleep(2)
 
@@ -176,6 +255,8 @@ def wait_turnstile(sb, timeout=CHALLENGE_TIMEOUT):
             log("Turnstile 验证通过！")
             return v
         if runtime_exceeded():
+            return None
+        if not _still_on_site():
             return None
         if click_count < MAX_CLICKS and (time.time() - last_click) >= CLICK_GAP:
             click_count += 1
@@ -319,6 +400,8 @@ def run_earn_session(sb, session_num, token, hard_deadline):
     log("加载 /earn…")
     sb.uc_open_with_reconnect("https://free.freezehost.pro/earn", reconnect_time=6)
     time.sleep(15)
+    bypass_adblock(sb)  # 提早绕过反广告锁，避免赚钱 UI 不被渲染
+    dump_page_state(sb, "earn加载后")
 
     url = sb.get_current_url()
     if not url.startswith("https://free.freezehost.pro"):
@@ -327,6 +410,8 @@ def run_earn_session(sb, session_num, token, hard_deadline):
             return False
         sb.uc_open_with_reconnect("https://free.freezehost.pro/earn", reconnect_time=6)
         time.sleep(15)
+        bypass_adblock(sb)
+        dump_page_state(sb, "earn加载后(重登)")
 
     log("等待 Turnstile（最多 %ds）…" % CHALLENGE_TIMEOUT)
     token_val = wait_turnstile(sb, timeout=CHALLENGE_TIMEOUT)
@@ -335,6 +420,7 @@ def run_earn_session(sb, session_num, token, hard_deadline):
             log("已达到最大运行时长")
             return None
         log("Turnstile 验证失败！")
+        dump_page_state(sb, "失败时")
         try:
             shot = os.path.join(tempfile.gettempdir(),
                                 "fh_fail_%d_%d.png" % (INSTANCE_ID, session_num))
