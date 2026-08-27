@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-FreezeHost AFK - 自动挂机赚币脚本（修复版 v2.5）
+FreezeHost AFK - 自动挂机赚币脚本（修复版 v2.6）
 =================================================
 v2.1 相对 v2.0 的改动（依据你 GHA 实测日志）：
 
@@ -229,7 +229,9 @@ if(b){b.classList.remove('active');b.style.display='none';}
 
 
 def element_screen_center(sb, selector):
-    """返回元素中心点在屏幕上的 (x, y)（先滚动到可视区中央，算式与 SeleniumBase 一致）"""
+    """返回元素中心点在屏幕上的 (x, y)。
+    getBoundingClientRect 已是视口坐标（含滚动），只需加窗口偏移，
+    不能再减 pageYOffset（SeleniumBase 里减滚动是因为它用文档坐标的 element.rect）"""
     try:
         r = sb.execute_script(
             "var el=document.querySelector('%s');"
@@ -245,9 +247,9 @@ def element_screen_center(sb, selector):
         b = _json.loads(r)
         wr = sb.driver.get_window_rect()
         inner_h = sb.execute_script("return window.innerHeight;")
-        y_scroll = sb.execute_script("return window.pageYOffset;")
+        # 窗口顶部偏移 = 窗口高度 - 视口高度（标题栏等），视口坐标直接累加
         x = wr["x"] + b["x"]
-        y = wr["y"] + wr["height"] - inner_h + b["y"] - y_scroll
+        y = wr["y"] + (wr["height"] - inner_h) + b["y"]
         return (float(x), float(y))
     except BaseException as e:
         log("  计算元素屏幕坐标失败[%s]: %s" % (selector, str(e)[:80]))
@@ -307,18 +309,19 @@ def hold_to_start(sb, hold_secs=HOLD_SECS):
 
 
 def afk_panel_state(sb):
-    """读取赚币面板状态：Active Session / WS / 币数进度"""
+    """读取赚币面板状态（空白归一化后再匹配，避免换行破坏正则）"""
     try:
         return str(sb.execute_script(
             "var o={};"
             "var b=document.getElementById('afk-action-trigger');"
-            "o.hold=b?(b.innerText||'').replace(/\\s+/g,' ').trim().substring(0,30):'';"
+            "o.hold=b?(b.innerText||'').replace(/\\s+/g,' ').trim().substring(0,40):'';"
             "o.ws=(typeof ws!=='undefined'&&ws)?ws.readyState:-1;"
-            "var t=document.body?document.body.innerText:'';"
-            "o.active=/active session/i.test(t);"
+            "var t=document.body?(document.body.innerText||'').replace(/\\s+/g,' '):'';"
+            "o.run=/active session/i.test(t)&&!/verify you are human/i.test(t);"
             "o.verify=/verify you are human/i.test(t);"
             "var m=t.match(/SESSION EARNED (\\d+)/i);o.earned=m?m[1]:'?';"
-            "var m2=t.match(/NEXT COIN IN ([\\d\\s]+)/i);o.next=m2?m2[1].trim():'?';"
+            "var m2=t.match(/NEXT COIN IN (\\d+)/i);o.next=m2?m2[1]:'?';"
+            "var m3=t.match(/SESSION REMAINING (\\d+:\\d+)/i);o.left=m3?m3[1]:'?';"
             "return JSON.stringify(o);"
         ))
     except BaseException:
@@ -578,55 +581,55 @@ def run_earn_session(sb, session_num, token, hard_deadline):
         time.sleep(4)
         dump_page_state(sb, "点ack后")
 
-    # ================== v2.5: 按住 HOLD TO START 启动 ==================
-    # 站点机制：页面无 Cloudflare Turnstile，"VERIFY YOU ARE HUMAN"=
-    # 按住 #afk-action-trigger 按钮数秒即可激活会话（1 币/60 秒，上限 20 分钟）
+    # ================== v2.6: 按住 HOLD TO START 启动 ==================
+    # 站点机制：无 Cloudflare Turnstile，"VERIFY YOU ARE HUMAN"=按住
+    # #afk-action-trigger 数秒激活会话（1 币/60 秒，上限 20 分钟）。
+    # 真实激活信号：WS 连接 / 按钮文本变化 / "VERIFY YOU ARE HUMAN"消失
     import json as _json
-    try:
-        panel = _json.loads(afk_panel_state(sb) or "{}")
-    except BaseException:
-        panel = {}
+
+    def _panel():
+        try:
+            return _json.loads(afk_panel_state(sb) or "{}")
+        except BaseException:
+            return {}
+
+    def _activated(panel):
+        try:
+            ws_state = int(panel.get("ws", -1))
+        except BaseException:
+            ws_state = -1
+        if ws_state in (0, 1):
+            return True
+        hold = str(panel.get("hold", ""))
+        if hold and hold.upper() not in ("HOLD TO START", "", "?"):
+            return True  # 按钮文案已变化（如 STARTING/ACTIVE…）
+        if panel.get("verify") is False:
+            return True  # "VERIFY YOU ARE HUMAN" 已消失
+        return False
+
+    panel = _panel()
     log("启动前面板: %s" % (afk_panel_state(sb) or "{}"))
     afk_started = False
 
-    held, sel = hold_to_start(sb, HOLD_SECS)
-    time.sleep(3)
-    if held:
-        try:
-            panel = _json.loads(afk_panel_state(sb) or "{}")
-        except BaseException:
-            panel = {}
-        log("按住后面板: %s" % (afk_panel_state(sb) or "{}"))
-        ws_state = -1
-        try:
-            ws_state = int(panel.get("ws", -1))
-        except BaseException:
-            pass
-        if panel.get("active") or ws_state in (0, 1):
+    hold_to_start(sb, HOLD_SECS)
+    for _i in range(8):  # 按住后轮询最多 16s
+        time.sleep(2)
+        panel = _panel()
+        if _activated(panel):
             afk_started = True
-            log("AFK 会话已激活（Active Session / WS=%s）！" % ws_state)
+            break
+    log("第一次按住后面板: %s" % (afk_panel_state(sb) or "{}"))
 
-    # 未激活：等待可能的验证组件最多 40s，再按住一次（长按 HOLD_RETRY_SECS）
     if not afk_started:
-        log("尚未激活，等待可能的验证组件 40s…")
-        wait_turnstile(sb, timeout=40)
-        if _turnstile_value(sb) and len(_turnstile_value(sb)) > 20:
-            log("验证组件已通过，再次长按…")
+        log("未激活，长按重试 %ds…" % HOLD_RETRY_SECS)
         hold_to_start(sb, HOLD_RETRY_SECS)
-        time.sleep(4)
-        try:
-            panel = _json.loads(afk_panel_state(sb) or "{}")
-        except BaseException:
-            panel = {}
+        for _i in range(8):  # 再轮询最多 16s
+            time.sleep(2)
+            panel = _panel()
+            if _activated(panel):
+                afk_started = True
+                break
         log("重试按住后面板: %s" % (afk_panel_state(sb) or "{}"))
-        ws_state = -1
-        try:
-            ws_state = int(panel.get("ws", -1))
-        except BaseException:
-            pass
-        if panel.get("active") or ws_state in (0, 1):
-            afk_started = True
-            log("重试后 AFK 会话已激活！")
 
     if not afk_started:
         log("HOLD TO START 未能激活会话，本 session 判失败")
@@ -640,6 +643,7 @@ def run_earn_session(sb, session_num, token, hard_deadline):
             pass
         return False
 
+    log("AFK 会话已激活！面板: %s" % (afk_panel_state(sb) or "{}"))
     log("开始赚币 %d 秒…" % SESSION_DURATION)
     session_start = time.time()
     while time.time() - session_start < SESSION_DURATION:
@@ -651,17 +655,20 @@ def run_earn_session(sb, session_num, token, hard_deadline):
             if not url.startswith("https://free.freezehost.pro"):
                 log("赚币期间会话过期")
                 break
-            # 每 60 秒确认一次 WebSocket/面板仍活跃
+            # 每 60 秒确认一次会话仍活跃
+            panel = _panel()
+            ws_state = -1
             try:
-                panel = _json.loads(afk_panel_state(sb) or "{}")
+                ws_state = int(panel.get("ws", -1))
             except BaseException:
-                panel = {}
-            ws_state = int(panel.get("ws", -1)) if panel.get("ws") not in (None, "?") else -1
-            if not panel.get("active") and ws_state not in (0, 1):
-                log("赚币期间会话失效（面板: %s），提前结束" % (afk_panel_state(sb) or "{}")[:140])
+                pass
+            if ws_state not in (0, 1) and panel.get("verify") is not False:
+                log("赚币期间会话失效（面板: %s），提前结束"
+                    % (afk_panel_state(sb) or "{}")[:140])
                 break
             if str(panel.get("earned")) not in ("?", ""):
-                log("  [赚币进度] 已赚 %s 币，下次 +1 在 %s" % (panel.get("earned"), panel.get("next")))
+                log("  [赚币进度] 已赚 %s 币，下次 +1 在 %s 秒，剩余 %s"
+                    % (panel.get("earned"), panel.get("next"), panel.get("left")))
         except BaseException as e:
             log("会话检查异常（可能是浏览器问题）: %s" % str(e)[:100])
             return "dead"
@@ -710,7 +717,7 @@ def main():
     token = tokens[INSTANCE_ID % len(tokens)]
 
     log("=" * 56)
-    log("FreezeHost AFK 修复版 v2.5 - 实例 #%d" % INSTANCE_ID)
+    log("FreezeHost AFK 修复版 v2.6 - 实例 #%d" % INSTANCE_ID)
     log("Token: %s...%s" % (token[:10], token[-5:]))
     log("代理顺序: %s TRY_SOLVE=%s RUSH_AFK_ON_FAIL=%s UC_CDP=%s"
         % (PROXY_ORDER, TRY_SOLVE, RUSH_AFK_ON_FAIL, UC_CDP))

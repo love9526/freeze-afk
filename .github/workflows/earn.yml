@@ -89,6 +89,8 @@ jobs:
           fi
           mkdir -p "logs/${{ github.run_id }}"
           cp -r /tmp/afk-debug/. "logs/${{ github.run_id }}/" 2>/dev/null || true
-          git add "logs/${{ github.run_id }}" || true
+          # 最新运行定位文件：外部无需 API 即可找到最新数据目录
+          echo "${{ github.run_id }} $(date -u +%Y%m%d-%H%M%S)" > "logs/LATEST.txt"
+          git add "logs/${{ github.run_id }}" "logs/LATEST.txt" || true
           git commit -m "debug artifacts run ${{ github.run_id }}" || true
           git push origin debug-logs || true
