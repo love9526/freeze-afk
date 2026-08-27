@@ -56,6 +56,8 @@ jobs:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
           WARP_PROXY: "socks5://127.0.0.1:40000"
           PROXY_MODE: ${{ github.event.inputs.proxy_mode || 'auto' }}
+          # 直连优先（GHA 上 WARP 代理实测经常 ERR_PROXY_CONNECTION_FAILED）
+          PROXY_ORDER: "direct,warp"
           TRY_SOLVE: ${{ github.event.inputs.try_solve || '0' }}
           UC_CDP: ${{ github.event.inputs.uc_cdp || '0' }}
           # push 触发默认只跑 25 分钟（调试用），手动触发用输入时长

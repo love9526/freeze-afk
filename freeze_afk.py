@@ -43,6 +43,16 @@ SESSION_DURATION = int(os.environ.get("SESSION_DURATION", "1200"))
 INSTANCE_ID = int(os.environ.get("INSTANCE_ID", "0"))
 LOG_FILE = os.environ.get("LOG_FILE", "")
 PROXY_MODE = os.environ.get("PROXY_MODE", "auto")          # warp | direct | auto
+# 代理顺序（auto 模式循环用），默认直连优先（GHA 上 WARP 常挂）
+_raw_order = [p.strip() for p in os.environ.get("PROXY_ORDER", "").split(",") if p.strip()]
+if _raw_order:
+    PROXY_ORDER = _raw_order
+elif PROXY_MODE == "warp":
+    PROXY_ORDER = ["warp"]
+elif PROXY_MODE == "direct":
+    PROXY_ORDER = ["direct"]
+else:
+    PROXY_ORDER = ["direct", "warp"]
 TRY_SOLVE = os.environ.get("TRY_SOLVE", "0") == "1"        # 解图片挑战
 RUSH_AFK_ON_FAIL = os.environ.get("RUSH_AFK_ON_FAIL", "1") == "1"  # 失败后仍试按 Start AFK
 UC_CDP = os.environ.get("UC_CDP", "0") == "1"              # 用 CDP 模式
@@ -114,37 +124,75 @@ def _turnstile_value(sb):
 
 
 def dump_page_state(sb, tag):
-    """页面全状态转储：URL/标题/正文/iframe/按钮/关键元素（诊断核弹）"""
+    """页面全状态转储 v2.3：URL/标题/正文/iframe/按钮(含id class)/链接/关键元素"""
     try:
         j = sb.execute_script(
             "var o={};"
-            "o.url=(location.href||'').substring(0,140);"
-            "o.title=(document.title||'').substring(0,80);"
+            "o.url=(location.href||'').substring(0,160);"
+            "o.title=(document.title||'').substring(0,100);"
             "o.text=(document.body?document.body.innerText:'')."
-            "replace(/\\s+/g,' ').substring(0,400);"
+            "replace(/\\s+/g,' ').substring(0,900);"
             "var fs=document.querySelectorAll('iframe'),srcs=[];"
-            "for(var i=0;i<fs.length&&i<8;i++){"
-            "srcs.push((fs[i].src||fs[i].name||'').substring(0,90));}"
+            "for(var i=0;i<fs.length&&i<10;i++){"
+            "srcs.push((fs[i].src||fs[i].name||'na').substring(0,120));}"
             "o.iframes=srcs;"
             "o.start_afk=!!document.getElementById('start-afk-btn');"
             "o.login_btn=!!document.getElementById('login-btn');"
             "o.cf=!!document.querySelector('.cf-turnstile,.cf-turnstile-wrapper,"
             "[class*=\"turnstile\"],iframe[src*=\"challenges.cloudflare.com\"],"
-            "[name=cf-turnstile-response]');"
+            "iframe[src*=\"challenge-platform\"],[name*=cf-turnstile]');"
             "o.adb=!!document.getElementById('freeze-adblock-blocker');"
             "o.adb_active=!!document.querySelector('#freeze-adblock-blocker.active');"
             "o.adb_flag=(window.adblockerDetected===true);"
             "o.ws=(typeof ws!=='undefined'&&ws)?ws.readyState:-1;"
             "var btns=[],all=document.querySelectorAll('button');"
-            "for(var j=0;j<all.length&&j<10;j++){"
-            "var t=(all[j].innerText||'').trim().replace(/\\s+/g,' ').substring(0,35);"
-            "if(t)btns.push(t);}"
+            "for(var j=0;j<all.length&&j<15;j++){"
+            "var t=(all[j].innerText||'').trim().replace(/\\s+/g,' ').substring(0,40);"
+            "var id=(all[j].id||'');var cl=(all[j].className||'').toString().substring(0,40);"
+            "if(t||id)btns.push((t||'?')+'|#'+id+'|.'+cl);}"
             "o.buttons=btns;"
+            "var as=[],aa=document.querySelectorAll('a');"
+            "for(var k=0;k<aa.length&&k<15;k++){"
+            "var t=(aa[k].innerText||'').trim().replace(/\\s+/g,' ').substring(0,25);"
+            "var h=(aa[k].getAttribute('href')||'').substring(0,60);"
+            "if(t||h)as.push(t+'|'+h);}"
+            "o.links=as;"
             "return JSON.stringify(o);"
         )
-        log("  [页面状态 %s] %s" % (tag, str(j)[:700]))
+        log("  [页面状态 %s] %s" % (tag, str(j)[:2200]))
     except BaseException as e:
         log("  [页面状态 %s] 获取失败: %s" % (tag, str(e)[:100]))
+
+
+def _proxy_connection_error(sb):
+    """页面是否为 Chrome 代理错误页（WARP 挂掉时的典型表现）"""
+    try:
+        return bool(sb.execute_script(
+            "return (location.protocol==='chrome-error:'||"
+            "(document.body&&document.body.innerText.indexOf('ERR_')>=0&&"
+            "document.body.innerText.indexOf('proxy')>=0))?true:false;"
+        ))
+    except BaseException:
+        return False
+
+
+def _click_acknowledge(sb):
+    """自动点掉站点公告/consent 弹窗（如 Acknowledge/OK/Accept）"""
+    try:
+        clicked = sb.execute_script(
+            "var els=document.querySelectorAll('button,a,[role=button]');"
+            "for(var i=0;i<els.length;i++){"
+            "var t=(els[i].innerText||'').toLowerCase();"
+            "if(t.indexOf('acknowledge')>=0||t.indexOf('agree')>=0||"
+            "t.indexOf('accept')>=0||t.indexOf('ok')===0||t.indexOf('i understand')>=0){"
+            "els[i].click();return els[i].tagName+':'+(els[i].innerText||'').trim().substring(0,30);}}"
+            "return '';"
+        )
+        if clicked:
+            log("已点击公告/consent 控制: %s" % str(clicked)[:60])
+        return bool(clicked)
+    except BaseException:
+        return False
 
 
 def bypass_adblock(sb):
@@ -233,6 +281,12 @@ def wait_turnstile(sb, timeout=CHALLENGE_TIMEOUT, home="https://free.freezehost.
         if now - last_diag >= 10:
             last_diag = now
             log("  [验证码状态] %s → %s" % (tag, _widget_state(sb)))
+            # 静置期 30s/60s 整点做一次完整页面转储（捕捉延迟渲染）
+            el = now - start
+            if el >= 30 and el < 32:
+                dump_page_state(sb, "静置30s")
+            elif el >= 60 and el < 62:
+                dump_page_state(sb, "静置60s")
 
     # 阶段1：静置等待（托管型自动通过）
     quiet_end = min(start + TURNSTILE_QUIET, start + timeout)
@@ -403,6 +457,10 @@ def run_earn_session(sb, session_num, token, hard_deadline):
     bypass_adblock(sb)  # 提早绕过反广告锁，避免赚钱 UI 不被渲染
     dump_page_state(sb, "earn加载后")
 
+    if _proxy_connection_error(sb):
+        log("代理连接失败（chrome-error 页）→ 本轮判代理死亡")
+        return "proxy_dead"
+
     url = sb.get_current_url()
     if not url.startswith("https://free.freezehost.pro"):
         log("会话过期，重新登录…")
@@ -412,6 +470,14 @@ def run_earn_session(sb, session_num, token, hard_deadline):
         time.sleep(15)
         bypass_adblock(sb)
         dump_page_state(sb, "earn加载后(重登)")
+        if _proxy_connection_error(sb):
+            log("重登后仍为代理错误页 → 本轮判代理死亡")
+            return "proxy_dead"
+
+    # 自动点掉公告/consent 弹窗（若存在）
+    if _click_acknowledge(sb):
+        time.sleep(4)
+        dump_page_state(sb, "点ack后")
 
     log("等待 Turnstile（最多 %ds）…" % CHALLENGE_TIMEOUT)
     token_val = wait_turnstile(sb, timeout=CHALLENGE_TIMEOUT)
@@ -521,13 +587,25 @@ def main():
     token = tokens[INSTANCE_ID % len(tokens)]
 
     log("=" * 56)
-    log("FreezeHost AFK 修复版 v2.1 - 实例 #%d" % INSTANCE_ID)
+    log("FreezeHost AFK 修复版 v2.3 - 实例 #%d" % INSTANCE_ID)
     log("Token: %s...%s" % (token[:10], token[-5:]))
-    log("代理: %s （模式: %s） TRY_SOLVE=%s RUSH_AFK_ON_FAIL=%s UC_CDP=%s"
-        % (WARP_PROXY or "无", PROXY_MODE, TRY_SOLVE, RUSH_AFK_ON_FAIL, UC_CDP))
+    log("代理顺序: %s TRY_SOLVE=%s RUSH_AFK_ON_FAIL=%s UC_CDP=%s"
+        % (PROXY_ORDER, TRY_SOLVE, RUSH_AFK_ON_FAIL, UC_CDP))
     log("=" * 56)
 
-    proxy = None if PROXY_MODE == "direct" else WARP_PROXY
+    def _proxy_value(name):
+        return None if name == "direct" else (WARP_PROXY if name == "warp" else name)
+
+    proxy_cycle = list(PROXY_ORDER)
+    proxy_idx = 0
+    proxy = _proxy_value(proxy_cycle[0])
+
+    def _next_proxy():
+        nonlocal proxy_idx, proxy
+        proxy_idx += 1
+        proxy = _proxy_value(proxy_cycle[proxy_idx % len(proxy_cycle)])
+        return proxy
+
     hard_deadline = (global_start + MAX_RUNTIME * 60) if MAX_RUNTIME > 0 else 0
 
     browser_restarts = 0
@@ -590,6 +668,15 @@ def main():
                             need_restart = True
                             restart_reason = "session 中浏览器死亡"
                             break
+                        if status == "proxy_dead":  # 代理连不上 → 立刻切换（不等 2 次失败）
+                            old = proxy
+                            _next_proxy()
+                            tf_fail_in_row = 0
+                            need_restart = True
+                            restart_reason = ("代理失效: %s -> %s"
+                                              % (old or "直连", proxy or "直连"))
+                            log("代理连接失败 → %s" % restart_reason)
+                            break
                         if status is True:
                             tf_fail_in_row = 0
                         else:
@@ -597,11 +684,11 @@ def main():
                             log("Session #%d 失败（连续失败 %d 次）"
                                 % (session, tf_fail_in_row))
 
-                            # 代理回退
-                            if (PROXY_MODE == "auto"
+                            # 验证码级连续失败 → 也切换代理
+                            if (len(proxy_cycle) > 1
                                     and tf_fail_in_row >= PROXY_FAIL_SWITCH):
                                 old = proxy
-                                proxy = None if proxy else WARP_PROXY
+                                _next_proxy()
                                 tf_fail_in_row = 0
                                 need_restart = True
                                 restart_reason = ("代理切换: %s -> %s"
