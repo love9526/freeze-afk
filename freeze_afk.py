@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-FreezeHost AFK - 自动挂机赚币脚本（修复版 v2.7）
+FreezeHost AFK - 自动挂机赚币脚本（修复版 v2.8）
 =================================================
 v2.1 相对 v2.0 的改动（依据你 GHA 实测日志）：
 
@@ -195,6 +195,86 @@ def _click_acknowledge(sb):
         return bool(clicked)
     except BaseException:
         return False
+
+
+def inspect_modal(sb):
+    """检查 'Verification Required' 模态及其中的验证组件"""
+    try:
+        return str(sb.execute_script(
+            "var o={};"
+            "var t=document.body?document.body.innerText:'';"
+            "o.verify_modal=/verification required/i.test(t);"
+            "o.cf_iframe=!!document.querySelector('iframe[src*=\"challenges.cloudflare.com\"],"
+            "iframe[src*=\"challenge-platform\"]');"
+            "o.rc_iframe=!!document.querySelector('iframe[src*=\"recaptcha/api2\"],"
+            "iframe[src*=\"recaptcha/api/anchor\"]');"
+            "var cf=document.querySelector('[name=cf-turnstile-response]');"
+            "var rc=document.querySelector('[name=g-recaptcha-response]');"
+            "o.cf_resp=cf?(cf.value||''):'';o.rc_resp=rc?(rc.value||''):'';"
+            "var btns=[],all=document.querySelectorAll('button');"
+            "for(var i=0;i<all.length;i++){"
+            "var x=(all[i].innerText||'').replace(/\\s+/g,' ').trim();"
+            "if(/verify|continue|next|i\\s*understood|got it|close/i.test(x))btns.push(x.substring(0,40));}"
+            "o.modal_btns=btns.slice(0,8);"
+            "var m=t.match(/[^\\n]{0,60}verification required[^\\n]{0,60}/i);"
+            "o.modal_head=m?m[0].trim():'';"
+            "return JSON.stringify(o);"
+        ))
+    except BaseException:
+        return "{}"
+
+
+def handle_modal(sb, timeout=30):
+    """处理 Verification Required 模态：点击 CF/reCAPTCHA 验证或模态按钮"""
+    import json as _json
+    end = time.time() + timeout
+    while time.time() < end:
+        try:
+            m = _json.loads(inspect_modal(sb) or "{}")
+        except BaseException:
+            m = {}
+        log("  模态状态: %s" % (inspect_modal(sb) or "{}"))
+        if (str(m.get("cf_resp", "")).strip()
+                or str(m.get("rc_resp", "")).strip()):
+            log("验证响应已生成，模态通过")
+            return True
+        if m.get("cf_iframe"):
+            log("点击 Cloudflare 验证复选框…")
+            try:
+                if sb.uc_gui_click_cf() or sb.uc_gui_click_captcha():
+                    time.sleep(4)
+                    continue
+            except BaseException as e:
+                log("  CF 点击异常: %s" % str(e)[:80])
+        if m.get("rc_iframe"):
+            log("点击 reCAPTCHA 复选框…")
+            try:
+                if sb.uc_gui_click_rc() or sb.uc_gui_click_captcha():
+                    time.sleep(4)
+                    continue
+            except BaseException as e:
+                log("  RC 点击异常: %s" % str(e)[:80])
+        clicked = False
+        for btn in m.get("modal_btns", []):
+            try:
+                ok = sb.execute_script(
+                    "var els=document.querySelectorAll('button');"
+                    "for(var i=0;i<els.length;i++){"
+                    "var x=(els[i].innerText||'').replace(/\\s+/g,' ').trim();"
+                    "if(x==='%s'){els[i].click();return true;}}return false;"
+                    % btn[:30].replace("'", "\\'"))
+                if ok:
+                    log("已点击模态按钮: %s" % btn[:30])
+                    clicked = True
+                    time.sleep(3)
+                    break
+            except BaseException:
+                pass
+        if clicked:
+            continue
+        time.sleep(2)
+    log("模态处理超时")
+    return False
 
 
 def bypass_adblock(sb):
@@ -670,13 +750,26 @@ def run_earn_session(sb, session_num, token, hard_deadline):
     afk_started = False
 
     hold_to_start(sb, HOLD_SECS)
-    for _i in range(8):  # 按住后轮询最多 16s
+    for _i in range(6):  # 按住后轮询最多 12s
         time.sleep(2)
         panel = _panel()
         if _activated(panel):
             afk_started = True
             break
     log("第一次按住后面板: %s" % (afk_panel_state(sb) or "{}"))
+
+    # 按住会触发 'Verification Required' 模态 → 处理其中的验证组件
+    if not afk_started and not _proxy_connection_error(sb):
+        log("按住后可能出现验证模态，检查并处理…")
+        dump_page_state(sb, "按住后")
+        handle_modal(sb, timeout=30)
+        for _i in range(4):  # 模态处理后再轮询 8s
+            time.sleep(2)
+            panel = _panel()
+            if _activated(panel):
+                afk_started = True
+                break
+        log("模态处理后面板: %s" % (afk_panel_state(sb) or "{}"))
 
     if not afk_started:
         log("未激活，长按重试 %ds…" % HOLD_RETRY_SECS)
@@ -793,7 +886,7 @@ def main():
     token = tokens[INSTANCE_ID % len(tokens)]
 
     log("=" * 56)
-    log("FreezeHost AFK 修复版 v2.7 - 实例 #%d" % INSTANCE_ID)
+    log("FreezeHost AFK 修复版 v2.8 - 实例 #%d" % INSTANCE_ID)
     log("Token: %s...%s" % (token[:10], token[-5:]))
     log("代理顺序: %s TRY_SOLVE=%s RUSH_AFK_ON_FAIL=%s UC_CDP=%s"
         % (PROXY_ORDER, TRY_SOLVE, RUSH_AFK_ON_FAIL, UC_CDP))
