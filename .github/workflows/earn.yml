@@ -3,7 +3,6 @@ name: AFK Earn
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
-
 on:
   workflow_dispatch:
     inputs:
@@ -39,5 +38,8 @@ jobs:
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
           WARP_PROXY: "socks5://127.0.0.1:40000"
+          # auto = WARP 连续失败 2 次自动切直连（避免 WARP IP 被标记导致 Turnstile 一直失败）
+          # warp = 只用 WARP   direct = 只用直连
+          PROXY_MODE: "auto"
           MAX_RUNTIME: ${{ github.event.inputs.duration || '300' }}
         run: python freeze_afk.py
