@@ -1,0 +1,224 @@
+[16:14:12] ========================================================
+[16:14:12] FreezeHost AFK 修复版 v2.1 - 实例 #0
+[16:14:12] Token: NDIxODYxND...7Fit0
+[16:14:12] 代理: socks5://127.0.0.1:40000 （模式: auto） TRY_SOLVE=False RUSH_AFK_ON_FAIL=True UC_CDP=False
+[16:14:12] ========================================================
+[16:14:12] 启动浏览器…（代理: socks5://127.0.0.1:40000，实例 1/8）
+[16:14:20] 打开 FreezeHost…
+[16:14:46] 无服务条款弹窗
+[16:14:48] 当前地址: https://free.freezehost.pro/
+[16:14:48] 登录 OK！
+[16:14:48] 
+[16:14:48] === Session #1（浏览器实例 1）===
+[16:14:48] 加载 /earn…
+[16:15:10] 等待 Turnstile（最多 150s）…
+[16:15:10]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:15:20]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:15:30]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:15:36] 静置 25s 未通过，开始按需精准点击（最多 3 次、间隔 18s）
+[16:15:36] Turnstile 点击未生效
+[16:15:42]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:15:54] Turnstile 点击未生效
+[16:15:54]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:16:06]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:16:12] Turnstile 点击未生效
+[16:16:18]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:16:30]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:16:42]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:16:54]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:17:06]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:17:18]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:17:30]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:17:42] Turnstile 验证失败！
+[16:17:42] 失败截图已保存: /tmp/fh_fail_0_1.png
+[16:17:42] 验证码未通过且按钮不存在/已关闭 RUSH，本 session 判失败
+[16:17:42] Session #1 失败（连续失败 1 次）
+[16:17:42] 20 秒后重试…
+[16:18:07] 
+[16:18:07] === Session #2（浏览器实例 1）===
+[16:18:07] 加载 /earn…
+[16:18:29] 等待 Turnstile（最多 150s）…
+[16:18:29]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:18:39]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:18:49]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:18:55] 静置 25s 未通过，开始按需精准点击（最多 3 次、间隔 18s）
+[16:18:55] Turnstile 点击未生效
+[16:19:01]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:19:13] Turnstile 点击未生效
+[16:19:13]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:19:25]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:19:31] Turnstile 点击未生效
+[16:19:37]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:19:49]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:20:01]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:20:13]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:20:25]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:20:37]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:20:49]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:21:01] Turnstile 验证失败！
+[16:21:01] 失败截图已保存: /tmp/fh_fail_0_2.png
+[16:21:01] 验证码未通过且按钮不存在/已关闭 RUSH，本 session 判失败
+[16:21:01] Session #2 失败（连续失败 2 次）
+[16:21:01] 连续 2 次失败 → 代理切换: socks5://127.0.0.1:40000 -> 直连
+[16:21:01] 浏览器重建 1/8（代理切换: socks5://127.0.0.1:40000 -> 直连）…
+[16:21:09] 启动浏览器…（代理: 直连，实例 2/8）
+[16:21:10] 打开 FreezeHost…
+[16:21:26] 已确认服务条款
+[16:21:28] 注入 Token…
+[16:21:28] 刷新页面等待 OAuth 回调…
+[16:21:37] 当前地址: https://free.freezehost.pro/dashboard
+[16:21:37] 登录 OK！
+[16:21:37] 
+[16:21:37] === Session #3（浏览器实例 2）===
+[16:21:37] 加载 /earn…
+[16:21:58] 等待 Turnstile（最多 150s）…
+[16:21:58]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:22:08]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:22:18]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:22:24] 静置 25s 未通过，开始按需精准点击（最多 3 次、间隔 18s）
+[16:22:27] Turnstile 点击未生效
+[16:22:30]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:22:46] Turnstile 点击未生效
+[16:22:46]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:22:58]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:23:04] Turnstile 点击未生效
+[16:23:10]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:23:22]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:23:34]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:23:46]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:23:58]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:24:10]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:24:22]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:24:28] Turnstile 验证失败！
+[16:24:28] 失败截图已保存: /tmp/fh_fail_0_3.png
+[16:24:28] 验证码未通过且按钮不存在/已关闭 RUSH，本 session 判失败
+[16:24:28] Session #3 失败（连续失败 1 次）
+[16:24:28] 20 秒后重试…
+[16:24:53] 
+[16:24:53] === Session #4（浏览器实例 2）===
+[16:24:53] 加载 /earn…
+[16:25:15] 等待 Turnstile（最多 150s）…
+[16:25:15]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:25:25]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:25:35]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:25:41] 静置 25s 未通过，开始按需精准点击（最多 3 次、间隔 18s）
+[16:25:44] Turnstile 点击未生效
+[16:25:47]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:26:02] Turnstile 点击未生效
+[16:26:02]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:26:14]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:26:20] Turnstile 点击未生效
+[16:26:26]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:26:38]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:26:50]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:27:02]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:27:14]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:27:26]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:27:38]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:27:47] Turnstile 验证失败！
+[16:27:47] 失败截图已保存: /tmp/fh_fail_0_4.png
+[16:27:47] 验证码未通过且按钮不存在/已关闭 RUSH，本 session 判失败
+[16:27:47] Session #4 失败（连续失败 2 次）
+[16:27:47] 连续 2 次失败 → 代理切换: 直连 -> socks5://127.0.0.1:40000
+[16:27:48] 浏览器重建 2/8（代理切换: 直连 -> socks5://127.0.0.1:40000）…
+[16:27:56] 启动浏览器…（代理: socks5://127.0.0.1:40000，实例 3/8）
+[16:27:57] 打开 FreezeHost…
+[16:28:22] 无服务条款弹窗
+[16:28:24] 当前地址: https://free.freezehost.pro/
+[16:28:24] 登录 OK！
+[16:28:24] 
+[16:28:24] === Session #5（浏览器实例 3）===
+[16:28:24] 加载 /earn…
+[16:28:45] 等待 Turnstile（最多 150s）…
+[16:28:45]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:28:56]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:29:06]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:29:12] 静置 25s 未通过，开始按需精准点击（最多 3 次、间隔 18s）
+[16:29:12] Turnstile 点击未生效
+[16:29:18]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:29:30] Turnstile 点击未生效
+[16:29:30]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:29:42]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:29:48] Turnstile 点击未生效
+[16:29:54]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:30:06]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:30:18]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:30:30]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:30:42]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:30:54]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:31:06]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:31:18] Turnstile 验证失败！
+[16:31:18] 失败截图已保存: /tmp/fh_fail_0_5.png
+[16:31:18] 验证码未通过且按钮不存在/已关闭 RUSH，本 session 判失败
+[16:31:18] Session #5 失败（连续失败 1 次）
+[16:31:18] 20 秒后重试…
+[16:31:43] 
+[16:31:43] === Session #6（浏览器实例 3）===
+[16:31:43] 加载 /earn…
+[16:32:04] 等待 Turnstile（最多 150s）…
+[16:32:04]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:32:14]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:32:24]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:32:30] 静置 25s 未通过，开始按需精准点击（最多 3 次、间隔 18s）
+[16:32:30] Turnstile 点击未生效
+[16:32:36]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:32:49] Turnstile 点击未生效
+[16:32:49]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:33:01]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:33:07] Turnstile 点击未生效
+[16:33:13]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:33:25]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:33:37]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:33:49]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:34:01]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:34:13]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:34:25]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:34:37] Turnstile 验证失败！
+[16:34:37] 失败截图已保存: /tmp/fh_fail_0_6.png
+[16:34:37] 验证码未通过且按钮不存在/已关闭 RUSH，本 session 判失败
+[16:34:37] Session #6 失败（连续失败 2 次）
+[16:34:37] 连续 2 次失败 → 代理切换: socks5://127.0.0.1:40000 -> 直连
+[16:34:38] 浏览器重建 3/8（代理切换: socks5://127.0.0.1:40000 -> 直连）…
+[16:34:46] 启动浏览器…（代理: 直连，实例 4/8）
+[16:34:46] 打开 FreezeHost…
+[16:35:02] 已确认服务条款
+[16:35:04] 注入 Token…
+[16:35:04] 刷新页面等待 OAuth 回调…
+[16:35:13] 当前地址: https://free.freezehost.pro/dashboard
+[16:35:13] 登录 OK！
+[16:35:13] 
+[16:35:13] === Session #7（浏览器实例 4）===
+[16:35:13] 加载 /earn…
+[16:35:34] 等待 Turnstile（最多 150s）…
+[16:35:34]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:35:44]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:35:54]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:36:00] 静置 25s 未通过，开始按需精准点击（最多 3 次、间隔 18s）
+[16:36:03] Turnstile 点击未生效
+[16:36:06]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:36:21] Turnstile 点击未生效
+[16:36:21]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:36:33]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:36:39] Turnstile 点击未生效
+[16:36:45]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:36:57]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:37:09]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:37:21]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:37:33]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:37:45]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:37:57]   [验证码状态] 等待中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:38:06] Turnstile 验证失败！
+[16:38:06] 失败截图已保存: /tmp/fh_fail_0_7.png
+[16:38:06] 验证码未通过且按钮不存在/已关闭 RUSH，本 session 判失败
+[16:38:06] Session #7 失败（连续失败 1 次）
+[16:38:06] 20 秒后重试…
+[16:38:31] 
+[16:38:31] === Session #8（浏览器实例 4）===
+[16:38:31] 加载 /earn…
+[16:38:53] 等待 Turnstile（最多 150s）…
+[16:38:53]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:39:03]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:39:13]   [验证码状态] 静置中 → {"iframe":false,"wrapper":false,"stage":false,"resp":0}
+[16:39:19] 静置 25s 未通过，开始按需精准点击（最多 3 次、间隔 18s）
+[16:39:19] 已达到最大运行时长
+[16:39:20] 运行结束！
