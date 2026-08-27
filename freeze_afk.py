@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-FreezeHost AFK - 自动挂机赚币脚本（修复版 v2.1）
+FreezeHost AFK - 自动挂机赚币脚本（修复版 v2.5）
 =================================================
 v2.1 相对 v2.0 的改动（依据你 GHA 实测日志）：
 
@@ -64,6 +64,8 @@ CHALLENGE_TIMEOUT = int(os.environ.get("CHALLENGE_TIMEOUT", "150"))
 PROXY_FAIL_SWITCH = int(os.environ.get("PROXY_FAIL_SWITCH", "2"))
 BROWSER_RESTART_MAX = int(os.environ.get("BROWSER_RESTART_MAX", "8"))
 RETRY_DELAY = int(os.environ.get("RETRY_DELAY", "10"))
+HOLD_SECS = float(os.environ.get("HOLD_SECS", "3"))          # HOLD TO START 按住秒数
+HOLD_RETRY_SECS = float(os.environ.get("HOLD_RETRY_SECS", "6"))
 
 TURNSTILE_IFRAME = 'iframe[src*="challenges.cloudflare.com"]'
 
@@ -224,6 +226,102 @@ if(b){b.classList.remove('active');b.style.display='none';}
         log("反广告拦截绕过已注入")
     except BaseException as e:
         log("反广告拦截绕过注入失败: %s" % str(e)[:100])
+
+
+def element_screen_center(sb, selector):
+    """返回元素中心点在屏幕上的 (x, y)（算式与 SeleniumBase get_gui_element_position 一致）"""
+    try:
+        r = sb.execute_script(
+            "var el=document.querySelector('%s');"
+            "if(!el) return null;"
+            "var b=el.getBoundingClientRect();"
+            "return JSON.stringify({x:b.x+b.width/2,y:b.y+b.height/2});"
+            % selector.replace("'", "\\'")
+        )
+        if not r:
+            return None
+        import json as _json
+        b = _json.loads(r)
+        wr = sb.driver.get_window_rect()
+        inner_h = sb.execute_script("return window.innerHeight;")
+        y_scroll = sb.execute_script("return window.pageYOffset;")
+        x = wr["x"] + b["x"]
+        y = wr["y"] + wr["height"] - inner_h + b["y"] - y_scroll
+        return (float(x), float(y))
+    except BaseException as e:
+        log("  计算元素屏幕坐标失败[%s]: %s" % (selector, str(e)[:80]))
+        return None
+
+
+def hold_to_start(sb, hold_secs=HOLD_SECS):
+    """按住 #afk-action-trigger（真实鼠标事件，站点判定可信）；
+    返回 True 表示按住动作已执行（是否成功由面板状态判断）"""
+    selector = "#afk-action-trigger"
+    try:
+        present = sb.execute_script(
+            "var e=document.getElementById('afk-action-trigger');"
+            "var t=e?(e.innerText||'').replace(/\\s+/g,' ').trim().substring(0,40):'';"
+            "return t;"
+        )
+        if not present:
+            selector2 = "#start-afk-btn"
+            log("未找到 #afk-action-trigger，尝试旧选择器 %s" % selector2)
+            if sb.is_element_present(selector2):
+                return click_start_afk(sb), selector2
+            log("两个启动按钮都不存在")
+            return False, None
+        log("找到 HOLD 按钮，文本: %s" % str(present)[:50])
+
+        xy = element_screen_center(sb, selector)
+        if xy:
+            import pyautogui
+            x, y = xy
+            log("按住 %s 处 (%.0f, %.0f) %ds…" % (selector, x, y, hold_secs))
+            pyautogui.moveTo(x, y, 0.35, pyautogui.easeOutQuad)
+            time.sleep(0.15)
+            pyautogui.mouseDown()
+            time.sleep(hold_secs)
+            pyautogui.mouseUp()
+            log("已松开鼠标")
+            return True, selector
+        # JS 合成事件兜底
+        log("pyautogui 坐标不可用，改用 JS 合成事件…")
+        sb.execute_script(
+            "var e=document.getElementById('afk-action-trigger');"
+            "if(e){"
+            "['pointerdown','mousedown'].forEach(function(t){"
+            "e.dispatchEvent(new MouseEvent(t,{bubbles:true,view:window,cancelable:true}));});"
+            "}"
+            "setTimeout(function(){"
+            "var e2=document.getElementById('afk-action-trigger');"
+            "if(e2){['pointerup','mouseup'].forEach(function(t){"
+            "e2.dispatchEvent(new MouseEvent(t,{bubbles:true,view:window,cancelable:true}));});}"
+            "},%d);" % int(hold_secs * 1000)
+        )
+        log("JS 合成按住事件已派发")
+        return True, selector
+    except BaseException as e:
+        log("按住启动失败: %s" % str(e)[:100])
+        return False, None
+
+
+def afk_panel_state(sb):
+    """读取赚币面板状态：Active Session / WS / 币数进度"""
+    try:
+        return str(sb.execute_script(
+            "var o={};"
+            "var b=document.getElementById('afk-action-trigger');"
+            "o.hold=b?(b.innerText||'').replace(/\\s+/g,' ').trim().substring(0,30):'';"
+            "o.ws=(typeof ws!=='undefined'&&ws)?ws.readyState:-1;"
+            "var t=document.body?document.body.innerText:'';"
+            "o.active=/active session/i.test(t);"
+            "o.verify=/verify you are human/i.test(t);"
+            "var m=t.match(/SESSION EARNED (\\d+)/i);o.earned=m?m[1]:'?';"
+            "var m2=t.match(/NEXT COIN IN ([\\d\\s]+)/i);o.next=m2?m2[1].trim():'?';"
+            "return JSON.stringify(o);"
+        ))
+    except BaseException:
+        return "{}"
 
 
 def _widget_state(sb):
@@ -479,14 +577,59 @@ def run_earn_session(sb, session_num, token, hard_deadline):
         time.sleep(4)
         dump_page_state(sb, "点ack后")
 
-    log("等待 Turnstile（最多 %ds）…" % CHALLENGE_TIMEOUT)
-    token_val = wait_turnstile(sb, timeout=CHALLENGE_TIMEOUT)
-    if token_val is None:
-        if runtime_exceeded() or (hard_deadline and time.time() > hard_deadline):
-            log("已达到最大运行时长")
-            return None
-        log("Turnstile 验证失败！")
-        dump_page_state(sb, "失败时")
+    # ================== v2.5: 按住 HOLD TO START 启动 ==================
+    # 站点机制：页面无 Cloudflare Turnstile，"VERIFY YOU ARE HUMAN"=
+    # 按住 #afk-action-trigger 按钮数秒即可激活会话（1 币/60 秒，上限 20 分钟）
+    import json as _json
+    try:
+        panel = _json.loads(afk_panel_state(sb) or "{}")
+    except BaseException:
+        panel = {}
+    log("启动前面板: %s" % (afk_panel_state(sb) or "{}"))
+    afk_started = False
+
+    held, sel = hold_to_start(sb, HOLD_SECS)
+    time.sleep(3)
+    if held:
+        try:
+            panel = _json.loads(afk_panel_state(sb) or "{}")
+        except BaseException:
+            panel = {}
+        log("按住后面板: %s" % (afk_panel_state(sb) or "{}"))
+        ws_state = -1
+        try:
+            ws_state = int(panel.get("ws", -1))
+        except BaseException:
+            pass
+        if panel.get("active") or ws_state in (0, 1):
+            afk_started = True
+            log("AFK 会话已激活（Active Session / WS=%s）！" % ws_state)
+
+    # 未激活：等待可能的验证组件最多 40s，再按住一次（长按 HOLD_RETRY_SECS）
+    if not afk_started:
+        log("尚未激活，等待可能的验证组件 40s…")
+        wait_turnstile(sb, timeout=40)
+        if _turnstile_value(sb) and len(_turnstile_value(sb)) > 20:
+            log("验证组件已通过，再次长按…")
+        hold_to_start(sb, HOLD_RETRY_SECS)
+        time.sleep(4)
+        try:
+            panel = _json.loads(afk_panel_state(sb) or "{}")
+        except BaseException:
+            panel = {}
+        log("重试按住后面板: %s" % (afk_panel_state(sb) or "{}"))
+        ws_state = -1
+        try:
+            ws_state = int(panel.get("ws", -1))
+        except BaseException:
+            pass
+        if panel.get("active") or ws_state in (0, 1):
+            afk_started = True
+            log("重试后 AFK 会话已激活！")
+
+    if not afk_started:
+        log("HOLD TO START 未能激活会话，本 session 判失败")
+        dump_page_state(sb, "启动失败时")
         try:
             shot = os.path.join(tempfile.gettempdir(),
                                 "fh_fail_%d_%d.png" % (INSTANCE_ID, session_num))
@@ -494,32 +637,7 @@ def run_earn_session(sb, session_num, token, hard_deadline):
             log("失败截图已保存: %s" % shot)
         except BaseException:
             pass
-        # 兜底：验证码没拿到，但按钮存在就强制点一次试试
-        # （部分情况下 Start AFK 不校验 token；click_start_afk 自带绕过 disabled）
-        if RUSH_AFK_ON_FAIL and sb.is_element_present("#start-afk-btn"):
-            log("[RUSH_AFK_ON_FAIL] 强制点击 Start AFK 试试…")
-            if click_start_afk(sb):
-                log("按钮点击成功且 WebSocket 已建立 → 继续赚币（无 token 模式）")
-                afk_started = True
-            else:
-                log("按钮点击后未建立连接，本 session 判失败")
-                return False
-        else:
-            log("验证码未通过且按钮不存在/已关闭 RUSH，本 session 判失败")
-            return False
-
-    if not afk_started and not click_start_afk(sb):
-        log("警告：Start AFK 按钮点击失败，继续观察 20 秒…")
-        time.sleep(20)
-        try:
-            ws_state = sb.execute_script(
-                "return (typeof ws !== 'undefined' && ws) ? ws.readyState : -1;"
-            )
-        except BaseException:
-            ws_state = -1
-        if ws_state not in (0, 1):
-            log("WebSocket 未建立，本 session 判失败")
-            return False
+        return False
 
     log("开始赚币 %d 秒…" % SESSION_DURATION)
     session_start = time.time()
@@ -532,13 +650,17 @@ def run_earn_session(sb, session_num, token, hard_deadline):
             if not url.startswith("https://free.freezehost.pro"):
                 log("赚币期间会话过期")
                 break
-            # 每 60 秒确认一次 WebSocket 活着
-            ws_state = sb.execute_script(
-                "return (typeof ws !== 'undefined' && ws) ? ws.readyState : -1;"
-            )
-            if ws_state not in (0, 1):
-                log("赚币期间 WebSocket 断开（状态 %s），提前结束" % ws_state)
+            # 每 60 秒确认一次 WebSocket/面板仍活跃
+            try:
+                panel = _json.loads(afk_panel_state(sb) or "{}")
+            except BaseException:
+                panel = {}
+            ws_state = int(panel.get("ws", -1)) if panel.get("ws") not in (None, "?") else -1
+            if not panel.get("active") and ws_state not in (0, 1):
+                log("赚币期间会话失效（面板: %s），提前结束" % (afk_panel_state(sb) or "{}")[:140])
                 break
+            if str(panel.get("earned")) not in ("?", ""):
+                log("  [赚币进度] 已赚 %s 币，下次 +1 在 %s" % (panel.get("earned"), panel.get("next")))
         except BaseException as e:
             log("会话检查异常（可能是浏览器问题）: %s" % str(e)[:100])
             return "dead"
@@ -587,7 +709,7 @@ def main():
     token = tokens[INSTANCE_ID % len(tokens)]
 
     log("=" * 56)
-    log("FreezeHost AFK 修复版 v2.3 - 实例 #%d" % INSTANCE_ID)
+    log("FreezeHost AFK 修复版 v2.5 - 实例 #%d" % INSTANCE_ID)
     log("Token: %s...%s" % (token[:10], token[-5:]))
     log("代理顺序: %s TRY_SOLVE=%s RUSH_AFK_ON_FAIL=%s UC_CDP=%s"
         % (PROXY_ORDER, TRY_SOLVE, RUSH_AFK_ON_FAIL, UC_CDP))
