@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-FreezeHost AFK - 自动挂机赚币脚本（修复版 v2.6）
+FreezeHost AFK - 自动挂机赚币脚本（修复版 v2.7）
 =================================================
 v2.1 相对 v2.0 的改动（依据你 GHA 实测日志）：
 
@@ -257,55 +257,113 @@ def element_screen_center(sb, selector):
 
 
 def hold_to_start(sb, hold_secs=HOLD_SECS):
-    """按住 #afk-action-trigger（真实鼠标事件，站点判定可信）；
-    返回 True 表示按住动作已执行（是否成功由面板状态判断）"""
-    selector = "#afk-action-trigger"
+    """激活 #afk-action-trigger：优先 CDP 触控长按（HOLD UI 多为触摸设计），
+    按住期间每秒采样按钮状态；失败则降级鼠标按住/单击"""
+    results = []
     try:
-        present = sb.execute_script(
-            "var e=document.getElementById('afk-action-trigger');"
-            "var t=e?(e.innerText||'').replace(/\\s+/g,' ').trim().substring(0,40):'';"
-            "return t;"
+        # 元素视口坐标 + 命中检测
+        r = sb.execute_script(
+            "var el=document.getElementById('afk-action-trigger');"
+            "if(!el) return null;"
+            "el.scrollIntoView({block:'center',inline:'center'});"
+            "var b=el.getBoundingClientRect();"
+            "var hit=document.elementFromPoint(b.x+b.width/2,b.y+b.height/2);"
+            "var hd=hit?(hit.id||hit.tagName):'none';"
+            "var ht=hit?(hit.innerText||'').replace(/\\s+/g,' ').trim().substring(0,25):'';"
+            "return JSON.stringify({x:b.x+b.width/2,y:b.y+b.height/2,"
+            "hit:hd,hitText:ht,rect:hit==el});"
         )
-        if not present:
-            selector2 = "#start-afk-btn"
-            log("未找到 #afk-action-trigger，尝试旧选择器 %s" % selector2)
-            if sb.is_element_present(selector2):
-                return click_start_afk(sb), selector2
-            log("两个启动按钮都不存在")
-            return False, None
-        log("找到 HOLD 按钮，文本: %s" % str(present)[:50])
+        if not r:
+            log("未找到 #afk-action-trigger")
+            return False
+        import json as _json
+        pos = _json.loads(r)
+        x, y = pos["x"], pos["y"]
+        on_target = pos.get("rect") is True
+        log("按钮中心 (%.0f, %.0f) | 命中元素: %s %r | 目标正确: %s"
+            % (x, y, pos.get("hit"), pos.get("hitText"), on_target))
+        if not on_target and not str(pos.get("hit", "")).upper().startswith("AFK"):
+            log("警告：命中元素不是 HOLD 按钮，可能有元素遮挡！")
 
-        xy = element_screen_center(sb, selector)
-        if xy:
+        def _sample(tag):
+            try:
+                t = sb.execute_script(
+                    "var e=document.getElementById('afk-action-trigger');"
+                    "return e?(e.innerText||'').replace(/\\s+/g,' ').trim().substring(0,40):'';"
+                )
+                log("  [按住中%s] 按钮文案: %r" % (tag, str(t)))
+            except BaseException:
+                pass
+
+        # 通用：触发后按住采样循环
+        def _do_hold(hold_s, sampler):
+            sampler("开始")
+            t0 = time.time()
+            while time.time() - t0 < hold_s:
+                time.sleep(1)
+                sampler("%d/%d" % (int(time.time() - t0 + 1), int(hold_s)))
+
+        drv = sb.driver
+        # 1) CDP 触控长按（主策略）
+        try:
+            drv.execute_cdp_cmd("Emulation.setTouchEmulationEnabled",
+                                {"enabled": True, "maxTouchPoints": 5})
+            drv.execute_cdp_cmd("Input.dispatchTouchEvent", {
+                "type": "touchStart",
+                "touchPoints": [{"x": x, "y": y, "radiusX": 2, "radiusY": 2, "force": 1}],
+            })
+            results.append("touch-hold")
+            _do_hold(hold_secs, _sample)
+            drv.execute_cdp_cmd("Input.dispatchTouchEvent", {
+                "type": "touchEnd", "touchPoints": []})
+            drv.execute_cdp_cmd("Emulation.setTouchEmulationEnabled", {"enabled": False})
+            log("CDP 触控长按完成 %ss" % hold_secs)
+            return True
+        except BaseException as e:
+            log("CDP 触控长按失败: %s" % str(e)[:100])
+            try:
+                drv.execute_cdp_cmd("Emulation.setTouchEmulationEnabled", {"enabled": False})
+            except BaseException:
+                pass
+
+        # 2) pyautogui 鼠标按住（fallback）
+        try:
             import pyautogui
-            x, y = xy
-            log("按住 %s 处 (%.0f, %.0f) %ds…" % (selector, x, y, hold_secs))
-            pyautogui.moveTo(x, y, 0.35, pyautogui.easeOutQuad)
-            time.sleep(0.15)
-            pyautogui.mouseDown()
-            time.sleep(hold_secs)
-            pyautogui.mouseUp()
-            log("已松开鼠标")
-            return True, selector
-        # JS 合成事件兜底
-        log("pyautogui 坐标不可用，改用 JS 合成事件…")
+            xy = element_screen_center(sb, "#afk-action-trigger")
+            if xy:
+                px, py_ = xy
+                pyautogui.moveTo(px, py_, 0.35, pyautogui.easeOutQuad)
+                time.sleep(0.15)
+                pyautogui.mouseDown()
+                results.append("mouse-hold")
+                _do_hold(hold_secs, _sample)
+                pyautogui.mouseUp()
+                log("鼠标按住完成 %ss" % hold_secs)
+                return True
+        except BaseException as e:
+            log("鼠标按住失败: %s" % str(e)[:100])
+
+        # 3) JS 合成 pointer 事件
+        log("改用 JS 合成按住…")
         sb.execute_script(
             "var e=document.getElementById('afk-action-trigger');"
             "if(e){"
-            "['pointerdown','mousedown'].forEach(function(t){"
-            "e.dispatchEvent(new MouseEvent(t,{bubbles:true,view:window,cancelable:true}));});"
+            "['pointerdown','mousedown','touchstart'].forEach(function(t){"
+            "e.dispatchEvent(new Event(t,{bubbles:true,cancelable:true}));});"
             "}"
             "setTimeout(function(){"
             "var e2=document.getElementById('afk-action-trigger');"
-            "if(e2){['pointerup','mouseup'].forEach(function(t){"
-            "e2.dispatchEvent(new MouseEvent(t,{bubbles:true,view:window,cancelable:true}));});}"
+            "if(e2){['pointerup','mouseup','touchend'].forEach(function(t){"
+            "e2.dispatchEvent(new Event(t,{bubbles:true,cancelable:true}));});}"
             "},%d);" % int(hold_secs * 1000)
         )
-        log("JS 合成按住事件已派发")
-        return True, selector
+        results.append("js-synth")
+        time.sleep(hold_secs + 1)
+        log("JS 合成按住完成")
+        return True
     except BaseException as e:
-        log("按住启动失败: %s" % str(e)[:100])
-        return False, None
+        log("按住启动异常: %s" % str(e)[:100])
+        return False
 
 
 def afk_panel_state(sb):
@@ -631,6 +689,24 @@ def run_earn_session(sb, session_num, token, hard_deadline):
                 break
         log("重试按住后面板: %s" % (afk_panel_state(sb) or "{}"))
 
+    if not afk_started and RUSH_AFK_ON_FAIL:
+        # 兜底：普通单击一次（部分实现其实是 click 触发）
+        log("长按均未激活，尝试普通单击…")
+        try:
+            sb.execute_script(
+                "var e=document.getElementById('afk-action-trigger');"
+                "if(e)e.click();"
+            )
+        except BaseException:
+            pass
+        for _i in range(6):  # 再轮询最多 12s
+            time.sleep(2)
+            panel = _panel()
+            if _activated(panel):
+                afk_started = True
+                break
+        log("单击后面板: %s" % (afk_panel_state(sb) or "{}"))
+
     if not afk_started:
         log("HOLD TO START 未能激活会话，本 session 判失败")
         dump_page_state(sb, "启动失败时")
@@ -717,7 +793,7 @@ def main():
     token = tokens[INSTANCE_ID % len(tokens)]
 
     log("=" * 56)
-    log("FreezeHost AFK 修复版 v2.6 - 实例 #%d" % INSTANCE_ID)
+    log("FreezeHost AFK 修复版 v2.7 - 实例 #%d" % INSTANCE_ID)
     log("Token: %s...%s" % (token[:10], token[-5:]))
     log("代理顺序: %s TRY_SOLVE=%s RUSH_AFK_ON_FAIL=%s UC_CDP=%s"
         % (PROXY_ORDER, TRY_SOLVE, RUSH_AFK_ON_FAIL, UC_CDP))
