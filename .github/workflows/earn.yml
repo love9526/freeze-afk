@@ -4,12 +4,27 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 on:
+  # push 触发：调试模式下推代码自动跑（无需 API token）
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       duration:
         description: '运行时长（分钟）'
         required: false
         default: '300'
+      proxy_mode:
+        description: '代理模式: auto=自动切换 / warp=只用WARP / direct=只用直连'
+        required: false
+        default: 'auto'
+      try_solve:
+        description: '尝试自动解图片挑战 (1/0)'
+        required: false
+        default: '0'
+      uc_cdp:
+        description: '使用 CDP 模式点击验证码 (1/0)，Xvfb 下更稳但登录流程有变化'
+        required: false
+        default: '0'
   schedule:
     - cron: '0 */8 * * *'
 
@@ -38,8 +53,18 @@ jobs:
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
           WARP_PROXY: "socks5://127.0.0.1:40000"
-          # auto = WARP 连续失败 2 次自动切直连（避免 WARP IP 被标记导致 Turnstile 一直失败）
-          # warp = 只用 WARP   direct = 只用直连
-          PROXY_MODE: "auto"
+          PROXY_MODE: ${{ github.event.inputs.proxy_mode || 'auto' }}
+          TRY_SOLVE: ${{ github.event.inputs.try_solve || '0' }}
+          UC_CDP: ${{ github.event.inputs.uc_cdp || '0' }}
           MAX_RUNTIME: ${{ github.event.inputs.duration || '300' }}
         run: python freeze_afk.py
+
+      # 失败截图自动上传（验证码失败时 /tmp/fh_fail_*.png），可下载排查挑战状态
+      - name: Upload failure screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fh-fail-screenshots
+          path: /tmp/fh_fail_*.png
+          if-no-files-found: ignore
+          retention-days: 3

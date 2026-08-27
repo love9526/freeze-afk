@@ -1,73 +1,63 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-FreezeHost AFK - 自动挂机赚币脚本（修复版 v2）
+FreezeHost AFK - 自动挂机赚币脚本（修复版 v2.1）
 =================================================
-相比原版的修复（逐条对应你日志里的三个问题）：
+v2.1 相对 v2.0 的改动（依据你 GHA 实测日志）：
 
-[问题1] Turnstile 永远失败（三个 session 全部 "Turnstile failed!"）
-  * 根因A：原 wait_turnstile 每 5 秒调一次 uc_gui_click_captcha()。
-    每次调用 = WebDriver 断开 + 鼠标点击 + 2.6 秒重连（UC.RECONNECT_TIME=2.4s）。
-    也就是每 5 秒就把验证码点一遍、连接掐一遍——验证过程被反复打断，
-    且这种机器人式狂点会触发 Cloudflare 升级为图片挑战，永远过不了。
-    → 修复：先静置 25 秒等待托管型挑战自动通过；未通过才精准点击，
-      每次点击间隔 >= 18 秒，每个 session 最多点 3 次。
-  * 根因B：默认 frame="iframe" 取的是页面【第一个】iframe。
-    /earn 页面上有 Funding Choices/广告等一堆 iframe，第一个未必是
-    Turnstile，pyautogui 就点在了空白处。
-    → 修复：用 frame='iframe[src*="challenges.cloudflare.com"]'
-      精确指定 Turnstile 自己的 iframe（SeleniumBase 支持任意 CSS 选择器）。
+[致命BUG] 代理回退永远不生效
+  * 日志证据：触发"切换为直连"后进程直接"运行结束！"，没有重建浏览器。
+  * 根因：SeleniumBase 的 SB() 上下文管理器在 test=True 模式下会【吞掉】
+    with 块内的所有异常（seleniumbase/plugins/sb_manager.py:1402-1408:
+    `if (test or inner_test) and not test_name: print(e); return`）。
+    我上一版用 `raise DriverDied` 跳出 SB 块，异常被吞，外层重建逻辑
+    永远收不到信号。
+  * 修复：改用纯标志位控制流（need_restart + break 正常退出 with 块），
+    不再依赖任何异常穿越 SB 边界；浏览器重建/代理切换由外层 while 执行。
 
-[问题2] Error: The operation was canceled.
-  * 根因：浏览器/CDP 连接在命令执行中途被掐断时抛出的错误
-    （asyncio.CancelledError 在 Python 3.8+ 是 BaseException，
-    原脚本里所有的 except: 都拦不住；或驱动连接被取消导致的 I/O 错误）。
-    前两个 session 约 50 次断开/重连风暴后，浏览器在第 3 个 session 挂掉。
-  * 原脚本对【任何】异常零恢复能力，一次崩溃整个进程退出、GitHub Actions 任务失败。
-    → 修复：session 级捕获 + 死链检测；浏览器死了自动重建并重新登录；
-      外层无限重试循环，连续失败指数退避。
-
-[问题3] WARP IP 被 Cloudflare 标记
-  * README 里 "WARP IP 是 Cloudflare 信任的" 已过时——WARP 出口 IP
-    在免费宿主站上被 Challenge 得很凶，这是验证码过不去的最大外因。
-    → 修复：PROXY_MODE=auto（默认）：连续 2 个 session 失败 → 自动切直连
-      重建浏览器再试；直连也失败 → 切回 WARP，来回切换直到通过。
-
-其他：* 等待期间轮询 + 到期前优雅退出
-      * 截图保存路径兼容 Windows（tempfile）
-      * 全部中文日志，方便你在 Actions 日志里排查
+[新增能力]
+  * TRY_SOLVE=1：点击复选框后额外尝试 uc_gui_handle_captcha() 解图片挑战
+    （默认 0，保守）。
+  * RUSH_AFK_ON_FAIL=1（默认开）：验证码超时后，若 Start AFK 按钮实际可点，
+    先点一次并检查 WebSocket——部分情况下按钮不校验 token 也能开始赚币。
+  * 点击阶段每 10 秒输出验证码部件状态诊断（iframe 是否存在 / 是否出现
+    交互式图片挑战 #challenge-stage / response 长度），下次失败截图+日志
+    能直接看出挑战停在什么状态。
+  * UC_CDP=1：切换 SeleniumBase CDP 模式（uc_cdp=True），该模式下验证码
+    点击走 CDP Input 事件而非 pyautogui 屏幕坐标，Xvfb 下更稳（默认 0）。
+  * earn.yml 增加失败截图上传 artifacts，失败后可直接下载图片排查。
 """
 import os
 import time
 import sys
 import platform
 import tempfile
-import traceback
 
 # ---------------------------------------------------------------------------
 # 环境变量配置
 # ---------------------------------------------------------------------------
-DISCORD_TOKEN = os.environ.get("DISCORD_TOKEN", "")                     # Discord Token（必填，逗号分隔支持多开）
-WARP_PROXY = os.environ.get("WARP_PROXY", "socks5://127.0.0.1:40000")   # WARP 代理，置空禁用
-MAX_RUNTIME = int(os.environ.get("MAX_RUNTIME", "0"))                   # 最大运行时长（分钟），0=无限
-SESSION_DURATION = int(os.environ.get("SESSION_DURATION", "1200"))      # 每个 session 赏币时长（秒）
-INSTANCE_ID = int(os.environ.get("INSTANCE_ID", "0"))                   # 实例编号
-LOG_FILE = os.environ.get("LOG_FILE", "")                               # 日志文件（可选）
-PROXY_MODE = os.environ.get("PROXY_MODE", "auto")                       # warp=只用WARP | direct=只用直连 | auto=失败自动切换
-TRY_SOLVE = os.environ.get("TRY_SOLVE", "0") == "1"                     # 1=点击后额外尝试用 uc_gui_handle_captcha 解图片挑战
+DISCORD_TOKEN = os.environ.get("DISCORD_TOKEN", "")
+WARP_PROXY = os.environ.get("WARP_PROXY", "socks5://127.0.0.1:40000")
+MAX_RUNTIME = int(os.environ.get("MAX_RUNTIME", "0"))
+SESSION_DURATION = int(os.environ.get("SESSION_DURATION", "1200"))
+INSTANCE_ID = int(os.environ.get("INSTANCE_ID", "0"))
+LOG_FILE = os.environ.get("LOG_FILE", "")
+PROXY_MODE = os.environ.get("PROXY_MODE", "auto")          # warp | direct | auto
+TRY_SOLVE = os.environ.get("TRY_SOLVE", "0") == "1"        # 解图片挑战
+RUSH_AFK_ON_FAIL = os.environ.get("RUSH_AFK_ON_FAIL", "1") == "1"  # 失败后仍试按 Start AFK
+UC_CDP = os.environ.get("UC_CDP", "0") == "1"              # 用 CDP 模式
 
-# Turnstile 行为参数（按需微调）
-TURNSTILE_QUIET = int(os.environ.get("TURNSTILE_QUIET", "25"))          # 进页面先静置 N 秒（托管型自动通过）
-CLICK_GAP = int(os.environ.get("CLICK_GAP", "18"))                      # 两次人工点击最小间隔（秒）
-MAX_CLICKS = int(os.environ.get("MAX_CLICKS", "3"))                     # 每个 session 最多点击次数
-CHALLENGE_TIMEOUT = int(os.environ.get("CHALLENGE_TIMEOUT", "150"))     # 单次验证码总超时（秒）
-PROXY_FAIL_SWITCH = int(os.environ.get("PROXY_FAIL_SWITCH", "2"))       # 连续失败 N 个 session 切换代理
-BROWSER_RESTART_MAX = int(os.environ.get("BROWSER_RESTART_MAX", "8"))   # 浏览器重建次数上限
-RETRY_DELAY = int(os.environ.get("RETRY_DELAY", "10"))                  # session 失败后的基础等待（秒）
+TURNSTILE_QUIET = int(os.environ.get("TURNSTILE_QUIET", "25"))
+CLICK_GAP = int(os.environ.get("CLICK_GAP", "18"))
+MAX_CLICKS = int(os.environ.get("MAX_CLICKS", "3"))
+CHALLENGE_TIMEOUT = int(os.environ.get("CHALLENGE_TIMEOUT", "150"))
+PROXY_FAIL_SWITCH = int(os.environ.get("PROXY_FAIL_SWITCH", "2"))
+BROWSER_RESTART_MAX = int(os.environ.get("BROWSER_RESTART_MAX", "8"))
+RETRY_DELAY = int(os.environ.get("RETRY_DELAY", "10"))
 
-TURNSTILE_IFRAME = 'iframe[src*="challenges.cloudflare.com"]'           # Turnstile 专属 iframe 选择器
+TURNSTILE_IFRAME = 'iframe[src*="challenges.cloudflare.com"]'
 
-# Linux 服务器上需要虚拟显示器（GitHub Actions 也是如此）
+# Linux 虚拟显示器（GitHub Actions 必需）
 if platform.system().lower() == "linux":
     try:
         from pyvirtualdisplay import Display
@@ -80,22 +70,15 @@ if platform.system().lower() == "linux":
 
 from seleniumbase import SB
 
-# asyncio.CancelledError 在 Py3.8+ 是 BaseException，普通 except 拦不住，这里显式引入
 try:
     from asyncio import CancelledError as _CancelledError
-except ImportError:  # 理论不会发生，兜底
+except ImportError:
     _CancelledError = Exception
-
-# 自定义异常：表示浏览器需要整体重建
-class DriverDied(Exception):
-    pass
-
 
 global_start = time.time()
 
 
 def log(msg):
-    """带时间戳和实例编号的日志（全中文）"""
     ts = time.strftime("%H:%M:%S")
     prefix = "[I%d] " % INSTANCE_ID if INSTANCE_ID else ""
     line = "[%s] %s%s" % (ts, prefix, msg)
@@ -117,44 +100,42 @@ def runtime_exceeded():
 
 
 # ---------------------------------------------------------------------------
-# Turnstile：取值 / 就绪检测 / 精准点击
+# Turnstile 工具
 # ---------------------------------------------------------------------------
 def _turnstile_value(sb):
-    """读取 cf-turnstile-response 的值（验证通过才会有值）"""
     try:
         v = sb.execute_script(
             "var t=document.querySelector('[name=cf-turnstile-response]');"
             "return t ? (t.value || '') : '';"
         ) or ""
         return str(v)
-    except Exception:
+    except BaseException:
         return ""
 
 
-def _turnstile_present(sb):
+def _widget_state(sb):
+    """返回验证码部件状态快照，用于诊断"""
     try:
-        return bool(sb.execute_script(
-            "return !!document.querySelector("
-            "'iframe[src*=\"challenges.cloudflare.com\"], .cf-turnstile, "
-            "[name=cf-turnstile-response], [data-callback=\"onCaptchaSuccess\"]');"
-        ))
-    except Exception:
-        return False
+        return sb.execute_script(
+            "var o={};"
+            "o.iframe=!!document.querySelector('iframe[src*=\"challenges.cloudflare.com\"]');"
+            "o.wrapper=!!document.querySelector('.cf-turnstile, .cf-turnstile-wrapper, [class*=\"turnstile\"]');"
+            "o.stage=!!document.querySelector('#challenge-stage');"
+            "var t=document.querySelector('[name=cf-turnstile-response]');"
+            "o.resp=(t&&t.value)?t.value.length:0;"
+            "return JSON.stringify(o);"
+        )
+    except BaseException:
+        return "{}"
 
 
 def click_turnstile_once(sb):
-    """精准点击 Turnstile 复选框（只点它自己的 iframe，绝不点页面第一个 iframe）"""
     try:
         if sb.is_element_present(TURNSTILE_IFRAME):
-            # 指定 frame=选择器：SeleniumBase 会先取该 iframe 的位置，
-            # 再进入 iframe 内部点复选框 span 的正中心
             ok = sb.uc_gui_click_captcha(frame=TURNSTILE_IFRAME)
         else:
             ok = sb.uc_gui_click_captcha()
-        if ok:
-            log("已点击 Turnstile 复选框")
-        else:
-            log("Turnstile 点击未生效（可能组件尚未渲染/已是自动模式）")
+        log("已点击 Turnstile 复选框" if ok else "Turnstile 点击未生效")
         return bool(ok)
     except BaseException as e:
         log("Turnstile 点击异常: %s" % str(e)[:120])
@@ -162,25 +143,32 @@ def click_turnstile_once(sb):
 
 
 def wait_turnstile(sb, timeout=CHALLENGE_TIMEOUT):
-    """
-    阶段1：完全静置，等托管型挑战自动完成（不做任何操作）
-    阶段2：精准点击（最多 MAX_CLICKS 次，每次间隔 CLICK_GAP 秒）
-    """
+    """返回验证码 token；失败返回 None"""
     start = time.time()
     last_click = 0.0
     click_count = 0
+    solved_tried = False
+    last_diag = 0.0
 
-    # ---- 阶段1：静置等待 ------------------------------------------------
+    def _diag(tag):
+        nonlocal last_diag
+        now = time.time()
+        if now - last_diag >= 10:
+            last_diag = now
+            log("  [验证码状态] %s → %s" % (tag, _widget_state(sb)))
+
+    # 阶段1：静置等待（托管型自动通过）
     quiet_end = min(start + TURNSTILE_QUIET, start + timeout)
     while time.time() < quiet_end:
         v = _turnstile_value(sb)
         if v and len(v) > 20:
             log("Turnstile 自动通过！（静置方式）")
             return v
+        _diag("静置中")
         time.sleep(2)
 
-    # ---- 阶段2：必要时精准点击 -------------------------------------------
-    log("静置 %ds 仍未通过，开始按需精准点击（最多 %d 次、间隔 %ds）..."
+    # 阶段2：按需精准点击
+    log("静置 %ds 未通过，开始按需精准点击（最多 %d 次、间隔 %ds）"
         % (TURNSTILE_QUIET, MAX_CLICKS, CLICK_GAP))
     while time.time() - start < timeout:
         v = _turnstile_value(sb)
@@ -190,20 +178,26 @@ def wait_turnstile(sb, timeout=CHALLENGE_TIMEOUT):
         if runtime_exceeded():
             return None
         if click_count < MAX_CLICKS and (time.time() - last_click) >= CLICK_GAP:
-            if _turnstile_present(sb):
-                click_count += 1
-                last_click = time.time()
-                click_turnstile_once(sb)
-            else:
-                time.sleep(3)
-                continue
+            click_count += 1
+            last_click = time.time()
+            click_turnstile_once(sb)
+            # 点击后尝试解交互式图片挑战（可选）
+            if TRY_SOLVE and not solved_tried:
+                solved_tried = True
+                try:
+                    log("尝试自动处理交互式挑战…")
+                    sb.uc_gui_handle_captcha()
+                    log("uc_gui_handle_captcha 执行完毕")
+                except BaseException as e:
+                    log("自动解挑战失败: %s" % str(e)[:100])
         else:
+            _diag("等待中")
             time.sleep(3)
     return None
 
 
 # ---------------------------------------------------------------------------
-# 登录（Discord Token 注入 OAuth）
+# 登录
 # ---------------------------------------------------------------------------
 def login_via_discord_token(sb, token):
     log("打开 FreezeHost…")
@@ -266,7 +260,7 @@ def login_via_discord_token(sb, token):
 
 
 # ---------------------------------------------------------------------------
-# 绕过广告拦截检测 + 点击 Start AFK
+# 绕过广告拦截 + 点击 Start AFK
 # ---------------------------------------------------------------------------
 def click_start_afk(sb):
     log("绕过广告拦截检测…")
@@ -318,9 +312,10 @@ def click_start_afk(sb):
 
 
 # ---------------------------------------------------------------------------
-# 单个赚币 session
+# 单个赚币 session（返回 True=成功 / False=失败 / None=到达时长 / "dead"=浏览器死亡）
 # ---------------------------------------------------------------------------
 def run_earn_session(sb, session_num, token, hard_deadline):
+    afk_started = False  # RUSH 模式下已成功点击过按钮则不再二次点击
     log("加载 /earn…")
     sb.uc_open_with_reconnect("https://free.freezehost.pro/earn", reconnect_time=6)
     time.sleep(15)
@@ -336,7 +331,7 @@ def run_earn_session(sb, session_num, token, hard_deadline):
     log("等待 Turnstile（最多 %ds）…" % CHALLENGE_TIMEOUT)
     token_val = wait_turnstile(sb, timeout=CHALLENGE_TIMEOUT)
     if token_val is None:
-        if runtime_exceeded():
+        if runtime_exceeded() or (hard_deadline and time.time() > hard_deadline):
             log("已达到最大运行时长")
             return None
         log("Turnstile 验证失败！")
@@ -345,14 +340,34 @@ def run_earn_session(sb, session_num, token, hard_deadline):
                                 "fh_fail_%d_%d.png" % (INSTANCE_ID, session_num))
             sb.save_screenshot(shot)
             log("失败截图已保存: %s" % shot)
-        except Exception:
+        except BaseException:
             pass
-        return False
+        # 兜底：验证码没拿到，但按钮存在就强制点一次试试
+        # （部分情况下 Start AFK 不校验 token；click_start_afk 自带绕过 disabled）
+        if RUSH_AFK_ON_FAIL and sb.is_element_present("#start-afk-btn"):
+            log("[RUSH_AFK_ON_FAIL] 强制点击 Start AFK 试试…")
+            if click_start_afk(sb):
+                log("按钮点击成功且 WebSocket 已建立 → 继续赚币（无 token 模式）")
+                afk_started = True
+            else:
+                log("按钮点击后未建立连接，本 session 判失败")
+                return False
+        else:
+            log("验证码未通过且按钮不存在/已关闭 RUSH，本 session 判失败")
+            return False
 
-    log("Turnstile 通过，继续…")
-
-    if not click_start_afk(sb):
-        log("警告：Start AFK 按钮点击失败，继续观察")
+    if not afk_started and not click_start_afk(sb):
+        log("警告：Start AFK 按钮点击失败，继续观察 20 秒…")
+        time.sleep(20)
+        try:
+            ws_state = sb.execute_script(
+                "return (typeof ws !== 'undefined' && ws) ? ws.readyState : -1;"
+            )
+        except BaseException:
+            ws_state = -1
+        if ws_state not in (0, 1):
+            log("WebSocket 未建立，本 session 判失败")
+            return False
 
     log("开始赚币 %d 秒…" % SESSION_DURATION)
     session_start = time.time()
@@ -365,17 +380,24 @@ def run_earn_session(sb, session_num, token, hard_deadline):
             if not url.startswith("https://free.freezehost.pro"):
                 log("赚币期间会话过期")
                 break
+            # 每 60 秒确认一次 WebSocket 活着
+            ws_state = sb.execute_script(
+                "return (typeof ws !== 'undefined' && ws) ? ws.readyState : -1;"
+            )
+            if ws_state not in (0, 1):
+                log("赚币期间 WebSocket 断开（状态 %s），提前结束" % ws_state)
+                break
         except BaseException as e:
             log("会话检查异常（可能是浏览器问题）: %s" % str(e)[:100])
-            raise
+            return "dead"
         time.sleep(30)
 
-    log("Session #%d 完成 ✓" % session_num)
+    log("Session #%d 完成" % session_num)
     return True
 
 
 # ---------------------------------------------------------------------------
-# 主循环：session + 浏览器重建 + 代理回退
+# 主循环：session + 浏览器重建 + 代理回退（纯标志位控制流）
 # ---------------------------------------------------------------------------
 def build_options(proxy):
     opts = {
@@ -390,6 +412,8 @@ def build_options(proxy):
     }
     if proxy:
         opts["proxy"] = proxy
+    if UC_CDP:
+        opts["uc_cdp"] = True
     return opts
 
 
@@ -411,9 +435,10 @@ def main():
     token = tokens[INSTANCE_ID % len(tokens)]
 
     log("=" * 56)
-    log("FreezeHost AFK 修复版 - 实例 #%d" % INSTANCE_ID)
+    log("FreezeHost AFK 修复版 v2.1 - 实例 #%d" % INSTANCE_ID)
     log("Token: %s...%s" % (token[:10], token[-5:]))
-    log("代理: %s （模式: %s）" % (WARP_PROXY or "无", PROXY_MODE))
+    log("代理: %s （模式: %s） TRY_SOLVE=%s RUSH_AFK_ON_FAIL=%s UC_CDP=%s"
+        % (WARP_PROXY or "无", PROXY_MODE, TRY_SOLVE, RUSH_AFK_ON_FAIL, UC_CDP))
     log("=" * 56)
 
     proxy = None if PROXY_MODE == "direct" else WARP_PROXY
@@ -424,91 +449,96 @@ def main():
     tf_fail_in_row = 0  # 连续 Turnstile 失败数（驱动崩溃不计入）
 
     while True:
-        if runtime_exceeded():
+        if runtime_exceeded() or (hard_deadline and time.time() > hard_deadline):
             log("达到最大运行时长，结束")
             break
         if browser_restarts > BROWSER_RESTART_MAX:
             log("浏览器重建次数超过上限（%d），结束" % BROWSER_RESTART_MAX)
             break
 
-        log("启动浏览器…（代理: %s，第 %d 个浏览器实例）"
-            % (proxy or "直连", browser_restarts + 1))
+        need_restart = False
+        restart_reason = ""
+
+        log("启动浏览器…（代理: %s，实例 %d/%d）"
+            % (proxy or "直连", browser_restarts + 1, BROWSER_RESTART_MAX))
         try:
             with SB(**build_options(proxy)) as sb:
-                # 登录
+                # ---- 登录 ----
                 try:
                     login_ok = login_via_discord_token(sb, token)
                 except BaseException as e:
                     log("登录阶段异常: %s" % str(e)[:120])
                     login_ok = False
+
                 if not login_ok:
                     if not driver_alive(sb):
-                        raise DriverDied("登录时浏览器死亡")
-                    log("登录失败（Token 失效或页面异常），本轮结束")
-                    break
-                log("登录 OK！")
-
-                # session 循环
-                while True:
-                    if runtime_exceeded() or (hard_deadline and time.time() > hard_deadline):
-                        log("达到最大运行时长，结束")
-                        break
-
-                    session += 1
-                    log("")
-                    log("=== Session #%d（浏览器实例 %d）==="
-                        % (session, browser_restarts + 1))
-
-                    try:
-                        status = run_earn_session(sb, session, token, hard_deadline)
-                    except BaseException as e:
-                        dead = not driver_alive(sb)
-                        log("Session 内异常: %s （浏览器存活: %s）"
-                            % (str(e)[:120], "是" if not dead else "否"))
-                        if dead:
-                            raise DriverDied(str(e)[:120])
-                        status = False  # 非致命错误，当一次失败重试
-
-                    if status is None:  # 达到运行时长
-                        break
-                    if status is True:
-                        tf_fail_in_row = 0
+                        need_restart = True
+                        restart_reason = "登录时浏览器死亡"
                     else:
-                        tf_fail_in_row += 1
-                        log("Session #%d 失败（连续失败 %d 次）" % (session, tf_fail_in_row))
+                        log("登录失败（Token 失效或页面异常），结束本次运行")
+                        # need_restart 保持 False → 外层 break
+                else:
+                    log("登录 OK！")
+                    # ---- session 循环 ----
+                    while need_restart is False:
+                        if runtime_exceeded() or (hard_deadline and time.time() > hard_deadline):
+                            log("达到最大运行时长，结束")
+                            break
 
-                        # ---- 代理回退：连续失败自动切换 --------------------
-                        if PROXY_MODE == "auto" and tf_fail_in_row >= PROXY_FAIL_SWITCH:
-                            old = proxy
-                            proxy = None if proxy else WARP_PROXY
+                        session += 1
+                        log("")
+                        log("=== Session #%d（浏览器实例 %d）==="
+                            % (session, browser_restarts + 1))
+
+                        try:
+                            status = run_earn_session(sb, session, token, hard_deadline)
+                        except BaseException as e:
+                            dead = not driver_alive(sb)
+                            log("Session 内异常: %s （浏览器存活: %s）"
+                                % (str(e)[:120], "是" if not dead else "否"))
+                            status = "dead" if dead else False
+
+                        if status is None:          # 到达运行时长
+                            break
+                        if status == "dead":        # 浏览器死亡 → 重建
+                            need_restart = True
+                            restart_reason = "session 中浏览器死亡"
+                            break
+                        if status is True:
                             tf_fail_in_row = 0
-                            log("连续 %d 次验证码失败 → 代理从 [%s] 切换为 [%s]，重建浏览器"
-                                % (PROXY_FAIL_SWITCH, old or "直连", proxy or "直连"))
-                            raise DriverDied("代理切换: %s -> %s" % (old or "直连", proxy or "直连"))
+                        else:
+                            tf_fail_in_row += 1
+                            log("Session #%d 失败（连续失败 %d 次）"
+                                % (session, tf_fail_in_row))
 
-                        wait = RETRY_DELAY + min(30, tf_fail_in_row * RETRY_DELAY)
-                        log("%d 秒后重试…" % wait)
-                        time.sleep(wait)
+                            # 代理回退
+                            if (PROXY_MODE == "auto"
+                                    and tf_fail_in_row >= PROXY_FAIL_SWITCH):
+                                old = proxy
+                                proxy = None if proxy else WARP_PROXY
+                                tf_fail_in_row = 0
+                                need_restart = True
+                                restart_reason = ("代理切换: %s -> %s"
+                                                  % (old or "直连", proxy or "直连"))
+                                log("连续 %d 次失败 → %s" % (PROXY_FAIL_SWITCH, restart_reason))
+                                break
 
-                    time.sleep(5)
+                            wait = RETRY_DELAY + min(30, tf_fail_in_row * RETRY_DELAY)
+                            log("%d 秒后重试…" % wait)
+                            time.sleep(wait)
 
-        except DriverDied as e:
-            browser_restarts += 1
-            log("浏览器需要重建（%s）→ 第 %d/%d 次重建"
-                % (e, browser_restarts, BROWSER_RESTART_MAX))
-            time.sleep(8)
-            continue
+                        time.sleep(5)
         except BaseException as e:
-            # 兜底：整个 with 块外部的异常（浏览器级）
-            browser_restarts += 1
-            log("浏览器级异常: %s" % str(e)[:150])
-            log("详细堆栈:\n%s" % "".join(
-                traceback.format_exception(type(e), e, e.__traceback__))[-800:])
-            log("→ 第 %d/%d 次重建" % (browser_restarts, BROWSER_RESTART_MAX))
-            time.sleep(8)
-            continue
+            # 理论上不会走到（test=True 时 SB 吞异常），兜底
+            need_restart = True
+            restart_reason = "浏览器级异常: %s" % str(e)[:150]
 
-        break  # 正常结束（超时或被主动停止）
+        if not need_restart:
+            break  # 正常运行结束（超时/登录失败/手动停止）
+
+        browser_restarts += 1
+        log("浏览器重建 %d/%d（%s）…" % (browser_restarts, BROWSER_RESTART_MAX, restart_reason))
+        time.sleep(8)
 
     log("运行结束！")
 
