@@ -32,6 +32,8 @@ jobs:
   earn:
     runs-on: ubuntu-latest
     timeout-minutes: 360
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
@@ -57,14 +59,27 @@ jobs:
           TRY_SOLVE: ${{ github.event.inputs.try_solve || '0' }}
           UC_CDP: ${{ github.event.inputs.uc_cdp || '0' }}
           MAX_RUNTIME: ${{ github.event.inputs.duration || '300' }}
+          LOG_FILE: "/tmp/afk.log"
         run: python freeze_afk.py
 
-      # 失败截图自动上传（验证码失败时 /tmp/fh_fail_*.png），可下载排查挑战状态
-      - name: Upload failure screenshots
+      # 把完整日志 + 失败截图推送到 debug-logs 分支（无需额外 token，
+      # 用 runner 自带 GITHUB_TOKEN；之后经 api.github.com 匿名读取）
+      - name: Publish debug artifacts to debug-logs branch
         if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: fh-fail-screenshots
-          path: /tmp/fh_fail_*.png
-          if-no-files-found: ignore
-          retention-days: 3
+        run: |
+          mkdir -p /tmp/afk-debug
+          cp /tmp/afk.log /tmp/afk-debug/afk.log 2>/dev/null || true
+          cp /tmp/fh_fail_*.png /tmp/afk-debug/ 2>/dev/null || true
+          git config user.name "afk-debug"
+          git config user.email "afk-debug@local"
+          if git ls-remote --exit-code origin debug-logs >/dev/null 2>&1; then
+            git fetch origin debug-logs
+            git checkout -B debug-logs origin/debug-logs
+          else
+            git checkout -b debug-logs
+          fi
+          mkdir -p "logs/${{ github.run_id }}"
+          cp -r /tmp/afk-debug/. "logs/${{ github.run_id }}/" 2>/dev/null || true
+          git add "logs/${{ github.run_id }}" || true
+          git commit -m "debug artifacts run ${{ github.run_id }}" || true
+          git push origin debug-logs || true
