@@ -229,11 +229,12 @@ if(b){b.classList.remove('active');b.style.display='none';}
 
 
 def element_screen_center(sb, selector):
-    """返回元素中心点在屏幕上的 (x, y)（算式与 SeleniumBase get_gui_element_position 一致）"""
+    """返回元素中心点在屏幕上的 (x, y)（先滚动到可视区中央，算式与 SeleniumBase 一致）"""
     try:
         r = sb.execute_script(
             "var el=document.querySelector('%s');"
             "if(!el) return null;"
+            "el.scrollIntoView({block:'center',inline:'center'});"
             "var b=el.getBoundingClientRect();"
             "return JSON.stringify({x:b.x+b.width/2,y:b.y+b.height/2});"
             % selector.replace("'", "\\'")
