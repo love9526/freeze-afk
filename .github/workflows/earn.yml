@@ -48,8 +48,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install seleniumbase pyvirtualdisplay
-          seleniumbase install chromedriver
+          pip install seleniumbase pyvirtualdisplay 2>&1 | tee /tmp/install.log
+          if ! seleniumbase install chromedriver 2>&1 | tee -a /tmp/install.log; then
+            echo "chromedriver install failed, retrying after 15s..." | tee -a /tmp/install.log
+            sleep 15
+            seleniumbase install chromedriver 2>&1 | tee -a /tmp/install.log
+          fi
+          tail -30 /tmp/install.log
 
       - name: Run AFK Earn
         env:
@@ -72,6 +77,7 @@ jobs:
         run: |
           mkdir -p /tmp/afk-debug
           cp /tmp/afk.log /tmp/afk-debug/afk.log 2>/dev/null || true
+          cp /tmp/install.log /tmp/afk-debug/install.log 2>/dev/null || true
           cp /tmp/fh_fail_*.png /tmp/afk-debug/ 2>/dev/null || true
           git config user.name "afk-debug"
           git config user.email "afk-debug@local"
