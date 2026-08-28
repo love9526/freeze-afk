@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-FreezeHost AFK - 自动挂机赚币脚本（修复版 v2.8）
+FreezeHost AFK - 自动挂机赚币脚本（修复版 v2.9）
 =================================================
 v2.1 相对 v2.0 的改动（依据你 GHA 实测日志）：
 
@@ -225,8 +225,15 @@ def inspect_modal(sb):
 
 
 def handle_modal(sb, timeout=30):
-    """处理 Verification Required 模态：点击 CF/reCAPTCHA 验证或模态按钮"""
+    """处理 Verification Required 模态：内联 CF 求解 + 点击 CF/reCAPTCHA 验证或模态按钮"""
     import json as _json
+    # 若存在内联 CF 组件，先尝试求解（覆盖模态/覆盖层场景）
+    try:
+        if cf_widget_center(sb) is not None:
+            log("检测到内联 CF 组件，先尝试求解…")
+            solve_inline_cf(sb, timeout=min(timeout, 30))
+    except BaseException:
+        pass
     end = time.time() + timeout
     while time.time() < end:
         try:
@@ -274,6 +281,123 @@ def handle_modal(sb, timeout=30):
             continue
         time.sleep(2)
     log("模态处理超时")
+    return False
+
+
+def _cf_resp(sb):
+    try:
+        v = sb.execute_script(
+            "var t=document.querySelector('[name=cf-turnstile-response]');"
+            "return t?(t.value||''):'';"
+        ) or ""
+        return str(v)
+    except BaseException:
+        return ""
+
+
+def cf_widget_center(sb):
+    """定位内联 Turnstile 组件/覆盖层的可视中心（视口坐标），找不到返回 None"""
+    try:
+        r = sb.execute_script(
+            "var sels=['.cf-turnstile','.cf-turnstile-wrapper','[class*=\"turnstile\"]',"
+            "'[data-callback=\"onCaptchaSuccess\"]'];"
+            "var el=null;"
+            "for(var i=0;i<sels.length;i++){"
+            "var q=document.querySelector(sels[i]);"
+            "if(q){var cs=getComputedStyle(q);"
+            "if(cs.display!=='none'&&cs.visibility!=='hidden'){el=q;break;}}}"
+            "if(!el)return null;"
+            "el.scrollIntoView({block:'center',inline:'center'});"
+            "var b=el.getBoundingClientRect();"
+            "if(b.width<1||b.height<1)return null;"
+            "return JSON.stringify({x:b.x+b.width/2,y:b.y+b.height/2,w:b.width,h:b.height});"
+        )
+        if not r:
+            return None
+        import json as _json
+        return _json.loads(r)
+    except BaseException:
+        return None
+
+
+def solve_inline_cf(sb, timeout=45):
+    """求解内联 Cloudflare Turnstile 挑战（覆盖层 'Take action to continue'）：
+    优先点组件中心，其次 iframe 型走 SeleniumBase，轮询 cf-turnstile-response"""
+    end = time.time() + timeout
+    tried_iframe = False
+    tried_touch = False
+    while time.time() < end:
+        resp = _cf_resp(sb)
+        if resp and len(resp) > 20:
+            log("Turnstile 响应已生成 → 挑战通过！")
+            return True
+        # 1) iframe 型 → SeleniumBase 精准点击（幂等）
+        try:
+            has_if = bool(sb.execute_script(
+                "return !!document.querySelector('iframe[src*=\"challenges.cloudflare.com\"],"
+                "iframe[src*=\"challenge-platform\"]');"))
+            if has_if and not tried_iframe:
+                tried_iframe = True
+                log("检测到 CF iframe，走 SeleniumBase 点击…")
+                try:
+                    sb.uc_gui_click_cf()
+                except BaseException:
+                    pass
+                try:
+                    sb.uc_gui_click_captcha()
+                except BaseException:
+                    pass
+                time.sleep(5)
+                continue
+        except BaseException:
+            pass
+        # 2) 内联组件中心 CDP 触摸点击
+        pos = cf_widget_center(sb)
+        if pos and not tried_touch:
+            tried_touch = True
+            log("点击内联 Turnstile 组件中心 (%.0f, %.0f)…" % (pos["x"], pos["y"]))
+            try:
+                drv = sb.driver
+                drv.execute_cdp_cmd("Emulation.setTouchEmulationEnabled",
+                                    {"enabled": True, "maxTouchPoints": 5})
+                drv.execute_cdp_cmd("Input.dispatchTouchEvent", {
+                    "type": "touchStart",
+                    "touchPoints": [{"x": pos["x"], "y": pos["y"],
+                                     "radiusX": 2, "radiusY": 2, "force": 1}]})
+                time.sleep(0.3)
+                drv.execute_cdp_cmd("Input.dispatchTouchEvent", {
+                    "type": "touchEnd", "touchPoints": []})
+                drv.execute_cdp_cmd("Emulation.setTouchEmulationEnabled", {"enabled": False})
+            except BaseException as e:
+                log("触摸点击异常: %s" % str(e)[:80])
+            time.sleep(5)
+            continue
+        # 3) 兜底：点一次按钮中心（managed 模式可能靠任意交互触发）
+        try:
+            r = sb.execute_script(
+                "var el=document.getElementById('afk-action-trigger');"
+                "if(!el)return null;"
+                "var b=el.getBoundingClientRect();"
+                "return JSON.stringify({x:b.x+b.width/2,y:b.y+b.height/2});")
+            if r:
+                import json as _json
+                p = _json.loads(r)
+                drv = sb.driver
+                drv.execute_cdp_cmd("Emulation.setTouchEmulationEnabled",
+                                    {"enabled": True, "maxTouchPoints": 5})
+                drv.execute_cdp_cmd("Input.dispatchTouchEvent", {
+                    "type": "touchStart",
+                    "touchPoints": [{"x": p["x"], "y": p["y"],
+                                     "radiusX": 2, "radiusY": 2, "force": 1}]})
+                time.sleep(0.2)
+                drv.execute_cdp_cmd("Input.dispatchTouchEvent", {
+                    "type": "touchEnd", "touchPoints": []})
+                drv.execute_cdp_cmd("Emulation.setTouchEmulationEnabled", {"enabled": False})
+                log("兜底点击按钮中心 (%.0f, %.0f)…" % (p["x"], p["y"]))
+        except BaseException:
+            pass
+        time.sleep(4)
+    log("内联 CF 挑战处理超时")
     return False
 
 
@@ -719,6 +843,20 @@ def run_earn_session(sb, session_num, token, hard_deadline):
         time.sleep(4)
         dump_page_state(sb, "点ack后")
 
+    # ================== v2.9: 先解内联 CF 挑战 ==================
+    # 页面加载后常有 CF managed 内联挑战覆盖层（'Take action to continue'）
+    # 盖住 HOLD 按钮 → 必须先点击通过，否则后续操作全打在覆盖层上
+    if not _proxy_connection_error(sb):
+        if _cf_resp(sb) and len(_cf_resp(sb)) > 20:
+            log("Turnstile 已自动通过")
+        elif cf_widget_center(sb) is not None:
+            log("检测到内联 Turnstile 挑战，先求解…")
+            dump_page_state(sb, "cf挑战时")
+            solve_inline_cf(sb, timeout=45)
+            dump_page_state(sb, "cf处理后")
+        else:
+            log("无内联 Turnstile 挑战覆盖")
+
     # ================== v2.6: 按住 HOLD TO START 启动 ==================
     # 站点机制：无 Cloudflare Turnstile，"VERIFY YOU ARE HUMAN"=按住
     # #afk-action-trigger 数秒激活会话（1 币/60 秒，上限 20 分钟）。
@@ -886,7 +1024,7 @@ def main():
     token = tokens[INSTANCE_ID % len(tokens)]
 
     log("=" * 56)
-    log("FreezeHost AFK 修复版 v2.8 - 实例 #%d" % INSTANCE_ID)
+    log("FreezeHost AFK 修复版 v2.9 - 实例 #%d" % INSTANCE_ID)
     log("Token: %s...%s" % (token[:10], token[-5:]))
     log("代理顺序: %s TRY_SOLVE=%s RUSH_AFK_ON_FAIL=%s UC_CDP=%s"
         % (PROXY_ORDER, TRY_SOLVE, RUSH_AFK_ON_FAIL, UC_CDP))
