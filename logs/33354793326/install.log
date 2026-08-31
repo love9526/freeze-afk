@@ -1,0 +1,304 @@
+Collecting seleniumbase
+  Downloading seleniumbase-4.53.0-py3-none-any.whl.metadata (91 kB)
+Collecting pyvirtualdisplay
+  Downloading PyVirtualDisplay-3.0-py3-none-any.whl.metadata (943 bytes)
+Requirement already satisfied: pip>=26.2.1 in /opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages (from seleniumbase) (26.2.1)
+Collecting packaging>=26.3 (from seleniumbase)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting setuptools>=84.0.0 (from seleniumbase)
+  Downloading setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting wheel>=0.48.0 (from seleniumbase)
+  Downloading wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting attrs>=26.1.0 (from seleniumbase)
+  Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting certifi>=2026.7.22 (from seleniumbase)
+  Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting exceptiongroup>=1.3.1 (from seleniumbase)
+  Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+Collecting websockets>=16.1.1 (from seleniumbase)
+  Downloading websockets-17.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.3 kB)
+Collecting filelock>=3.32.4 (from seleniumbase)
+  Downloading filelock-3.32.4-py3-none-any.whl.metadata (2.0 kB)
+Collecting fasteners>=0.20 (from seleniumbase)
+  Downloading fasteners-0.20-py3-none-any.whl.metadata (4.8 kB)
+Collecting mycdp>=1.4.0 (from seleniumbase)
+  Downloading mycdp-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting pynose>=1.5.5 (from seleniumbase)
+  Downloading pynose-1.5.5-py3-none-any.whl.metadata (19 kB)
+Collecting platformdirs>=4.11.5 (from seleniumbase)
+  Downloading platformdirs-4.11.5-py3-none-any.whl.metadata (5.5 kB)
+Collecting typing-extensions>=4.16.0 (from seleniumbase)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting sbvirtualdisplay>=1.4.0 (from seleniumbase)
+  Downloading sbvirtualdisplay-1.4.0-py3-none-any.whl.metadata (4.3 kB)
+Collecting MarkupSafe>=3.0.3 (from seleniumbase)
+  Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting Jinja2>=3.1.6 (from seleniumbase)
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting six>=1.17.0 (from seleniumbase)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting parse>=1.22.1 (from seleniumbase)
+  Downloading parse-1.22.1-py2.py3-none-any.whl.metadata (21 kB)
+Collecting parse-type>=0.6.6 (from seleniumbase)
+  Downloading parse_type-0.6.6-py2.py3-none-any.whl.metadata (12 kB)
+Collecting colorama>=0.4.6 (from seleniumbase)
+  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting psutil>=7.2.2 (from seleniumbase)
+  Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+Collecting pyyaml>=6.0.3 (from seleniumbase)
+  Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting pygments>=2.20.1 (from seleniumbase)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting tabcompleter>=1.4.1 (from seleniumbase)
+  Downloading tabcompleter-1.4.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting pdbp>=1.8.2 (from seleniumbase)
+  Downloading pdbp-1.8.2-py3-none-any.whl.metadata (7.2 kB)
+Collecting idna>=3.19 (from seleniumbase)
+  Downloading idna-3.19-py3-none-any.whl.metadata (9.2 kB)
+Collecting charset-normalizer<4,>=3.5.1 (from seleniumbase)
+  Downloading charset_normalizer-3.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (45 kB)
+Collecting urllib3<3,>=2.7.0 (from seleniumbase)
+  Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting requests~=2.34.2 (from seleniumbase)
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting sniffio==1.3.1 (from seleniumbase)
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting h11==0.16.0 (from seleniumbase)
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting outcome==1.3.0.post0 (from seleniumbase)
+  Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+Collecting trio<1,>=0.34.0 (from seleniumbase)
+  Downloading trio-0.34.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting trio-websocket~=0.12.2 (from seleniumbase)
+  Downloading trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting wsproto~=1.3.2 (from seleniumbase)
+  Downloading wsproto-1.3.2-py3-none-any.whl.metadata (5.2 kB)
+Collecting websocket-client~=1.9.1 (from seleniumbase)
+  Downloading websocket_client-1.9.1-py3-none-any.whl.metadata (8.3 kB)
+Collecting selenium==4.48.0 (from seleniumbase)
+  Downloading selenium-4.48.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting cssselect<2,>=1.5.0 (from seleniumbase)
+  Downloading cssselect-1.5.0-py3-none-any.whl.metadata (2.4 kB)
+Collecting sortedcontainers==2.4.0 (from seleniumbase)
+  Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Collecting execnet==2.1.2 (from seleniumbase)
+  Downloading execnet-2.1.2-py3-none-any.whl.metadata (2.9 kB)
+Collecting iniconfig==2.3.0 (from seleniumbase)
+  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting pluggy==1.6.0 (from seleniumbase)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting pytest==9.1.1 (from seleniumbase)
+  Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting pytest-html==4.0.2 (from seleniumbase)
+  Downloading pytest_html-4.0.2-py3-none-any.whl.metadata (3.9 kB)
+Collecting pytest-metadata==3.1.1 (from seleniumbase)
+  Downloading pytest_metadata-3.1.1-py3-none-any.whl.metadata (8.6 kB)
+Collecting pytest-ordering==0.6 (from seleniumbase)
+  Downloading pytest_ordering-0.6-py3-none-any.whl.metadata (1.1 kB)
+Collecting pytest-rerunfailures==16.6 (from seleniumbase)
+  Downloading pytest_rerunfailures-16.6-py3-none-any.whl.metadata (28 kB)
+Collecting pytest-xdist==3.8.0 (from seleniumbase)
+  Downloading pytest_xdist-3.8.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting parameterized==0.9.0 (from seleniumbase)
+  Downloading parameterized-0.9.0-py2.py3-none-any.whl.metadata (18 kB)
+Collecting behave==1.2.6 (from seleniumbase)
+  Downloading behave-1.2.6-py2.py3-none-any.whl.metadata (6.4 kB)
+Collecting soupsieve~=2.9.2 (from seleniumbase)
+  Downloading soupsieve-2.9.2-py3-none-any.whl.metadata (4.6 kB)
+Collecting beautifulsoup4~=4.15.0 (from seleniumbase)
+  Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting pyotp~=2.10.0 (from seleniumbase)
+  Downloading pyotp-2.10.0-py3-none-any.whl.metadata (10 kB)
+Collecting python-xlib==0.33 (from seleniumbase)
+  Downloading python_xlib-0.33-py2.py3-none-any.whl.metadata (6.2 kB)
+Collecting PyAutoGUI>=0.9.54 (from seleniumbase)
+  Downloading PyAutoGUI-0.9.54.tar.gz (61 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting markdown-it-py==4.2.0 (from seleniumbase)
+  Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting mdurl==0.1.2 (from seleniumbase)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting rich<16,>=15.0.0 (from seleniumbase)
+  Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3.0,>=2.6.3->selenium==4.48.0->seleniumbase)
+  Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+Collecting python3-Xlib (from PyAutoGUI>=0.9.54->seleniumbase)
+  Downloading python3-xlib-0.15.tar.gz (132 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting pymsgbox (from PyAutoGUI>=0.9.54->seleniumbase)
+  Downloading pymsgbox-2.0.1-py3-none-any.whl.metadata (4.4 kB)
+Collecting pytweening>=1.0.4 (from PyAutoGUI>=0.9.54->seleniumbase)
+  Downloading pytweening-1.2.0.tar.gz (171 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting pyscreeze>=0.1.21 (from PyAutoGUI>=0.9.54->seleniumbase)
+  Downloading pyscreeze-1.0.1.tar.gz (27 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting pygetwindow>=0.0.5 (from PyAutoGUI>=0.9.54->seleniumbase)
+  Downloading PyGetWindow-0.0.9.tar.gz (9.7 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting mouseinfo (from PyAutoGUI>=0.9.54->seleniumbase)
+  Downloading MouseInfo-0.1.3.tar.gz (10 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting pyrect (from pygetwindow>=0.0.5->PyAutoGUI>=0.9.54->seleniumbase)
+  Downloading PyRect-0.2.0.tar.gz (17 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting Pillow>=9.3.0 (from pyscreeze>=0.1.21->PyAutoGUI>=0.9.54->seleniumbase)
+  Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting pyperclip (from mouseinfo->PyAutoGUI>=0.9.54->seleniumbase)
+  Downloading pyperclip-1.11.0-py3-none-any.whl.metadata (2.4 kB)
+Downloading seleniumbase-4.53.0-py3-none-any.whl (686 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 686.2/686.2 kB 28.0 MB/s  0:00:00
+Downloading behave-1.2.6-py2.py3-none-any.whl (136 kB)
+Downloading execnet-2.1.2-py3-none-any.whl (40 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+Downloading parameterized-0.9.0-py2.py3-none-any.whl (20 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+Downloading pytest_html-4.0.2-py3-none-any.whl (23 kB)
+Downloading pytest_metadata-3.1.1-py3-none-any.whl (11 kB)
+Downloading pytest_ordering-0.6-py3-none-any.whl (4.6 kB)
+Downloading pytest_rerunfailures-16.6-py3-none-any.whl (19 kB)
+Downloading pytest_xdist-3.8.0-py3-none-any.whl (46 kB)
+Downloading python_xlib-0.33-py2.py3-none-any.whl (182 kB)
+Downloading selenium-4.48.0-py3-none-any.whl (9.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.6/9.6 MB 65.8 MB/s  0:00:00
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+Downloading charset_normalizer-3.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (262 kB)
+Downloading cssselect-1.5.0-py3-none-any.whl (20 kB)
+Downloading pyotp-2.10.0-py3-none-any.whl (13 kB)
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading idna-3.19-py3-none-any.whl (68 kB)
+Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 67.3 MB/s  0:00:00
+Downloading soupsieve-2.9.2-py3-none-any.whl (37 kB)
+Downloading trio-0.34.0-py3-none-any.whl (511 kB)
+Downloading trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+Downloading websocket_client-1.9.1-py3-none-any.whl (95 kB)
+Downloading wsproto-1.3.2-py3-none-any.whl (24 kB)
+Downloading PyVirtualDisplay-3.0-py3-none-any.whl (15 kB)
+Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Downloading fasteners-0.20-py3-none-any.whl (18 kB)
+Downloading filelock-3.32.4-py3-none-any.whl (99 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Downloading mycdp-1.4.0-py3-none-any.whl (275 kB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Downloading parse-1.22.1-py2.py3-none-any.whl (20 kB)
+Downloading parse_type-0.6.6-py2.py3-none-any.whl (27 kB)
+Downloading pdbp-1.8.2-py3-none-any.whl (21 kB)
+Downloading platformdirs-4.11.5-py3-none-any.whl (23 kB)
+Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Downloading pynose-1.5.5-py3-none-any.whl (130 kB)
+Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 40.9 MB/s  0:00:00
+Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 35.8 MB/s  0:00:00
+Downloading sbvirtualdisplay-1.4.0-py3-none-any.whl (12 kB)
+Using cached setuptools-84.0.0-py3-none-any.whl (818 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading tabcompleter-1.4.1-py3-none-any.whl (6.9 kB)
+Downloading websockets-17.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (224 kB)
+Using cached wheel-0.48.0-py3-none-any.whl (33 kB)
+Downloading pymsgbox-2.0.1-py3-none-any.whl (10.0 kB)
+Downloading pyperclip-1.11.0-py3-none-any.whl (11 kB)
+Building wheels for collected packages: PyAutoGUI, pygetwindow, pyscreeze, pytweening, mouseinfo, pyrect, python3-Xlib
+  Building wheel for PyAutoGUI (pyproject.toml): started
+  Building wheel for PyAutoGUI (pyproject.toml): finished with status 'done'
+  Created wheel for PyAutoGUI: filename=pyautogui-0.9.54-py3-none-any.whl size=37684 sha256=9c2d9e30203550adf6f134a3b050830158f9d0aedf704b5cbc0cc679f3f784dd
+  Stored in directory: /home/runner/.cache/pip/wheels/95/dc/b1/fe122b791e0db8bf439a0e6e1d2628e48f10bf430cae13521b
+  Building wheel for pygetwindow (pyproject.toml): started
+  Building wheel for pygetwindow (pyproject.toml): finished with status 'done'
+  Created wheel for pygetwindow: filename=pygetwindow-0.0.9-py3-none-any.whl size=11120 sha256=1c59c8a45ef1f853cc2599506353d9dd94cb08eae6677c5b1ad5277c8b7419a5
+  Stored in directory: /home/runner/.cache/pip/wheels/07/75/0b/7ca0b598eb4c21d43ba4bcc78a0538dfcf803a5997da33bc19
+  Building wheel for pyscreeze (pyproject.toml): started
+  Building wheel for pyscreeze (pyproject.toml): finished with status 'done'
+  Created wheel for pyscreeze: filename=pyscreeze-1.0.1-py3-none-any.whl size=14458 sha256=a11b9edd2849aa2cefb2e23e741b7722f05d2a526783363078c3f3f429fc3972
+  Stored in directory: /home/runner/.cache/pip/wheels/cd/e3/dd/267b393d8e8f607e47194942740d080d9bfd835cd4375a3de1
+  Building wheel for pytweening (pyproject.toml): started
+  Building wheel for pytweening (pyproject.toml): finished with status 'done'
+  Created wheel for pytweening: filename=pytweening-1.2.0-py3-none-any.whl size=8113 sha256=a90c65af6467d8d12c599fccb82367fcb94e1913429a1e519f025e6bd5e68936
+  Stored in directory: /home/runner/.cache/pip/wheels/db/81/dc/0d61a3c9614f288e057ab63924e2a49edbeed4ffc916dcda1e
+  Building wheel for mouseinfo (pyproject.toml): started
+  Building wheel for mouseinfo (pyproject.toml): finished with status 'done'
+  Created wheel for mouseinfo: filename=mouseinfo-0.1.3-py3-none-any.whl size=10943 sha256=eb20d8d3ebf934bec13b31f428badbadba6c05749d71104526765247ccf65271
+  Stored in directory: /home/runner/.cache/pip/wheels/20/0b/7f/939ac9ff785b09951c706150537572c00123412f260a6024f3
+  Building wheel for pyrect (pyproject.toml): started
+  Building wheel for pyrect (pyproject.toml): finished with status 'done'
+  Created wheel for pyrect: filename=pyrect-0.2.0-py2.py3-none-any.whl size=11278 sha256=3d44d1915e2940ad8e599e42dc85d0bfcfa07ae934a39bf989a07879761146a7
+  Stored in directory: /home/runner/.cache/pip/wheels/c4/e9/fc/b7a666dd4f9a3168fb44d643079b41d36ddab52f470707e820
+  Building wheel for python3-Xlib (pyproject.toml): started
+  Building wheel for python3-Xlib (pyproject.toml): finished with status 'done'
+  Created wheel for python3-Xlib: filename=python3_xlib-0.15-py3-none-any.whl size=109549 sha256=6b1b6b52261aec477d75f69bbab6ed21d875ad0e338d6df05c08d88b130cbd37
+  Stored in directory: /home/runner/.cache/pip/wheels/58/d2/1b/c2247396a6c5fbb1900ccf1ec3b73482d428b137dcdf1d99de
+Successfully built PyAutoGUI pygetwindow pyscreeze pytweening mouseinfo pyrect python3-Xlib
+Installing collected packages: sortedcontainers, pyvirtualdisplay, pytweening, python3-Xlib, pyrect, pyperclip, parse, websockets, websocket-client, urllib3, typing-extensions, tabcompleter, soupsieve, sniffio, six, setuptools, sbvirtualdisplay, pyyaml, pysocks, pyotp, pynose, pymsgbox, pygments, pygetwindow, psutil, pluggy, platformdirs, Pillow, parameterized, packaging, mycdp, mouseinfo, mdurl, MarkupSafe, iniconfig, idna, h11, filelock, fasteners, execnet, cssselect, colorama, charset-normalizer, certifi, attrs, wsproto, wheel, requests, python-xlib, pytest, pyscreeze, pdbp, parse-type, outcome, markdown-it-py, Jinja2, exceptiongroup, beautifulsoup4, trio, rich, pytest-xdist, pytest-rerunfailures, pytest-ordering, pytest-metadata, PyAutoGUI, behave, trio-websocket, pytest-html, selenium, seleniumbase
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 79.0.1
+    Uninstalling setuptools-79.0.1:
+      Successfully uninstalled setuptools-79.0.1
+
+Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3 Pillow-12.3.0 PyAutoGUI-0.9.54 attrs-26.1.0 beautifulsoup4-4.15.0 behave-1.2.6 certifi-2026.7.22 charset-normalizer-3.5.1 colorama-0.4.6 cssselect-1.5.0 exceptiongroup-1.3.1 execnet-2.1.2 fasteners-0.20 filelock-3.32.4 h11-0.16.0 idna-3.19 iniconfig-2.3.0 markdown-it-py-4.2.0 mdurl-0.1.2 mouseinfo-0.1.3 mycdp-1.4.0 outcome-1.3.0.post0 packaging-26.3 parameterized-0.9.0 parse-1.22.1 parse-type-0.6.6 pdbp-1.8.2 platformdirs-4.11.5 pluggy-1.6.0 psutil-7.2.2 pygetwindow-0.0.9 pygments-2.21.0 pymsgbox-2.0.1 pynose-1.5.5 pyotp-2.10.0 pyperclip-1.11.0 pyrect-0.2.0 pyscreeze-1.0.1 pysocks-1.7.1 pytest-9.1.1 pytest-html-4.0.2 pytest-metadata-3.1.1 pytest-ordering-0.6 pytest-rerunfailures-16.6 pytest-xdist-3.8.0 python-xlib-0.33 python3-Xlib-0.15 pytweening-1.2.0 pyvirtualdisplay-3.0 pyyaml-6.0.3 requests-2.34.2 rich-15.0.0 sbvirtualdisplay-1.4.0 selenium-4.48.0 seleniumbase-4.53.0 setuptools-84.0.0 six-1.17.0 sniffio-1.3.1 sortedcontainers-2.4.0 soupsieve-2.9.2 tabcompleter-1.4.1 trio-0.34.0 trio-websocket-0.12.2 typing-extensions-4.16.0 urllib3-2.7.0 websocket-client-1.9.1 websockets-17.1 wheel-0.48.0 wsproto-1.3.2
+
+*** Getting chromedriver 151.0.7922.138 (Previous Version)
+
+Downloading chromedriver-linux64.zip from:
+https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.138/linux64/chromedriver-linux64.zip ...
+Download Complete!
+
+Extracting ['chromedriver'] from chromedriver-linux64.zip:
+Unzip Complete!
+
+['chromedriver'] was saved to:
+/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/seleniumbase/drivers/
+chromedriver
+
+[chromedriver 151.0.7922.138] is ready for use!
+
