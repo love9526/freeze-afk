@@ -1,0 +1,1235 @@
+[03:24:37] ========================================================
+[03:24:37] FreezeHost AFK 修复版 v2.9 - 实例 #0
+[03:24:37] Token: NDIxODYxND...7Fit0
+[03:24:37] 代理顺序: ['direct', 'warp'] TRY_SOLVE=False RUSH_AFK_ON_FAIL=True UC_CDP=False
+[03:24:37] ========================================================
+[03:24:37] 启动浏览器…（代理: 直连，实例 1/8）
+[03:24:43] 打开 FreezeHost…
+[03:24:59] 已确认服务条款
+[03:25:01] 注入 Token…
+[03:25:01] 刷新页面等待 OAuth 回调…
+[03:25:10] 当前地址: https://free.freezehost.pro/dashboard
+[03:25:10] 登录 OK！
+[03:25:10] 
+[03:25:10] === Session #1（浏览器实例 1）===
+[03:25:10] 加载 /earn…
+[03:25:31] 反广告拦截绕过已注入
+[03:25:31]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 344 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 344 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 20h 34m 29s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025194257&","googlefcPresent","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[03:25:31] 无内联 Turnstile 挑战覆盖
+[03:25:31] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[03:25:31] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[03:25:31]   [按住中开始] 按钮文案: 'HOLDING...'
+[03:25:32]   [按住中2/3] 按钮文案: 'HOLDING...'
+[03:25:33]   [按住中3/3] 按钮文案: 'STARTING...'
+[03:25:34]   [按住中4/3] 按钮文案: 'STARTING...'
+[03:25:34] CDP 触控长按完成 3.0s
+[03:25:46] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[03:25:46] 按住后可能出现验证模态，检查并处理…
+[03:25:46]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 344 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 344 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 20h 34m 14s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025194257&","googlefcPresent","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text","GOT IT|#|.w-full relative z-10 bg-gradient-to-r fr"],"links":["Dashboard|/dashboard","Deploy|/server
+[03:25:46]   模态状态: {"verify_modal":true,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["GOT IT"],"modal_head":"Verification Required"}
+[03:25:46] 点击 reCAPTCHA 复选框…
+[03:25:50] 已点击模态按钮: GOT IT
+[03:25:53]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[03:25:53] 点击 reCAPTCHA 复选框…
+[03:25:57] 已点击模态按钮: Got it
+[03:26:00]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"1.8-0aRUmT38p4sv9zioKUqkcZF0pQBp5L7bIVLyy6vfz66J2eeBKV6sj4QgdSXdO1UZ1LgEnkI0qsCm9sm3AJmHq6d8JQYEnPlYTzvczIpaJyARV4DBcKv7EtUpubvdBCynYh35lPmfecbvHxcEXX0zuw_41rkZ8VsL7ef6mOR3IUaEG7WM2rcy7CUJm8mvn34A74tVjXIocpxWrFHItsRge0Ns_WDkLYavOVXjaKshL1U9CPGI__KvTREeYd_gSz15U71A_o1H7InxqUbwCYtRKGq_DnZTQj33cY4lNaJVKpu4SrAG_fjdkwGOgxfGZrsdoi4kGrIrg2TEI0GpL8-0dWQgdFR7oanOYl2AY4mbHLvBaqgT4jN-4kRaPNBfSsFevEv5j26BxcuZosDM8HsFkl7m7_KNNSP77qxlHXA9WW19TKIMGa3pTfcYDG4v8NfvdZziy0sVQCExkSbZPf5YnHfD0nk9c3PZuH5ykChMkg9e3pY-LbP2_wpPp1sMRtOvze9C8dBctq15wEVJiHPWwrrmEkwAyYkv5Fpjeq-WeXn6cdeMB9LWTHcbkaet09Vh_qV5pL_0j9DlE0849cAbG2ymoI-ZlSWCm8NHddmnOLYAeT2keUWO0WIubUunNfTeGFtnQIrb0HH_Z1ikuiTA.bPBUeFJV9A2SK3mu5NO_Eg.834115dbd5a310e54d7b29ea4af995c8e2dcdf9ee8ed75bdcac0cb60bb91122e","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[03:26:00] 验证响应已生成，模态通过
+[03:26:08] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[03:26:08] 未激活，长按重试 6s…
+[03:26:08] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[03:26:08]   [按住中开始] 按钮文案: 'HOLDING...'
+[03:26:09]   [按住中2/6] 按钮文案: 'HOLDING...'
+[03:26:10]   [按住中3/6] 按钮文案: 'STARTING...'
+[03:26:11]   [按住中4/6] 按钮文案: 'Starting...'
+[03:26:12]   [按住中5/6] 按钮文案: 'Starting...'
+[03:26:13]   [按住中6/6] 按钮文案: 'Starting...'
+[03:26:14]   [按住中7/6] 按钮文案: 'Starting...'
+[03:26:14] CDP 触控长按完成 6.0s
+[03:26:16] 重试按住后面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[03:26:16] AFK 会话已激活！面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[03:26:16] 开始赚币 1200 秒…
+[03:26:16]   [赚币进度] 已赚 0 币，下次 +1 在 54 秒，剩余 19:55
+[03:26:46]   [赚币进度] 已赚 0 币，下次 +1 在 24 秒，剩余 19:25
+[03:27:16]   [赚币进度] 已赚 1 币，下次 +1 在 53 秒，剩余 18:54
+[03:27:46]   [赚币进度] 已赚 1 币，下次 +1 在 23 秒，剩余 18:24
+[03:28:16]   [赚币进度] 已赚 2 币，下次 +1 在 53 秒，剩余 17:54
+[03:28:46]   [赚币进度] 已赚 2 币，下次 +1 在 23 秒，剩余 17:24
+[03:29:16]   [赚币进度] 已赚 3 币，下次 +1 在 53 秒，剩余 16:54
+[03:29:46]   [赚币进度] 已赚 3 币，下次 +1 在 23 秒，剩余 16:24
+[03:30:16]   [赚币进度] 已赚 4 币，下次 +1 在 53 秒，剩余 15:54
+[03:30:46]   [赚币进度] 已赚 4 币，下次 +1 在 23 秒，剩余 15:24
+[03:31:16]   [赚币进度] 已赚 5 币，下次 +1 在 53 秒，剩余 14:54
+[03:31:46]   [赚币进度] 已赚 5 币，下次 +1 在 23 秒，剩余 14:24
+[03:32:17]   [赚币进度] 已赚 6 币，下次 +1 在 53 秒，剩余 13:54
+[03:32:47]   [赚币进度] 已赚 6 币，下次 +1 在 23 秒，剩余 13:24
+[03:33:17]   [赚币进度] 已赚 7 币，下次 +1 在 53 秒，剩余 12:54
+[03:33:47]   [赚币进度] 已赚 7 币，下次 +1 在 23 秒，剩余 12:24
+[03:34:17]   [赚币进度] 已赚 8 币，下次 +1 在 53 秒，剩余 11:54
+[03:34:47]   [赚币进度] 已赚 8 币，下次 +1 在 23 秒，剩余 11:24
+[03:35:17]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:35:47]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:36:17]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:36:47]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:37:17]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:37:47]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:38:17]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:38:47]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:39:17]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:39:47]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:40:17]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:40:47]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:41:17]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:41:47]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:42:17]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:42:47]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:43:17]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:43:47]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:44:17]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:44:47]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:45:17]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:45:47]   [赚币进度] 已赚 8 币，下次 +1 在 59 秒，剩余 11:00
+[03:46:17] Session #1 完成
+[03:46:22] 
+[03:46:22] === Session #2（浏览器实例 1）===
+[03:46:22] 加载 /earn…
+[03:46:43] 反广告拦截绕过已注入
+[03:46:43]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 352 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 352 GLOBAL CURRENCY Discover more Debugging tools software Cloud hosting solutions Download Productivity Apps Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 20h 13m 17s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastruc","iframes":["googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem","|/settings","|/logout","Dashboard|/dashboard","Deploy Server|/servers/new","Resource Store|/store","Earn Coins|/coins","Re
+[03:46:43] 无内联 Turnstile 挑战覆盖
+[03:46:43] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[03:46:43] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[03:46:43]   [按住中开始] 按钮文案: 'HOLDING...'
+[03:46:44]   [按住中2/3] 按钮文案: 'HOLDING...'
+[03:46:45]   [按住中3/3] 按钮文案: 'STARTING...'
+[03:46:46]   [按住中4/3] 按钮文案: 'STARTING...'
+[03:46:46] CDP 触控长按完成 3.0s
+[03:46:58] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[03:46:58] 按住后可能出现验证模态，检查并处理…
+[03:46:58]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 352 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 352 GLOBAL CURRENCY Discover more Debugging tools software Cloud hosting solutions Download Productivity Apps Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 20h 13m 01s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastruc","iframes":["googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text","GOT IT|#|.w-full relative z-10 bg-gradient-to-r fr"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem","|/settings","|/logout","Dashboard|/dashboard","Deploy Server|/servers
+[03:46:58]   模态状态: {"verify_modal":true,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["GOT IT"],"modal_head":"Verification Required"}
+[03:46:58] 点击 reCAPTCHA 复选框…
+[03:47:02] 已点击模态按钮: GOT IT
+[03:47:05]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[03:47:05] 点击 reCAPTCHA 复选框…
+[03:47:09] 已点击模态按钮: Got it
+[03:47:12]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"1.aMnosb9MEIu2q404C_D9Uv57Jt2il0oXD_4vwIFE9B5OUkCfnayOqtq5whnfAx7m4Y80Ebe38wk88ODQYSrg-VUG11ECjZZlC4ckjoBwFWDG5xwEl6NuAYeE9NgnsQh-7wcSHbADMLOEeH2PmPtIQvW58rMjDeSDyKlsHI0OaOHSCNcxmockM-JFnoyauRz3QGPQYWbl9yQmJH15fEQRL5c8NdkHAQUzapu5Gg9jUYV2D_4uQXFTza6Y12p6d2R2easLQe-wqnexlJ1al1f1dX1-LfXvtmqXdlgdqvvSFviS4jU62h2Cl9v5U9wqxsQO5Jf-XiB6T8w-SCZD_gXdTZ0Eer1Nx1Veyg9gjSouWiFrsKJHwFs0gc1PpIbE0kmLA1YFpfHm1WIH6pBDRiLzhYqQsAkpQxm5XLr4GrprgqBUntWwGRCE2F2JOckyIO3Zr1GdCVbVJ5CLLSEC86kStYxan4cH3HPh9-aMOQjDvicMNG0mKr9PXPbuKwX7BfNYdPcSvQy8cpzltaDIxZZ5eUc6pPt3zOJvf-UlNMnPS9J9e8j1I0Tz49QRvF55C7GSNBfAf-50fZKfIfeetfXi-cGUNW6X_QjEb2iWLkz7_Sc7giJmfcTmlAvnQwD60mt9CfdupxGBBz4PRkysHjU9xw.yZkNIfBW9XcsuRg9LnB50A.defffa97729893cab1a9f66e66084ce04e4b6c91962e9ab7ed051dad8fbc5f1e","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[03:47:12] 验证响应已生成，模态通过
+[03:47:20] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[03:47:20] 未激活，长按重试 6s…
+[03:47:20] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[03:47:20]   [按住中开始] 按钮文案: 'HOLDING...'
+[03:47:21]   [按住中2/6] 按钮文案: 'HOLDING...'
+[03:47:22]   [按住中3/6] 按钮文案: 'STARTING...'
+[03:47:23]   [按住中4/6] 按钮文案: 'Starting...'
+[03:47:24]   [按住中5/6] 按钮文案: 'Starting...'
+[03:47:25]   [按住中6/6] 按钮文案: 'Starting...'
+[03:47:26]   [按住中7/6] 按钮文案: 'Starting...'
+[03:47:26] CDP 触控长按完成 6.0s
+[03:47:28] 重试按住后面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:54"}
+[03:47:28] AFK 会话已激活！面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:54"}
+[03:47:28] 开始赚币 1200 秒…
+[03:47:28]   [赚币进度] 已赚 0 币，下次 +1 在 54 秒，剩余 19:54
+[03:47:58]   [赚币进度] 已赚 0 币，下次 +1 在 24 秒，剩余 19:24
+[03:48:28]   [赚币进度] 已赚 1 币，下次 +1 在 54 秒，剩余 18:54
+[03:48:58]   [赚币进度] 已赚 1 币，下次 +1 在 24 秒，剩余 18:24
+[03:49:28]   [赚币进度] 已赚 2 币，下次 +1 在 54 秒，剩余 17:54
+[03:49:58]   [赚币进度] 已赚 2 币，下次 +1 在 24 秒，剩余 17:24
+[03:50:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:50:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:51:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:51:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:52:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:52:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:53:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:53:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:54:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:54:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:55:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:55:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:56:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:56:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:57:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:57:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:58:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:58:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:59:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[03:59:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:00:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:00:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:01:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:01:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:02:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:02:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:03:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:03:59]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:04:29]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:04:59]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:05:29]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:05:59]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:06:29]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:06:59]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[04:07:29] Session #2 完成
+[04:07:34] 
+[04:07:34] === Session #3（浏览器实例 1）===
+[04:07:34] 加载 /earn…
+[04:07:55] 反广告拦截绕过已注入
+[04:07:55]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 354 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 354 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 19h 52m 05s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[04:07:55] 无内联 Turnstile 挑战覆盖
+[04:07:55] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[04:07:55] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[04:07:55]   [按住中开始] 按钮文案: 'HOLDING...'
+[04:07:56]   [按住中2/3] 按钮文案: 'HOLDING...'
+[04:07:57]   [按住中3/3] 按钮文案: 'STARTING...'
+[04:07:58]   [按住中4/3] 按钮文案: 'STARTING...'
+[04:07:58] CDP 触控长按完成 3.0s
+[04:08:10] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[04:08:10] 按住后可能出现验证模态，检查并处理…
+[04:08:10]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 354 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 354 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 19h 51m 49s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text","GOT IT|#|.w-full relative z-10 bg-gradient-to-r fr"],"links":["Dashboard|/dashboard","Deploy|/server
+[04:08:10]   模态状态: {"verify_modal":true,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["GOT IT"],"modal_head":"Verification Required"}
+[04:08:10] 点击 reCAPTCHA 复选框…
+[04:08:14] 已点击模态按钮: GOT IT
+[04:08:17]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[04:08:17] 点击 reCAPTCHA 复选框…
+[04:08:20] 已点击模态按钮: Got it
+[04:08:23]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"1.yk9Epzq9W_j2OsirB8yvYZ-Nd0jcQZWyyQJ5lYXndUs5GsQDN8A_vIP6PyqWFkU0rcqFlH98-rr7fpTsm9mrbyRKADZklMuqUFUAazlD4V-bUrI3CWcojE9qFiKynhvEFMbtxb_cy03zoS7lLGRtK9AvXY7uJexZx6SnzAc08XX_0anMczEFP9DQpG-vziA8kiLHMnZgPnPEvfJFn83CVlPlUjkVZ_sIdsfV0LVmqUYkU5gNJPrECu6HMy80Umka4aJ1eeorRGzSq4PoBLdQOgwhaZZN8VaCCmTshSBnbJZKRXdPX-yYM5sn_xuNqzL4fXGWwQVaXjGsyXA4L8U6pUUCxJxuRswWaRx2Ke_oI_Jym5TrUr0IDYrOazmdNHAb8LaFZc9Bxygw7saAdFYBY7vbgM1Hd_580Atht7T3QByZq4TGtTuIh5yHW6DVMXfFGqW_iMgDkw0DFZTYUdcOmTZSbQ_AdAhQ_b3mtkMrn_R9bNe_k2Ef1OGnaf5FSYapghseIljqZmqnbOPgNstFikiLulprMMZlYF76xPdqtaATeGsfGxYUNxkXXWy3EpBljP4Gju_Q0ZPFQ9sPlBK0IKjdThcCv66I-zTm133YZ2wAVPfRWGrfHGD883KXWp1Q52I31LzpfGneRwcEGLyQ1w.0mZcI9ABvlOAhYERlgLwIg.3e15d8f66548460fe0886afa61d03020bc17bc8869d0156b1930a4643e68d9e9","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[04:08:23] 验证响应已生成，模态通过
+[04:08:31] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[04:08:31] 未激活，长按重试 6s…
+[04:08:31] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[04:08:31]   [按住中开始] 按钮文案: 'HOLDING...'
+[04:08:32]   [按住中2/6] 按钮文案: 'HOLDING...'
+[04:08:34]   [按住中3/6] 按钮文案: 'STARTING...'
+[04:08:35]   [按住中4/6] 按钮文案: 'Starting...'
+[04:08:36]   [按住中5/6] 按钮文案: 'Starting...'
+[04:08:37]   [按住中6/6] 按钮文案: 'Starting...'
+[04:08:38]   [按住中7/6] 按钮文案: 'Starting...'
+[04:08:38] CDP 触控长按完成 6.0s
+[04:08:40] 重试按住后面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[04:08:40] AFK 会话已激活！面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[04:08:40] 开始赚币 1200 秒…
+[04:08:40]   [赚币进度] 已赚 0 币，下次 +1 在 54 秒，剩余 19:55
+[04:09:10]   [赚币进度] 已赚 0 币，下次 +1 在 24 秒，剩余 19:25
+[04:09:40]   [赚币进度] 已赚 1 币，下次 +1 在 54 秒，剩余 18:55
+[04:10:10]   [赚币进度] 已赚 1 币，下次 +1 在 24 秒，剩余 18:25
+[04:10:40]   [赚币进度] 已赚 2 币，下次 +1 在 54 秒，剩余 17:55
+[04:11:10]   [赚币进度] 已赚 2 币，下次 +1 在 24 秒，剩余 17:25
+[04:11:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:12:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:12:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:13:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:13:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:14:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:14:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:15:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:15:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:16:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:16:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:17:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:17:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:18:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:18:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:19:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:19:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:20:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:20:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:21:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:21:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:22:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:22:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:23:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:23:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:24:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:24:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:25:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:25:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:26:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:26:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:27:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:27:40]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:28:10]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:28:40] Session #3 完成
+[04:28:45] 
+[04:28:45] === Session #4（浏览器实例 1）===
+[04:28:45] 加载 /earn…
+[04:29:06] 反广告拦截绕过已注入
+[04:29:06]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 356 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 356 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 19h 30m 53s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[04:29:06] 无内联 Turnstile 挑战覆盖
+[04:29:06] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[04:29:06] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[04:29:06]   [按住中开始] 按钮文案: 'HOLDING...'
+[04:29:07]   [按住中2/3] 按钮文案: 'HOLDING...'
+[04:29:08]   [按住中3/3] 按钮文案: 'STARTING...'
+[04:29:09]   [按住中4/3] 按钮文案: 'STARTING...'
+[04:29:09] CDP 触控长按完成 3.0s
+[04:29:22] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[04:29:22] 按住后可能出现验证模态，检查并处理…
+[04:29:22]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 356 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 356 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 19h 30m 37s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text","GOT IT|#|.w-full relative z-10 bg-gradient-to-r fr"],"links":["Dashboard|/dashboard","Deploy|/server
+[04:29:22]   模态状态: {"verify_modal":true,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["GOT IT"],"modal_head":"Verification Required"}
+[04:29:22] 点击 reCAPTCHA 复选框…
+[04:29:25] 已点击模态按钮: GOT IT
+[04:29:28]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[04:29:28] 点击 reCAPTCHA 复选框…
+[04:29:32] 已点击模态按钮: Got it
+[04:29:35]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"1.1VfG1Lg1W4mdJrlMAzcG-xXc1jxtCsPyhQonU4KkFtgUU-HjjB3K6AgkhBwmIo57iOZMNaKVjbyFkdsSZLe4mBHAGFLEMnHf-e1fPH_BcUchDyqVlU7OhRdsdlCp58QOIWA2zIzKZGOoeL66B9LGwYTfVwjIybsHPowhLVVUl71f8K_UeTNTFztNyRilI7_-wutUdr3GhawkoBNwFBBTGB4_suo_xznwJqgMiFIKmBfEKWcMQ3XcLc_r3v5PPWN1639QkmZ55bEHAKXrqZpoHTQlJ_yIZlZlyuC0_2EblCIu2Nxk-onX9QK_UN341zsomCxz9raQQ6GJSozheHjJaTds95JZfnwXyQX_QKFMVJhwBTvSzmryw0KP859HF-9MvRGF8Dsu50PNa-P33rsDcuLhkKIDOKQ_zbZs3ARaTbW5y9CF6Tb80aYZNdMv7G425UeZ-NMKtXiXR9YliILKWnHFT6op6QDYT-P1LriEMhasQhGZbVs0Vv-GC71Qa9KthvslQ7yhm4fd6s9O2WGL05giYQLNyYJTuv4AmDKAMCq66dFaocHAuEsXoxRD4nQu55l8VgOB94rmWeAbxviipPM9qzDA_tAM89s1BgDh-0ZM5k38kBRyI-Ls504_aOqL6OgTvEgVYVqABvF9ug-x1w.8FUR--FmIzeTbrwocZRV-A.72e321316b09feec91ed2ff0b0db586b7d77882591622d774d82c21bf5a3f04b","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[04:29:35] 验证响应已生成，模态通过
+[04:29:43] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[04:29:43] 未激活，长按重试 6s…
+[04:29:43] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[04:29:43]   [按住中开始] 按钮文案: 'HOLDING...'
+[04:29:44]   [按住中2/6] 按钮文案: 'HOLDING...'
+[04:29:45]   [按住中3/6] 按钮文案: 'STARTING...'
+[04:29:46]   [按住中4/6] 按钮文案: 'Starting...'
+[04:29:47]   [按住中5/6] 按钮文案: 'Starting...'
+[04:29:48]   [按住中6/6] 按钮文案: 'Starting...'
+[04:29:49]   [按住中7/6] 按钮文案: 'Starting...'
+[04:29:49] CDP 触控长按完成 6.0s
+[04:29:51] 重试按住后面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[04:29:51] AFK 会话已激活！面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[04:29:51] 开始赚币 1200 秒…
+[04:29:51]   [赚币进度] 已赚 0 币，下次 +1 在 54 秒，剩余 19:55
+[04:30:21]   [赚币进度] 已赚 0 币，下次 +1 在 24 秒，剩余 19:25
+[04:30:51]   [赚币进度] 已赚 1 币，下次 +1 在 54 秒，剩余 18:55
+[04:31:21]   [赚币进度] 已赚 1 币，下次 +1 在 24 秒，剩余 18:25
+[04:31:51]   [赚币进度] 已赚 2 币，下次 +1 在 54 秒，剩余 17:55
+[04:32:21]   [赚币进度] 已赚 2 币，下次 +1 在 24 秒，剩余 17:25
+[04:32:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:33:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:33:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:34:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:34:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:35:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:35:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:36:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:36:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:37:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:37:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:38:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:38:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:39:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:39:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:40:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:40:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:41:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:41:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:42:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:42:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:43:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:43:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:44:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:44:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:45:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:45:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:46:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:46:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:47:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:47:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:48:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:48:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:49:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[04:49:51] Session #4 完成
+[04:49:56] 
+[04:49:56] === Session #5（浏览器实例 1）===
+[04:49:56] 加载 /earn…
+[04:50:18] 反广告拦截绕过已注入
+[04:50:18]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 358 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 358 GLOBAL CURRENCY Discover more Dedicated server rental Website performance optimization Data backup solutions Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 19h 09m 42s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrast","iframes":["googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html#RS-1-&adk=1812271802&client=c"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[04:50:18] 无内联 Turnstile 挑战覆盖
+[04:50:18] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[04:50:18] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[04:50:18]   [按住中开始] 按钮文案: 'HOLDING...'
+[04:50:19]   [按住中2/3] 按钮文案: 'HOLDING...'
+[04:50:20]   [按住中3/3] 按钮文案: 'STARTING...'
+[04:50:21]   [按住中4/3] 按钮文案: 'STARTING...'
+[04:50:21] CDP 触控长按完成 3.0s
+[04:50:33] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[04:50:33] 按住后可能出现验证模态，检查并处理…
+[04:50:33]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 358 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 358 GLOBAL CURRENCY Discover more Dedicated server rental Website performance optimization Data backup solutions Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 19h 09m 26s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrast","iframes":["googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html#RS-1-&adk=1812271802&client=c"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text","GOT IT|#|.w-full relative z-10 bg-gradient-to-r fr"],"links":["Dashboard|/dashboard","Deploy|/server
+[04:50:33]   模态状态: {"verify_modal":true,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["GOT IT"],"modal_head":"Verification Required"}
+[04:50:33] 点击 reCAPTCHA 复选框…
+[04:50:37] 已点击模态按钮: GOT IT
+[04:50:40]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[04:50:40] 点击 reCAPTCHA 复选框…
+[04:50:43] 已点击模态按钮: Got it
+[04:50:46]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"1.bDY0e4IOsuqjOoesQi45RBrT-mi_u3GPv9PFKx89LTeBiz_JJLm2nLL9_TkKTnmIEsWkeAvrCVrpgOia9KDHqCPM2PaGPo0eJR4hN6JZNeQaxhO_aAc_JnqMlIdTqVgjYO0A8Yt1gWXQFbvD6Go6Hz8-kjLrBD7FMvMoeq2ldNvizFnYERuIXifMyBytqCA07sNQG8cH_UupgeyYwZwJ0ffKQFfk2AQfeflUjAPP0AVn0DeDM7iRvicoabqiUtxvD1WCRGde27N-RPaAUVPbtgo0LTwjc_S2x7aK6qZZ2HhMFqGun7jW14M-4PhQLOacE6rpv4Wx0jgqP0UhRSw8WRiJyuJqCMSBNbjLe75NcmNt9g1ng1dQ4Ysi4lr3gfYztBCRCAYEGB4Nppzte5bg4VAe34V08JBwxWC5jDRioeGz9TRLw3BA4XAQMqaYSBHBU32z4XsZwavA0ZenyMMXptdcvqDfkbhuixqTEfISwlU9hvvony2LV8nlwXzoTujYKOntgnY-Sckcvf_Vq996HV2_K5UIAvY3lScbaVEqY3ih86VRF34Qv64rps2icHFI-8E239OkG0_9_H1i3PyeN1FoQmni_OiNhc1QhwWOcmtRpDmY38uEgAeKezhynVedd_SZ1fgD_ecWS0wJ7XrinA.U0GxKbYreOnqy41WwxtWdw.e74396e248fa33ede126210c32463f4bd7f257365be17eb558bd2365207f992c","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[04:50:46] 验证响应已生成，模态通过
+[04:50:54] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[04:50:54] 未激活，长按重试 6s…
+[04:50:54] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[04:50:55]   [按住中开始] 按钮文案: 'HOLDING...'
+[04:50:56]   [按住中2/6] 按钮文案: 'HOLDING...'
+[04:50:57]   [按住中3/6] 按钮文案: 'STARTING...'
+[04:50:58]   [按住中4/6] 按钮文案: 'Starting...'
+[04:50:59]   [按住中5/6] 按钮文案: 'Starting...'
+[04:51:00]   [按住中6/6] 按钮文案: 'Starting...'
+[04:51:01]   [按住中7/6] 按钮文案: 'Starting...'
+[04:51:01] CDP 触控长按完成 6.0s
+[04:51:03] 重试按住后面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[04:51:03] AFK 会话已激活！面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[04:51:03] 开始赚币 1200 秒…
+[04:51:03]   [赚币进度] 已赚 0 币，下次 +1 在 54 秒，剩余 19:55
+[04:51:33]   [赚币进度] 已赚 0 币，下次 +1 在 24 秒，剩余 19:24
+[04:52:03]   [赚币进度] 已赚 1 币，下次 +1 在 54 秒，剩余 18:55
+[04:52:33]   [赚币进度] 已赚 1 币，下次 +1 在 24 秒，剩余 18:25
+[04:53:03]   [赚币进度] 已赚 2 币，下次 +1 在 54 秒，剩余 17:55
+[04:53:33]   [赚币进度] 已赚 2 币，下次 +1 在 24 秒，剩余 17:25
+[04:54:03]   [赚币进度] 已赚 3 币，下次 +1 在 54 秒，剩余 16:55
+[04:54:33]   [赚币进度] 已赚 3 币，下次 +1 在 24 秒，剩余 16:25
+[04:55:03]   [赚币进度] 已赚 4 币，下次 +1 在 54 秒，剩余 15:55
+[04:55:33]   [赚币进度] 已赚 4 币，下次 +1 在 24 秒，剩余 15:25
+[04:56:03]   [赚币进度] 已赚 5 币，下次 +1 在 54 秒，剩余 14:55
+[04:56:33]   [赚币进度] 已赚 5 币，下次 +1 在 24 秒，剩余 14:25
+[04:57:03]   [赚币进度] 已赚 6 币，下次 +1 在 54 秒，剩余 13:55
+[04:57:33]   [赚币进度] 已赚 6 币，下次 +1 在 24 秒，剩余 13:25
+[04:58:03]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[04:58:33]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[04:59:03]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[04:59:33]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:00:03]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:00:33]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:01:03]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:01:33]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:02:03]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:02:33]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:03:03]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:03:33]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:04:03]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:04:33]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:05:03]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:05:33]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:06:03]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:06:33]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:07:03]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:07:33]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:08:03]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:08:33]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:09:03]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:09:33]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:10:03]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:10:33]   [赚币进度] 已赚 6 币，下次 +1 在 59 秒，剩余 13:00
+[05:11:03] Session #5 完成
+[05:11:08] 
+[05:11:08] === Session #6（浏览器实例 1）===
+[05:11:08] 加载 /earn…
+[05:11:29] 反广告拦截绕过已注入
+[05:11:29]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 364 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 364 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 18h 48m 30s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[05:11:29] 无内联 Turnstile 挑战覆盖
+[05:11:29] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:11:29] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[05:11:29]   [按住中开始] 按钮文案: 'HOLDING...'
+[05:11:30]   [按住中2/3] 按钮文案: 'HOLDING...'
+[05:11:31]   [按住中3/3] 按钮文案: 'STARTING...'
+[05:11:32]   [按住中4/3] 按钮文案: 'STARTING...'
+[05:11:33] CDP 触控长按完成 3.0s
+[05:11:45] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:11:45] 按住后可能出现验证模态，检查并处理…
+[05:11:45]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 364 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 364 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 18h 48m 14s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text","GOT IT|#|.w-full relative z-10 bg-gradient-to-r fr"],"links":["Dashboard|/dashboard","Deploy|/server
+[05:11:45]   模态状态: {"verify_modal":true,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["GOT IT"],"modal_head":"Verification Required"}
+[05:11:45] 点击 reCAPTCHA 复选框…
+[05:11:48] 已点击模态按钮: GOT IT
+[05:11:51]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[05:11:51] 点击 reCAPTCHA 复选框…
+[05:11:55] 已点击模态按钮: Got it
+[05:11:58]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"1.1mz5p41LuGv69EZBRsaiAmaDeMQT4GHSHbD5t05Ukuv3f0np13dBAwN7KAPCQ7C39kx5tNYTnQ04MWp-qy0vfHzmFbsG_Nx6oUgyO6ZN-0WSj2xeAsyKxryHcLBCxmvb-WtJs6byDHvc-nJ1hf5Hp51zkev5Wcu-3Wb4oxSihVoONpJS8enW6YDFsbCVpHsADT_QvFhGu5D0f60A3K6Fpd7AetCBRIlhxQzCkm1KwnL2xNDmldg5BOjUxJQvyIIM2e89PZ2clXsxCyJqe0JQV5L-YNnUScpL9d_OGObU4jFTrFNde8o25fJT56Qe8rBSPnyTOC7e3_wiGRMxz7jDx1z9WVP5mULlgOSGzjlBnIcO1YraILRNAk-MtvGOZSxYxdDG0xhLV1Z1XWbDCsclFbizdtitp2O3WSelJUi8HSK1PUOqPqa8AZQjAyrw9QIHLEtKa1WdUt16SYqHD0j4CSdvIt5beWeZcPtUZ81h4AL53qF9MHgKhLxC7HJ3JdoxqiAEVA99IZ03A0g-tCFTV9MZ1ycDgzcibDzHmMtI20f4YkZxiBTERnAtSR8LOAXyevIpeeFSQlySoYQp2agOjkGtk8aFM8i1snE5unkw4q7p6RJD41a2EeAPzY32rQ62GUdn1zU79gVJg8nlAurq1Q.tHBxKbGLi5fJH10-D_XnLw.cc931ce7102b8de79b7f11c10aa8752dd95455333d98eb3277339be24025c899","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[05:11:58] 验证响应已生成，模态通过
+[05:12:06] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:12:06] 未激活，长按重试 6s…
+[05:12:06] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[05:12:06]   [按住中开始] 按钮文案: 'HOLDING...'
+[05:12:07]   [按住中2/6] 按钮文案: 'HOLDING...'
+[05:12:08]   [按住中3/6] 按钮文案: 'STARTING...'
+[05:12:09]   [按住中4/6] 按钮文案: 'Starting...'
+[05:12:10]   [按住中5/6] 按钮文案: 'Starting...'
+[05:12:11]   [按住中6/6] 按钮文案: 'Starting...'
+[05:12:12]   [按住中7/6] 按钮文案: 'Starting...'
+[05:12:12] CDP 触控长按完成 6.0s
+[05:12:14] 重试按住后面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[05:12:14] AFK 会话已激活！面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[05:12:14] 开始赚币 1200 秒…
+[05:12:14]   [赚币进度] 已赚 0 币，下次 +1 在 54 秒，剩余 19:55
+[05:12:44]   [赚币进度] 已赚 0 币，下次 +1 在 24 秒，剩余 19:25
+[05:13:14]   [赚币进度] 已赚 1 币，下次 +1 在 54 秒，剩余 18:55
+[05:13:44]   [赚币进度] 已赚 1 币，下次 +1 在 24 秒，剩余 18:25
+[05:14:14]   [赚币进度] 已赚 2 币，下次 +1 在 54 秒，剩余 17:55
+[05:14:44]   [赚币进度] 已赚 2 币，下次 +1 在 24 秒，剩余 17:25
+[05:15:14]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:15:44]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:16:14]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:16:44]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:17:14]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:17:44]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:18:14]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:18:44]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:19:14]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:19:44]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:20:14]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:20:44]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:21:14]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:21:44]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:22:14]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:22:44]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:23:14]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:23:44]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:24:14]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:24:44]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:25:15]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:25:45]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:26:15]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:26:45]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:27:15]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:27:45]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:28:15]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:28:45]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:29:15]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:29:45]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:30:15]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:30:45]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:31:15]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:31:45]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:32:15] Session #6 完成
+[05:32:20] 
+[05:32:20] === Session #7（浏览器实例 1）===
+[05:32:20] 加载 /earn…
+[05:32:41] 反广告拦截绕过已注入
+[05:32:41]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 366 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 366 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 18h 27m 19s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[05:32:41] 无内联 Turnstile 挑战覆盖
+[05:32:41] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:32:41] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[05:32:41]   [按住中开始] 按钮文案: 'HOLDING...'
+[05:32:42]   [按住中2/3] 按钮文案: 'HOLDING...'
+[05:32:43]   [按住中3/3] 按钮文案: 'STARTING...'
+[05:32:44]   [按住中4/3] 按钮文案: 'STARTING...'
+[05:32:44] CDP 触控长按完成 3.0s
+[05:32:56] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:32:56] 按住后可能出现验证模态，检查并处理…
+[05:32:56]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 366 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 366 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 18h 27m 03s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text","GOT IT|#|.w-full relative z-10 bg-gradient-to-r fr"],"links":["Dashboard|/dashboard","Deploy|/server
+[05:32:56]   模态状态: {"verify_modal":true,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["GOT IT"],"modal_head":"Verification Required"}
+[05:32:56] 点击 reCAPTCHA 复选框…
+[05:33:00] 已点击模态按钮: GOT IT
+[05:33:03]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[05:33:03] 点击 reCAPTCHA 复选框…
+[05:33:06] 已点击模态按钮: Got it
+[05:33:09]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"1.n00Mm6mdMX5LWepxWqWmGaq7Uacb-VyscOJeHsNPXaOn6fjad97EF0BUHzdIdWbwBTLxIBlTs1khLP8oDBAC853zZFOMarwoS558KV0QkMIUOL75FOEJuS054BcEGQNPuR2gz-5FqN_V7gupO9GielFNfn1A5_idVklMkz-SrEttQaObpmAaSGNZxuZkSLxN--FniwT9fgtP6b8HARv8cDsGmuFORMUjmalPGr4abEVImCgNfTWnNTnDjFrcfvCi8lulsuLOX2krFqeOyIHnd6-CrDmJg0LknALqr58Wz2GvYBTC7Eli0qIBUkBgV4-fLxRdt9lMQ2qT4jIQMof7VWnwXlu3ilZzQxJPCZ3TBvA-Ez84X5D8FBS4rU2OohNKYniuHg7NgMTHEcuWSIEfgaH1WMAhaGKEyl-4PD3A25Spqh4dC0s6h19TuIc4GUwRGV6r4a3Gsz9OmK71qE0vTwGVzQc7-Zzm5pUi8sGrD0g4Oe4aHAOZzb4UNJde7ATIpF6ddC0FX-Z9eGM8KyYnhyH0ZxVB8xZpxC-pl5hY7nxmP2EU7ZFU1KVHxLC7GeyCC_y4-zgbmKegABiwTl_9BvIv0HflgGEJCzCRRQSrwoFvlAsjvnVJa2qxK1mslwUkmUgp6KQIr4c3dyl6nnJF7g.e1PTf2JqaK17gIpMv6qxKg.bfc456ef576aa10c78a3a62a3b5d4f18193b58aa78e02a30fc53fbf1dc69cc58","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[05:33:09] 验证响应已生成，模态通过
+[05:33:17] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:33:17] 未激活，长按重试 6s…
+[05:33:17] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[05:33:17]   [按住中开始] 按钮文案: 'HOLDING...'
+[05:33:18]   [按住中2/6] 按钮文案: 'HOLDING...'
+[05:33:19]   [按住中3/6] 按钮文案: 'STARTING...'
+[05:33:21]   [按住中4/6] 按钮文案: 'Starting...'
+[05:33:22]   [按住中5/6] 按钮文案: 'Starting...'
+[05:33:23]   [按住中6/6] 按钮文案: 'Starting...'
+[05:33:24]   [按住中7/6] 按钮文案: 'Starting...'
+[05:33:24] CDP 触控长按完成 6.0s
+[05:33:26] 重试按住后面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[05:33:26] AFK 会话已激活！面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[05:33:26] 开始赚币 1200 秒…
+[05:33:26]   [赚币进度] 已赚 0 币，下次 +1 在 54 秒，剩余 19:55
+[05:33:56]   [赚币进度] 已赚 0 币，下次 +1 在 24 秒，剩余 19:25
+[05:34:26]   [赚币进度] 已赚 1 币，下次 +1 在 54 秒，剩余 18:55
+[05:34:56]   [赚币进度] 已赚 1 币，下次 +1 在 24 秒，剩余 18:25
+[05:35:26]   [赚币进度] 已赚 2 币，下次 +1 在 54 秒，剩余 17:55
+[05:35:56]   [赚币进度] 已赚 2 币，下次 +1 在 24 秒，剩余 17:25
+[05:36:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:36:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:37:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:37:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:38:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:38:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:39:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:39:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:40:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:40:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:41:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:41:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:42:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:42:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:43:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:43:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:44:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:44:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:45:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:45:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:46:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:46:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:47:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:47:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:48:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:48:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:49:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:49:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:50:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:50:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:51:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:51:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:52:26]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:52:56]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[05:53:26] Session #7 完成
+[05:53:31] 
+[05:53:31] === Session #8（浏览器实例 1）===
+[05:53:31] 加载 /earn…
+[05:53:52] 反广告拦截绕过已注入
+[05:53:52]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 368 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 368 GLOBAL CURRENCY Rate Us Enjoying FreezeHost? Your feedback drives our innovation. Help us shape the future of hosting! PREMIUM HARDWARE 24/7 EXPERT SUPPORT INSTANT DEPLOYMENT Write a Review Maybe Later No Thanks TRUSTPILOT AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 ","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=973&hl=en-US&adk=2936"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 ho
+[05:53:52] 无内联 Turnstile 挑战覆盖
+[05:53:52] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:53:52] 按钮中心 (472, 486) | 命中元素: DIV 'PREMIUM HARDWARE 24/7 EXP' | 目标正确: False
+[05:53:52] 警告：命中元素不是 HOLD 按钮，可能有元素遮挡！
+[05:53:52]   [按住中开始] 按钮文案: 'HOLD TO START'
+[05:53:53]   [按住中2/3] 按钮文案: 'HOLD TO START'
+[05:53:54]   [按住中3/3] 按钮文案: 'HOLD TO START'
+[05:53:55]   [按住中4/3] 按钮文案: 'HOLD TO START'
+[05:53:55] CDP 触控长按完成 3.0s
+[05:54:07] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:54:07] 按住后可能出现验证模态，检查并处理…
+[05:54:07]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 368 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 368 GLOBAL CURRENCY Rate Us Enjoying FreezeHost? Your feedback drives our innovation. Help us shape the future of hosting! PREMIUM HARDWARE 24/7 EXPERT SUPPORT INSTANT DEPLOYMENT Write a Review Maybe Later No Thanks TRUSTPILOT AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 ","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[05:54:08]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":[],"modal_head":""}
+[05:54:08] 点击 reCAPTCHA 复选框…
+[05:54:13]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":[],"modal_head":""}
+[05:54:13] 点击 reCAPTCHA 复选框…
+[05:54:19]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":[],"modal_head":""}
+[05:54:19] 点击 reCAPTCHA 复选框…
+[05:54:24]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":[],"modal_head":""}
+[05:54:24] 点击 reCAPTCHA 复选框…
+[05:54:30]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":[],"modal_head":""}
+[05:54:30] 点击 reCAPTCHA 复选框…
+[05:54:36]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":[],"modal_head":""}
+[05:54:36] 点击 reCAPTCHA 复选框…
+[05:54:41] 模态处理超时
+[05:54:49] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:54:49] 未激活，长按重试 6s…
+[05:54:49] 按钮中心 (472, 486) | 命中元素: DIV 'PREMIUM HARDWARE 24/7 EXP' | 目标正确: False
+[05:54:49] 警告：命中元素不是 HOLD 按钮，可能有元素遮挡！
+[05:54:49]   [按住中开始] 按钮文案: 'HOLD TO START'
+[05:54:50]   [按住中2/6] 按钮文案: 'HOLD TO START'
+[05:54:51]   [按住中3/6] 按钮文案: 'HOLD TO START'
+[05:54:52]   [按住中4/6] 按钮文案: 'HOLD TO START'
+[05:54:53]   [按住中5/6] 按钮文案: 'HOLD TO START'
+[05:54:54]   [按住中6/6] 按钮文案: 'HOLD TO START'
+[05:54:55]   [按住中7/6] 按钮文案: 'HOLD TO START'
+[05:54:55] CDP 触控长按完成 6.0s
+[05:55:11] 重试按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:55:11] 长按均未激活，尝试普通单击…
+[05:55:23] 单击后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:55:23] HOLD TO START 未能激活会话，本 session 判失败
+[05:55:23]   [页面状态 启动失败时] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 368 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 368 GLOBAL CURRENCY Rate Us Enjoying FreezeHost? Your feedback drives our innovation. Help us shape the future of hosting! PREMIUM HARDWARE 24/7 EXPERT SUPPORT INSTANT DEPLOYMENT Write a Review Maybe Later No Thanks TRUSTPILOT AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 ","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[05:55:24] 失败截图已保存: /tmp/fh_fail_0_8.png
+[05:55:24] Session #8 失败（连续失败 1 次）
+[05:55:24] 20 秒后重试…
+[05:55:49] 
+[05:55:49] === Session #9（浏览器实例 1）===
+[05:55:49] 加载 /earn…
+[05:56:10] 反广告拦截绕过已注入
+[05:56:10]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 368 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 368 GLOBAL CURRENCY Rate Us Enjoying FreezeHost? Your feedback drives our innovation. Help us shape the future of hosting! PREMIUM HARDWARE 24/7 EXPERT SUPPORT INSTANT DEPLOYMENT Write a Review Maybe Later No Thanks TRUSTPILOT AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 ","iframes":["googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=973&hl=en-US&adk=2936"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 ho
+[05:56:10] 无内联 Turnstile 挑战覆盖
+[05:56:10] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:56:10] 按钮中心 (472, 486) | 命中元素: DIV 'PREMIUM HARDWARE 24/7 EXP' | 目标正确: False
+[05:56:10] 警告：命中元素不是 HOLD 按钮，可能有元素遮挡！
+[05:56:10]   [按住中开始] 按钮文案: 'HOLD TO START'
+[05:56:11]   [按住中2/3] 按钮文案: 'HOLD TO START'
+[05:56:12]   [按住中3/3] 按钮文案: 'HOLD TO START'
+[05:56:13]   [按住中4/3] 按钮文案: 'HOLD TO START'
+[05:56:13] CDP 触控长按完成 3.0s
+[05:56:25] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:56:25] 按住后可能出现验证模态，检查并处理…
+[05:56:25]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 368 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 368 GLOBAL CURRENCY Rate Us Enjoying FreezeHost? Your feedback drives our innovation. Help us shape the future of hosting! PREMIUM HARDWARE 24/7 EXPERT SUPPORT INSTANT DEPLOYMENT Write a Review Maybe Later No Thanks TRUSTPILOT AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 ","iframes":["googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[05:56:25]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":[],"modal_head":""}
+[05:56:25] 点击 reCAPTCHA 复选框…
+[05:56:31]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":[],"modal_head":""}
+[05:56:31] 点击 reCAPTCHA 复选框…
+[05:56:36]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":[],"modal_head":""}
+[05:56:36] 点击 reCAPTCHA 复选框…
+[05:56:42]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":[],"modal_head":""}
+[05:56:42] 点击 reCAPTCHA 复选框…
+[05:56:48]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":[],"modal_head":""}
+[05:56:48] 点击 reCAPTCHA 复选框…
+[05:56:53]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":[],"modal_head":""}
+[05:56:53] 点击 reCAPTCHA 复选框…
+[05:56:59] 模态处理超时
+[05:57:07] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:57:07] 未激活，长按重试 6s…
+[05:57:07] 按钮中心 (472, 486) | 命中元素: DIV 'PREMIUM HARDWARE 24/7 EXP' | 目标正确: False
+[05:57:07] 警告：命中元素不是 HOLD 按钮，可能有元素遮挡！
+[05:57:07]   [按住中开始] 按钮文案: 'HOLD TO START'
+[05:57:08]   [按住中2/6] 按钮文案: 'HOLD TO START'
+[05:57:09]   [按住中3/6] 按钮文案: 'HOLD TO START'
+[05:57:10]   [按住中4/6] 按钮文案: 'HOLD TO START'
+[05:57:11]   [按住中5/6] 按钮文案: 'HOLD TO START'
+[05:57:12]   [按住中6/6] 按钮文案: 'HOLD TO START'
+[05:57:13]   [按住中7/6] 按钮文案: 'HOLD TO START'
+[05:57:13] CDP 触控长按完成 6.0s
+[05:57:29] 重试按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:57:29] 长按均未激活，尝试普通单击…
+[05:57:41] 单击后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:57:41] HOLD TO START 未能激活会话，本 session 判失败
+[05:57:41]   [页面状态 启动失败时] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 368 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 368 GLOBAL CURRENCY Rate Us Enjoying FreezeHost? Your feedback drives our innovation. Help us shape the future of hosting! PREMIUM HARDWARE 24/7 EXPERT SUPPORT INSTANT DEPLOYMENT Write a Review Maybe Later No Thanks TRUSTPILOT AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 ","iframes":["googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[05:57:41] 失败截图已保存: /tmp/fh_fail_0_9.png
+[05:57:41] Session #9 失败（连续失败 2 次）
+[05:57:41] 连续 2 次失败 → 代理切换: 直连 -> socks5://127.0.0.1:40000
+[05:57:42] 浏览器重建 1/8（代理切换: 直连 -> socks5://127.0.0.1:40000）…
+[05:57:50] 启动浏览器…（代理: socks5://127.0.0.1:40000，实例 2/8）
+[05:57:50] 打开 FreezeHost…
+[05:58:16] 无服务条款弹窗
+[05:58:18] 当前地址: https://free.freezehost.pro/
+[05:58:18] 登录 OK！
+[05:58:18] 
+[05:58:18] === Session #10（浏览器实例 2）===
+[05:58:18] 加载 /earn…
+[05:58:39] 反广告拦截绕过已注入
+[05:58:39]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"free.freezehost.pro","text":"No internet There is something wrong with the proxy server, or the address is incorrect. Try: Contacting the system admin Checking the proxy address ERR_PROXY_CONNECTION_FAILED Details","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Details|#details-button|.secondary-button text-button\n           "],"links":["Checking the proxy addres|#buttons"]}
+[05:58:39] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[05:58:39] 代理连接失败 → 代理失效: socks5://127.0.0.1:40000 -> 直连
+[05:58:40] 浏览器重建 2/8（代理失效: socks5://127.0.0.1:40000 -> 直连）…
+[05:58:48] 启动浏览器…（代理: 直连，实例 3/8）
+[05:58:48] 打开 FreezeHost…
+[05:59:04] 已确认服务条款
+[05:59:06] 注入 Token…
+[05:59:06] 刷新页面等待 OAuth 回调…
+[05:59:14] 当前地址: https://free.freezehost.pro/dashboard
+[05:59:14] 登录 OK！
+[05:59:14] 
+[05:59:14] === Session #11（浏览器实例 3）===
+[05:59:14] 加载 /earn…
+[05:59:35] 反广告拦截绕过已注入
+[05:59:35]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 368 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 368 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 18h 00m 24s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025194257&","googlefcPresent","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[05:59:35] 无内联 Turnstile 挑战覆盖
+[05:59:35] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:59:36] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[05:59:36]   [按住中开始] 按钮文案: 'HOLDING...'
+[05:59:37]   [按住中2/3] 按钮文案: 'HOLDING...'
+[05:59:38]   [按住中3/3] 按钮文案: 'STARTING...'
+[05:59:39]   [按住中4/3] 按钮文案: 'STARTING...'
+[05:59:39] CDP 触控长按完成 3.0s
+[05:59:51] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[05:59:51] 按住后可能出现验证模态，检查并处理…
+[05:59:51]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 368 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 368 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 18h 00m 09s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025194257&","googlefcPresent","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text","GOT IT|#|.w-full relative z-10 bg-gradient-to-r fr"],"links":["Dashboard|/dashboard","Deploy|/server
+[05:59:51]   模态状态: {"verify_modal":true,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["GOT IT"],"modal_head":"Verification Required"}
+[05:59:51] 点击 reCAPTCHA 复选框…
+[05:59:54] 已点击模态按钮: GOT IT
+[05:59:57]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[05:59:57] 点击 reCAPTCHA 复选框…
+[06:00:01] 已点击模态按钮: Got it
+[06:00:04]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"1.2alIOn7121NNVwCk_sluZuKUPSdfaWIOJ1m87xgQUVu50i3C0v73LiY-CHFKUo0_kFHimJVG3de469erzg942BE6fcA10D0f5wBSAs2pfr3-ESskmfHX06bCw-SBdQ41_Mlj36nUnflJYba9L-wq4Cl1H-Z6t8w3mnjEWOZfqUiAyOes_QUYQmCXvcFlfXHCGg1spZSbu_IDj8JqtjoAXK-rvGpU-RhvROLBkauIsuz9ab68PayE-bYOOj4bBgVnHUW_XtLN7IjbDyjTQhh8Oa2pdJ1E0M8qynRpoTprZo8fQwunDBiDt7cHRyafT4hvN2FYjMfuhtnrb6iMhd-7aEAawKpV7VlQmzEI17GpVyiaqqyU8fwQT6Q3v5G0_nkH18oL3jLpkcZlOS5C_Q-3YqV7fWLr0tO9KA-n-1X4tcGO7y-upBRWLGPwujVZDzs1XvMh7X4Q1TzJovNVM8N151IF8paa54viKQb9bLnPw0jQ51nvlW7YqtcFWkRXUOqGWblMutkNPRGpzL7dvDe8jz61kI3c5loP9QEwuVwxYxJTdVt9FnwnWbU6oHz6h9zB7pMzrLnMTzLtlsAEcoiyl5z2XaE2zlSmq6xJlaPwnReeb-NlHeCM5vTXFfbB9QuGjASZoVUd9S3qnBOX8Ukryg.U2YvZcXJzVJecPiMcL3tDw.20fce6e2b0359c03507792fab51e091b5aff0358d5c9865c4df08f3d198259c6","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[06:00:04] 验证响应已生成，模态通过
+[06:00:12] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[06:00:12] 未激活，长按重试 6s…
+[06:00:12] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[06:00:12]   [按住中开始] 按钮文案: 'HOLDING...'
+[06:00:13]   [按住中2/6] 按钮文案: 'HOLDING...'
+[06:00:14]   [按住中3/6] 按钮文案: 'STARTING...'
+[06:00:15]   [按住中4/6] 按钮文案: 'Starting...'
+[06:00:16]   [按住中5/6] 按钮文案: 'Starting...'
+[06:00:17]   [按住中6/6] 按钮文案: 'Starting...'
+[06:00:18]   [按住中7/6] 按钮文案: 'Starting...'
+[06:00:18] CDP 触控长按完成 6.0s
+[06:00:20] 重试按住后面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[06:00:20] AFK 会话已激活！面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[06:00:20] 开始赚币 1200 秒…
+[06:00:20]   [赚币进度] 已赚 0 币，下次 +1 在 54 秒，剩余 19:55
+[06:00:50]   [赚币进度] 已赚 0 币，下次 +1 在 24 秒，剩余 19:25
+[06:01:20]   [赚币进度] 已赚 1 币，下次 +1 在 54 秒，剩余 18:55
+[06:01:50]   [赚币进度] 已赚 1 币，下次 +1 在 24 秒，剩余 18:25
+[06:02:20]   [赚币进度] 已赚 2 币，下次 +1 在 54 秒，剩余 17:55
+[06:02:50]   [赚币进度] 已赚 2 币，下次 +1 在 24 秒，剩余 17:25
+[06:03:20]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:03:50]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:04:20]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:04:50]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:05:20]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:05:50]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:06:20]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:06:50]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:07:20]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:07:50]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:08:20]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:08:50]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:09:20]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:09:50]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:10:20]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:10:50]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:11:20]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:11:50]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:12:20]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:12:50]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:13:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:13:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:14:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:14:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:15:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:15:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:16:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:16:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:17:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:17:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:18:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:18:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:19:21]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:19:51]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:20:21] Session #11 完成
+[06:20:26] 
+[06:20:26] === Session #12（浏览器实例 3）===
+[06:20:26] 加载 /earn…
+[06:20:47] 反广告拦截绕过已注入
+[06:20:47]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 370 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 370 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 17h 39m 13s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[06:20:47] 无内联 Turnstile 挑战覆盖
+[06:20:47] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[06:20:47] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[06:20:47]   [按住中开始] 按钮文案: 'HOLDING...'
+[06:20:48]   [按住中2/3] 按钮文案: 'HOLDING...'
+[06:20:49]   [按住中3/3] 按钮文案: 'STARTING...'
+[06:20:50]   [按住中4/3] 按钮文案: 'STARTING...'
+[06:20:50] CDP 触控长按完成 3.0s
+[06:21:02] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[06:21:02] 按住后可能出现验证模态，检查并处理…
+[06:21:02]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 370 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 370 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 17h 38m 57s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text","GOT IT|#|.w-full relative z-10 bg-gradient-to-r fr"],"links":["Dashboard|/dashboard","Deploy|/server
+[06:21:02]   模态状态: {"verify_modal":true,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["GOT IT"],"modal_head":"Verification Required"}
+[06:21:02] 点击 reCAPTCHA 复选框…
+[06:21:06] 已点击模态按钮: GOT IT
+[06:21:09]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[06:21:09] 点击 reCAPTCHA 复选框…
+[06:21:12] 已点击模态按钮: Got it
+[06:21:15]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"1.-dGn_Oee0VF6g8W2BQomsOSP0eyHoS8hWgrPZ4f8wR97j6S2-M7g2fuCGvFWYOcqKSR2Vr-1sSaDu7hiqu54Dc4ZdkPBhZrKb9NT2Iszw8Imn5s3GhqC-ImHsqogftVDfPfNbtcRcyABxwLZX1xR0A6FqPjV77mbXUF2buJcFOv1UCP2cXLSYw6OayLwN-h1_UfrJoJ9YMUG0SQUsnn1aaTuK0c7oJibXEGlIpssMf-Nazgss_Qa74TlSukLArEFFGXY_98uSNrqqzlopkJZ6rwEV26Qb62FLVgKrvnFbMvzrVjcwfCOXDdulZAX42Lxj72Y9RMbBA6PpeRpYQjSMDVKnSHv7sRp7z0-qixm8FOzNhZyo1pzGQL45fTeRZhyja2P4K671Lq62pXynx4SkVvQAdEHglzBLqwiJrVqb_tRlwFNWAQpdf5floj7gpM6PYRWas12Xvo7bB_XSmqii6EvMRe0NJQpY9yX2dU7O609u3Wy81tprQovUinPUANP-9E2AjEAMrGWGKmlu0vhJN9sbxFH-Y1t98cnH0FUHgPfrR4goAFmhhgYB7AboLTiJ4DzBZ9-_7KXoDCaw81PhmYx6Bu4aHuI8xAw_zmeLwdQiFK-7pvlZON1vxZYSErsp9VuIm4qIi5Y_ztrVeaDyQ.mzufGn1Qo-g0CcN64ym4GA.0e372b2bce518b52a9585d89d1fca9e0a1d45c5c4842693e97b6c83e557e411f","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[06:21:15] 验证响应已生成，模态通过
+[06:21:23] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[06:21:23] 未激活，长按重试 6s…
+[06:21:23] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[06:21:23]   [按住中开始] 按钮文案: 'HOLDING...'
+[06:21:24]   [按住中2/6] 按钮文案: 'HOLDING...'
+[06:21:25]   [按住中3/6] 按钮文案: 'STARTING...'
+[06:21:27]   [按住中4/6] 按钮文案: 'Starting...'
+[06:21:28]   [按住中5/6] 按钮文案: 'Starting...'
+[06:21:29]   [按住中6/6] 按钮文案: 'Starting...'
+[06:21:30]   [按住中7/6] 按钮文案: 'Starting...'
+[06:21:30] CDP 触控长按完成 6.0s
+[06:21:32] 重试按住后面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:54"}
+[06:21:32] AFK 会话已激活！面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:54"}
+[06:21:32] 开始赚币 1200 秒…
+[06:21:32]   [赚币进度] 已赚 0 币，下次 +1 在 54 秒，剩余 19:54
+[06:22:02]   [赚币进度] 已赚 0 币，下次 +1 在 24 秒，剩余 19:24
+[06:22:32]   [赚币进度] 已赚 1 币，下次 +1 在 54 秒，剩余 18:54
+[06:23:02]   [赚币进度] 已赚 1 币，下次 +1 在 24 秒，剩余 18:24
+[06:23:32]   [赚币进度] 已赚 2 币，下次 +1 在 54 秒，剩余 17:54
+[06:24:02]   [赚币进度] 已赚 2 币，下次 +1 在 24 秒，剩余 17:24
+[06:24:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:25:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:25:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:26:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:26:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:27:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:27:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:28:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:28:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:29:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:29:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:30:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:30:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:31:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:31:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:32:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:32:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:33:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:33:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:34:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:34:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:35:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:35:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:36:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:36:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:37:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:37:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:38:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:38:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:39:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:39:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:40:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:40:32]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:41:02]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 16:59
+[06:41:32] Session #12 完成
+[06:41:37] 
+[06:41:37] === Session #13（浏览器实例 3）===
+[06:41:37] 加载 /earn…
+[06:41:58] 反广告拦截绕过已注入
+[06:41:58]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 372 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 372 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 17h 18m 02s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[06:41:58] 无内联 Turnstile 挑战覆盖
+[06:41:58] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[06:41:58] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[06:41:58]   [按住中开始] 按钮文案: 'HOLDING...'
+[06:41:59]   [按住中2/3] 按钮文案: 'HOLDING...'
+[06:42:00]   [按住中3/3] 按钮文案: 'STARTING...'
+[06:42:01]   [按住中4/3] 按钮文案: 'STARTING...'
+[06:42:01] CDP 触控长按完成 3.0s
+[06:42:13] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[06:42:13] 按住后可能出现验证模态，检查并处理…
+[06:42:13]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 372 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 372 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 17h 17m 46s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text","GOT IT|#|.w-full relative z-10 bg-gradient-to-r fr"],"links":["Dashboard|/dashboard","Deploy|/server
+[06:42:13]   模态状态: {"verify_modal":true,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["GOT IT"],"modal_head":"Verification Required"}
+[06:42:13] 点击 reCAPTCHA 复选框…
+[06:42:17] 已点击模态按钮: GOT IT
+[06:42:20]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[06:42:20] 点击 reCAPTCHA 复选框…
+[06:42:24] 已点击模态按钮: Got it
+[06:42:27]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"1.uLvd3IiPrgoaxpuduW6h1Fs-rMXPeO0D6STLZ5qKKgA8hyJ_959hVg1aOrAx8RrToTDvVL8SsSnGjWjPpqcxFgjC1cd3-y-jBHTvVUN-aQ3hZ-c-P94lebL0rjmVlosIKRDmG2XwDj-eo9tikwwxNmo-W57Rvo18yCLbZFMHKtpzJYZ0JHj-p8r_q8_EPjEJlwvv6pofvQK_hB0HOgS8j8BticFVC4SPHAl9z2UZTYot4JV_rD92NjIsrNgIW5E8M7btaWzgEolErvpXh7gAMOk5Tkyik0n4_pryZpEwHxuwQUnCn8S89YtKXNCjNtXvtUDgTUqAOjq2fSYL66-tWfulS9UXshPEF50GXRIE_A11JDsnAk-XlFntGHn_shIjFhiWyx33ZbGuqJtG7fZYvNAMIZnt6pNzc_ExlFtg-eoSBlUfjEVw5kf1OufJ-bdHB7v3mlppboTdU0mHEIUeSD1paEZoAbO5QNLIMMpdH6TN2P748Dg8QZeauTaUYhuftonFONaAf61cs_zqv_4PzcFXMZ4Fdqd-i3rPuyBwEpEdyUBaCndEHKDhL6HEAToMm6szzx5uQJzefsOX4nrSSlN2P22X6ACEeEO6-vpg7-1l78iJFpbYCMjtRtAXsFG7JqUwZm266Px0yhB_w3M7cA.1-pMBBT34vmL3AoQLa-nFQ.499aa5ab9e9c929d24d77030cdfd256a146390ac0a62e1e476dba29c89f08ef8","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[06:42:27] 验证响应已生成，模态通过
+[06:42:35] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[06:42:35] 未激活，长按重试 6s…
+[06:42:35] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[06:42:35]   [按住中开始] 按钮文案: 'HOLDING...'
+[06:42:36]   [按住中2/6] 按钮文案: 'HOLDING...'
+[06:42:37]   [按住中3/6] 按钮文案: 'STARTING...'
+[06:42:38]   [按住中4/6] 按钮文案: 'Starting...'
+[06:42:39]   [按住中5/6] 按钮文案: 'Starting...'
+[06:42:40]   [按住中6/6] 按钮文案: 'Starting...'
+[06:42:41]   [按住中7/6] 按钮文案: 'Starting...'
+[06:42:41] CDP 触控长按完成 6.0s
+[06:42:43] 重试按住后面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[06:42:43] AFK 会话已激活！面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[06:42:43] 开始赚币 1200 秒…
+[06:42:43]   [赚币进度] 已赚 0 币，下次 +1 在 54 秒，剩余 19:55
+[06:43:13]   [赚币进度] 已赚 0 币，下次 +1 在 24 秒，剩余 19:25
+[06:43:43]   [赚币进度] 已赚 1 币，下次 +1 在 54 秒，剩余 18:55
+[06:44:13]   [赚币进度] 已赚 1 币，下次 +1 在 24 秒，剩余 18:25
+[06:44:43]   [赚币进度] 已赚 2 币，下次 +1 在 54 秒，剩余 17:55
+[06:45:13]   [赚币进度] 已赚 2 币，下次 +1 在 24 秒，剩余 17:25
+[06:45:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:46:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:46:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:47:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:47:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:48:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:48:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:49:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:49:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:50:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:50:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:51:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:51:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:52:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:52:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:53:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:53:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:54:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:54:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:55:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:55:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:56:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:56:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:57:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:57:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:58:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:58:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:59:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[06:59:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:00:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:00:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:01:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:01:43]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:02:13]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:02:43] Session #13 完成
+[07:02:48] 
+[07:02:48] === Session #14（浏览器实例 3）===
+[07:02:48] 加载 /earn…
+[07:03:10] 反广告拦截绕过已注入
+[07:03:10]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 374 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 374 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 16h 56m 50s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[07:03:10] 无内联 Turnstile 挑战覆盖
+[07:03:10] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[07:03:10] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[07:03:10]   [按住中开始] 按钮文案: 'HOLDING...'
+[07:03:11]   [按住中2/3] 按钮文案: 'HOLDING...'
+[07:03:12]   [按住中3/3] 按钮文案: 'STARTING...'
+[07:03:13]   [按住中4/3] 按钮文案: 'STARTING...'
+[07:03:13] CDP 触控长按完成 3.0s
+[07:03:25] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[07:03:25] 按住后可能出现验证模态，检查并处理…
+[07:03:25]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 374 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 374 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 16h 56m 34s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text","GOT IT|#|.w-full relative z-10 bg-gradient-to-r fr"],"links":["Dashboard|/dashboard","Deploy|/server
+[07:03:25]   模态状态: {"verify_modal":true,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["GOT IT"],"modal_head":"Verification Required"}
+[07:03:25] 点击 reCAPTCHA 复选框…
+[07:03:29] 已点击模态按钮: GOT IT
+[07:03:32]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[07:03:32] 点击 reCAPTCHA 复选框…
+[07:03:35] 已点击模态按钮: Got it
+[07:03:38]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"1.LdxZdwYfTXiSuVQK1z0uFzeiONCxdJ7LeUp4WXlyGLIhPO7F2YLS0-2KhvqZ4sJHeb7p5lO1ApPPugiugktl4HILXLPZsi76rCpw2bTpPyBW2ZotCSstaGHtuB0HCVGfqNjq3G_KoXa2Kqr7IemCvrWzJ7xkxJxRTLRsYLhScF6lJoMkrKy598OfD35oI6TyCVNSHk0RtfdgauenhvVetrlkdJMPD5VSsBtYCjf-T1w6rkARjRKGFKZThcm0ZO0kARTKQgbsOt5FOCLDYF8_j9ofCz2Fe3khHe_z33uzVwbk-7AtAbmHyP-FwWzdbl87_DknrwmQ7sIEcA2M3d5nDWDLicxaAwLcxlLgN1gntyIwTrkK4Q-gLqyH7MowzRjEjodQiRtwmmMeAq5Oxq57FuaLmSJYGBvwt6zMiYnrSkJw8h1V7wFRoD9PK37TgQDCj_lfLt4eEf7UaCzCMsKV482FMtEmRliCbnl-kk5maNehc8ShA-cJBoVg5vK78KNB3JHfg6m_NpOyAX4EbrHwfd8WSfEXZNoAF0lWdDhnuVUa9cmb2SkWuCOFtu69FwegukgjLVExQoGcMsKVPdRk6Df2EMNvvopAo3o_hF-M7g5RQWAf57vA5hSYX-sYAcm_CT3bscwupmrarLrAJWSLdg.ST0uSrmbY1yL6D3MU3IF7A.dac3fb34052cfc237371605d06ab4d43092e25d6e2a79abcfa9d000626d44fac","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[07:03:38] 验证响应已生成，模态通过
+[07:03:46] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[07:03:46] 未激活，长按重试 6s…
+[07:03:46] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[07:03:46]   [按住中开始] 按钮文案: 'HOLDING...'
+[07:03:47]   [按住中2/6] 按钮文案: 'HOLDING...'
+[07:03:48]   [按住中3/6] 按钮文案: 'STARTING...'
+[07:03:49]   [按住中4/6] 按钮文案: 'Starting...'
+[07:03:50]   [按住中5/6] 按钮文案: 'Starting...'
+[07:03:51]   [按住中6/6] 按钮文案: 'Starting...'
+[07:03:52]   [按住中7/6] 按钮文案: 'Starting...'
+[07:03:52] CDP 触控长按完成 6.0s
+[07:03:54] 重试按住后面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[07:03:54] AFK 会话已激活！面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[07:03:54] 开始赚币 1200 秒…
+[07:03:54]   [赚币进度] 已赚 0 币，下次 +1 在 54 秒，剩余 19:55
+[07:04:24]   [赚币进度] 已赚 0 币，下次 +1 在 24 秒，剩余 19:25
+[07:04:54]   [赚币进度] 已赚 1 币，下次 +1 在 54 秒，剩余 18:55
+[07:05:24]   [赚币进度] 已赚 1 币，下次 +1 在 24 秒，剩余 18:25
+[07:05:54]   [赚币进度] 已赚 2 币，下次 +1 在 54 秒，剩余 17:55
+[07:06:24]   [赚币进度] 已赚 2 币，下次 +1 在 24 秒，剩余 17:25
+[07:06:54]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:07:24]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:07:54]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:08:24]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:08:54]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:09:24]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:09:54]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:10:25]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:10:55]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:11:25]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:11:55]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:12:25]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:12:55]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:13:25]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:13:55]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:14:25]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:14:55]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:15:25]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:15:55]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:16:25]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:16:55]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:17:25]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:17:55]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:18:25]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:18:55]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:19:25]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:19:55]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:20:25]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:20:55]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:21:25]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:21:55]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:22:25]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:22:55]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:23:25]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:23:55] Session #14 完成
+[07:24:00] 
+[07:24:00] === Session #15（浏览器实例 3）===
+[07:24:00] 加载 /earn…
+[07:24:21] 反广告拦截绕过已注入
+[07:24:21]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 376 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 376 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 16h 35m 39s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[07:24:21] 无内联 Turnstile 挑战覆盖
+[07:24:21] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[07:24:21] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[07:24:21]   [按住中开始] 按钮文案: 'HOLDING...'
+[07:24:22]   [按住中2/3] 按钮文案: 'HOLDING...'
+[07:24:23]   [按住中3/3] 按钮文案: 'STARTING...'
+[07:24:24]   [按住中4/3] 按钮文案: 'STARTING...'
+[07:24:24] CDP 触控长按完成 3.0s
+[07:24:36] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[07:24:36] 按住后可能出现验证模态，检查并处理…
+[07:24:36]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 376 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 376 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 16h 35m 23s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text","GOT IT|#|.w-full relative z-10 bg-gradient-to-r fr"],"links":["Dashboard|/dashboard","Deploy|/server
+[07:24:36]   模态状态: {"verify_modal":true,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["GOT IT"],"modal_head":"Verification Required"}
+[07:24:36] 点击 reCAPTCHA 复选框…
+[07:24:40] 已点击模态按钮: GOT IT
+[07:24:43]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[07:24:43] 点击 reCAPTCHA 复选框…
+[07:24:46] 已点击模态按钮: Got it
+[07:24:49]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"1.3a0J21l4gNYl9XNGqjdmrMjajy57G1WrMhDYsAXuEQGKG0qqqsomu4Xgpu4CriDlPWAT1LTxEcYF7aDBor0sU3TDdW9l2SVzBQWwd4FgpAjMAxXjsCm_7IS4gZo7XJyPJXaTmOO94rOcsIxukkeUaRGx6LAKu55DJuqV71j2yRgPSK_-fLLhPAdbH-Hujj9l7HMDklpDLmYg2fV7N7WSi7K3NdonhI5S1X9iCGOeyuNRlhghDkAgiijlERKyOGjfMO1aKn_Ytt3FCaHwbWdBwXa4MgBsYUtd-gABXClbhzzTcRGw0Rlj9G5UB_PPRSLEJlTGkYFsuqKGdalegIbF6ESDmXEaINv0BDEYqAzGN_lByRMpYglxetrjEPPwvIN7VxwtHi1a-6tMDyuFwgy2muLmRIdDIWKhNktaX-FKqOHthGRTkinF8Vlq-eEHH_gIoHBJEv4nl0qt-B2hGdNXoF6kSwHwD9VlVoT2aleVZarMAFhrWlyk6RzP-vbxtPUFIBmwTTG3aLwLST5Jp6a1DRshkiTAPLSZu3IC9bgN3_IotwnDmxECPmquAjzV8tppIAORm9bHCaoJXgwdfCXjPYp0zqszm4_Dtjyo_O2XGaTPSVVwQoLDpRj1-gKEWW05BMBjrMuk070yHa7RhhDqwQ.9TtGzZmE0wv8lh8TCrmLXA.d892051a535e79db3a6e41a56b305d87a983c317ae8cd0ef9cbdd6f1fedf1163","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[07:24:49] 验证响应已生成，模态通过
+[07:24:58] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[07:24:58] 未激活，长按重试 6s…
+[07:24:58] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[07:24:58]   [按住中开始] 按钮文案: 'HOLDING...'
+[07:24:59]   [按住中2/6] 按钮文案: 'HOLDING...'
+[07:25:00]   [按住中3/6] 按钮文案: 'STARTING...'
+[07:25:01]   [按住中4/6] 按钮文案: 'Starting...'
+[07:25:02]   [按住中5/6] 按钮文案: 'Starting...'
+[07:25:03]   [按住中6/6] 按钮文案: 'Starting...'
+[07:25:04]   [按住中7/6] 按钮文案: 'Starting...'
+[07:25:04] CDP 触控长按完成 6.0s
+[07:25:06] 重试按住后面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[07:25:06] AFK 会话已激活！面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[07:25:06] 开始赚币 1200 秒…
+[07:25:06]   [赚币进度] 已赚 0 币，下次 +1 在 54 秒，剩余 19:55
+[07:25:36]   [赚币进度] 已赚 0 币，下次 +1 在 24 秒，剩余 19:25
+[07:26:06]   [赚币进度] 已赚 1 币，下次 +1 在 54 秒，剩余 18:55
+[07:26:36]   [赚币进度] 已赚 1 币，下次 +1 在 24 秒，剩余 18:25
+[07:27:06]   [赚币进度] 已赚 2 币，下次 +1 在 54 秒，剩余 17:55
+[07:27:36]   [赚币进度] 已赚 2 币，下次 +1 在 24 秒，剩余 17:25
+[07:28:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:28:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:29:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:29:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:30:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:30:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:31:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:31:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:32:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:32:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:33:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:33:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:34:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:34:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:35:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:35:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:36:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:36:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:37:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:37:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:38:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:38:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:39:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:39:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:40:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:40:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:41:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:41:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:42:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:42:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:43:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:43:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:44:06]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:44:36]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:45:06] Session #15 完成
+[07:45:11] 
+[07:45:11] === Session #16（浏览器实例 3）===
+[07:45:11] 加载 /earn…
+[07:45:32] 反广告拦截绕过已注入
+[07:45:32]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 378 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 378 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 16h 14m 28s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[07:45:32] 无内联 Turnstile 挑战覆盖
+[07:45:32] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[07:45:32] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[07:45:32]   [按住中开始] 按钮文案: 'HOLDING...'
+[07:45:33]   [按住中2/3] 按钮文案: 'HOLDING...'
+[07:45:34]   [按住中3/3] 按钮文案: 'STARTING...'
+[07:45:35]   [按住中4/3] 按钮文案: 'STARTING...'
+[07:45:35] CDP 触控长按完成 3.0s
+[07:45:47] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[07:45:47] 按住后可能出现验证模态，检查并处理…
+[07:45:47]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 378 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 378 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 16h 14m 12s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text","GOT IT|#|.w-full relative z-10 bg-gradient-to-r fr"],"links":["Dashboard|/dashboard","Deploy|/server
+[07:45:47]   模态状态: {"verify_modal":true,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["GOT IT"],"modal_head":"Verification Required"}
+[07:45:47] 点击 reCAPTCHA 复选框…
+[07:45:51] 已点击模态按钮: GOT IT
+[07:45:54]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[07:45:54] 点击 reCAPTCHA 复选框…
+[07:45:58] 已点击模态按钮: Got it
+[07:46:01]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"1.pjiroe0B6k7gfGHEamc4_eGCocqxLPTKFg-EGV1Zr3EqKXODzMeCUQ5jJi9T70XFFToJv2x-vdhwVgBXEvZKNekGdHAk5wRGbdxV1ZQntAXbO1bmXNh0sN7O0TQH32hSmR3-FiV0QbWcwxtgpDaQKD8_B-HdBjN-JmgnqFf87vFxgGGPGQeLXTawM0OQn33uOXahctpm9aJeBwhQNKLzySxsQMfKsdn2r3dCNd1R9B5VnOlHclfV-ZDlNe7pAEP16slrAxpHgScK1BVKJ_iqr6NfNmfQ9hy4Ah6pqy7SBnM9aZtlTnGt3-n5gII9f6r_IP2iM23-S8asIiv-DCkTkkenpMjbdEKzVxGxk7pIZ-f7uXrCIoepxAtmb6plv6zWiH47Y1RCTfObOwLTbCsOkquNHmCER1t6dCCsM927yjHkjn2ffHnLm3WSJtY1Cvi8H5nlrgWGu9L7TU484cSSyVLmof3L2FCmgUuNaNjI8T37e2eFe7ZCbEbNqv7mbo-9eGZluq-ab9b_3xJizUFIkR5brY8WTf7Ji0thv0n8HEs-Xk5c4WcKc7H-JH53NTp4NCG2EvQA0UqF2YtVDQOZE3UvP-U-1Xe9Kuhb9KPrQXe2qPUDhJcXNcoVNV-L9I5Jpam9KrJwu3r-CRcJndWe4A.6UqyzXIlxl5ULbNkCrM3Dg.ccb30c3796e033cd47975033df0cb3a575a6540dcca97788f9a402461e4446c1","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[07:46:01] 验证响应已生成，模态通过
+[07:46:09] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[07:46:09] 未激活，长按重试 6s…
+[07:46:09] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[07:46:09]   [按住中开始] 按钮文案: 'HOLDING...'
+[07:46:10]   [按住中2/6] 按钮文案: 'HOLDING...'
+[07:46:11]   [按住中3/6] 按钮文案: 'STARTING...'
+[07:46:12]   [按住中4/6] 按钮文案: 'Starting...'
+[07:46:13]   [按住中5/6] 按钮文案: 'Starting...'
+[07:46:14]   [按住中6/6] 按钮文案: 'Starting...'
+[07:46:15]   [按住中7/6] 按钮文案: 'Starting...'
+[07:46:15] CDP 触控长按完成 6.0s
+[07:46:17] 重试按住后面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[07:46:17] AFK 会话已激活！面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[07:46:17] 开始赚币 1200 秒…
+[07:46:17]   [赚币进度] 已赚 0 币，下次 +1 在 54 秒，剩余 19:55
+[07:46:47]   [赚币进度] 已赚 0 币，下次 +1 在 24 秒，剩余 19:25
+[07:47:17]   [赚币进度] 已赚 1 币，下次 +1 在 54 秒，剩余 18:55
+[07:47:47]   [赚币进度] 已赚 1 币，下次 +1 在 24 秒，剩余 18:25
+[07:48:17]   [赚币进度] 已赚 2 币，下次 +1 在 54 秒，剩余 17:55
+[07:48:47]   [赚币进度] 已赚 2 币，下次 +1 在 24 秒，剩余 17:25
+[07:49:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:49:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:50:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:50:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:51:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:51:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:52:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:52:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:53:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:53:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:54:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:54:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:55:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:55:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:56:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:56:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:57:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:57:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:58:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:58:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:59:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[07:59:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:00:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:00:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:01:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:01:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:02:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:02:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:03:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:03:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:04:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:04:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:05:17]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:05:47]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:06:17] Session #16 完成
+[08:06:22] 
+[08:06:22] === Session #17（浏览器实例 3）===
+[08:06:22] 加载 /earn…
+[08:06:44] 反广告拦截绕过已注入
+[08:06:44]   [页面状态 earn加载后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 380 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 380 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 15h 53m 16s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text"],"links":["Dashboard|/dashboard","Deploy|/servers/new","Store|/store","Earn|/coins","Redeem|/redeem",
+[08:06:44] 无内联 Turnstile 挑战覆盖
+[08:06:44] 启动前面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[08:06:44] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[08:06:44]   [按住中开始] 按钮文案: 'HOLDING...'
+[08:06:45]   [按住中2/3] 按钮文案: 'HOLDING...'
+[08:06:46]   [按住中3/3] 按钮文案: 'STARTING...'
+[08:06:47]   [按住中4/3] 按钮文案: 'STARTING...'
+[08:06:47] CDP 触控长按完成 3.0s
+[08:06:59] 第一次按住后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[08:06:59] 按住后可能出现验证模态，检查并处理…
+[08:06:59]   [页面状态 按住后] {"url":"https://free.freezehost.pro/earn","title":"AFK Coins - FreezeHost","text":"FreezeHost CLOUD INFRASTRUCTURE @shuijing1802 DEFAULT 380 COINS Dashboard Manage your account and resources securely. Upgrade to Premium High performance hardware, 99.9% uptime, no hibernating, and no renewal starting at $0.75/GB. Upgrade Now CPU ALLOCATION 0% OF 200% TOTAL 0% MEMORY USAGE 0MB OF 2048MB TOTAL 0% STORAGE 0MB OF 10240MB TOTAL 0% DATABASES 0 OF 0 TOTAL 0% ACTIVE SERVERS 0 OF 1 TOTAL 0% AVAILABLE BALANCE 380 GLOBAL CURRENCY Rate Us AFK Earn KEEP THIS PAGE OPEN TO EARN FREE COINS AUTOMATICALLY Active Session VERIFY YOU ARE HUMAN TO START EARNING COINS HOLD TO START MAX SESSION: 20 MINUTES 1 COIN ADDED EVERY 60 SECONDS NEXT COIN IN 60SEC SESSION REMAINING 20:00MIN SESSION EARNED 0 DAILY RESET IN 15h 53m 00s DAILY LIMIT 0 / 1440 COINS (0%) Premium Game Server Hosting Our hosting infrastructure is built for gamers, by gamers. We understand the importance of low latency, high per","iframes":["https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&h=280&slotname=57562123","googlefcPresent","https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&client=ca-pub-4580579291403697&output=html&adk=1812271804&adf=3025","about:blank","about:blank","about:blank","https://www.google.com/recaptcha/api2/aframe","https://googleads.g.doubleclick.net/pagead/html/r20260917/r20190131/zrt_lookup_fy2021.html"],"start_afk":false,"login_btn":false,"cf":true,"adb":true,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["?|#mobile-menu-toggle|.lg:hidden w-11 h-11 flex items-center ju","Rate Us|#permanent-rate-button|.fixed bottom-6 right-6 z-40 bg-blue-600 ","Write a Review|#|.group w-full bg-blue-600 hover:bg-blue-7","Maybe Later|#|.w-full bg-gray-800/30 hover:bg-gray-800/","No Thanks|#|.w-full bg-transparent hover:bg-red-500/5","HOLD TO START|#afk-action-trigger|.relative overflow-hidden bg-blue-600 hov","Check Again & Unlock Site|#fh-adblock-check-btn|.w-full bg-gradient-to-r from-red-600 to-","Reload Page|#|.w-full bg-white/5 hover:bg-white/10 text","GOT IT|#|.w-full relative z-10 bg-gradient-to-r fr"],"links":["Dashboard|/dashboard","Deploy|/server
+[08:06:59]   模态状态: {"verify_modal":true,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["GOT IT"],"modal_head":"Verification Required"}
+[08:06:59] 点击 reCAPTCHA 复选框…
+[08:07:02] 已点击模态按钮: GOT IT
+[08:07:05]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[08:07:05] 点击 reCAPTCHA 复选框…
+[08:07:09] 已点击模态按钮: Got it
+[08:07:12]   模态状态: {"verify_modal":false,"cf_iframe":false,"rc_iframe":true,"cf_resp":"1.PA8IAuHmuKAf5RFbq7vzyLJrSltjz6lovVvSVEvKSQEmrAoufBOAcr9z571faY5HWoEpuLYh26hSgyA9fnapTCE3Z8tpMyCkJWLMVb6GCalspBZSQodyuml-645gqvi16QVB2O3vwz7UlpkLqYEKUKIE2bnkUM15sLOThXYKpmgBIQ6vjCTXj5_qESODNHR-7bT_4NwG4eTP-FPSeQEt_wfqriXs_JllGSmhCdDcYgpM864lNUQdYJL1Ml0Bwq7AzV7njE90l2h3AVnRkiKOz4R9nzAiwdf0h5Yavk0GUBEXnVDXT3hTanRtZvtSKZ0N8FrRd1xYXRx_JghMQBvcJqSj-0j1th_y-_POfhSaIn10pHnGKUtzVwtnd_7DioZ9xXCGDgb_NjuOpyaiQj--i-nBh4GbB2bDIYEKdVcXojl0J3Jzj3MOPkisyDVqSQ1dFAJmvKtO-0heUsLii-jA0xtSfGvBXBR6oM6oqi3uhzRLe3mJ5Ij9zjRT8bgeNXSdOj1P0n39Qd62PgCGhZIMNYlp_Ky7wr6a_5U3eTx4ptKZxNAhwGqvPByPLT9ZOghoV3no3d-5D9KnYffYdjYZ_z0LXlV1t24akOpzd8H8KqpTURF5JTMzpobrnzXTGRY6DU0JwD0R1D08-dwGU7TUEQ.V4PPIlY8EWsiUw4iaHCqIA.dda2fa2e95418246c883b2660d5f8fbb68d6ce57d1cb5e53dda0718c76d4dbd9","rc_resp":"","modal_btns":["Got it"],"modal_head":""}
+[08:07:12] 验证响应已生成，模态通过
+[08:07:20] 模态处理后面板: {"hold":"HOLD TO START","ws":-1,"run":false,"verify":true,"earned":"0","next":"60","left":"20:00"}
+[08:07:20] 未激活，长按重试 6s…
+[08:07:20] 按钮中心 (468, 486) | 命中元素: afk-action-trigger 'HOLD TO START' | 目标正确: True
+[08:07:20]   [按住中开始] 按钮文案: 'HOLDING...'
+[08:07:21]   [按住中2/6] 按钮文案: 'HOLDING...'
+[08:07:22]   [按住中3/6] 按钮文案: 'STARTING...'
+[08:07:23]   [按住中4/6] 按钮文案: 'Starting...'
+[08:07:24]   [按住中5/6] 按钮文案: 'Starting...'
+[08:07:25]   [按住中6/6] 按钮文案: 'Starting...'
+[08:07:26]   [按住中7/6] 按钮文案: 'Starting...'
+[08:07:26] CDP 触控长按完成 6.0s
+[08:07:28] 重试按住后面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[08:07:28] AFK 会话已激活！面板: {"hold":"Starting...","ws":-1,"run":true,"verify":false,"earned":"0","next":"54","left":"19:55"}
+[08:07:28] 开始赚币 1200 秒…
+[08:07:28]   [赚币进度] 已赚 0 币，下次 +1 在 54 秒，剩余 19:55
+[08:07:58]   [赚币进度] 已赚 0 币，下次 +1 在 24 秒，剩余 19:25
+[08:08:28]   [赚币进度] 已赚 1 币，下次 +1 在 54 秒，剩余 18:55
+[08:08:58]   [赚币进度] 已赚 1 币，下次 +1 在 24 秒，剩余 18:25
+[08:09:28]   [赚币进度] 已赚 2 币，下次 +1 在 54 秒，剩余 17:55
+[08:09:58]   [赚币进度] 已赚 2 币，下次 +1 在 24 秒，剩余 17:25
+[08:10:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:10:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:11:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:11:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:12:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:12:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:13:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:13:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:14:28]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:14:58]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:15:29]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:15:59]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:16:29]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:16:59]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:17:29]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:17:59]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:18:29]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:18:59]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:19:29]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:19:59]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:20:29]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:20:59]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:21:29]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:21:59]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:22:29]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:22:59]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:23:29]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:23:59]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:24:29]   [赚币进度] 已赚 2 币，下次 +1 在 59 秒，剩余 17:00
+[08:24:59] 达到最大运行时长，提前结束
+[08:24:59] 运行结束！
