@@ -1,0 +1,124 @@
+[20:26:22] ========================================================
+[20:26:22] FreezeHost AFK 修复版 v2.9 - 实例 #0
+[20:26:22] Token: NDIxODYxND...7Fit0
+[20:26:22] 代理顺序: ['direct', 'warp'] TRY_SOLVE=False RUSH_AFK_ON_FAIL=True UC_CDP=False
+[20:26:22] ========================================================
+[20:26:22] 启动浏览器…（代理: 直连，实例 1/8）
+[20:26:24] 打开 FreezeHost…
+[20:26:50] 无服务条款弹窗
+[20:26:52] 当前地址: https://free.freezehost.pro/
+[20:26:52] 登录 OK！
+[20:26:52] 
+[20:26:52] === Session #1（浏览器实例 1）===
+[20:26:52] 加载 /earn…
+[20:27:13] 反广告拦截绕过已注入
+[20:27:13]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"Privacy error","text":"Your connection is not private Attackers might be trying to steal your information from free.freezehost.pro (for example, passwords, messages, or credit cards). Learn more about this warning NET::ERR_CERT_COMMON_NAME_INVALID Turn on enhanced protection to get Chrome's highest level of security Back to safety Advanced","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Back to safety|#primary-button|.","?|#proceed-button|.secondary-button small-link hidden","Advanced|#details-button|.secondary-button small-link"],"links":["Learn more about this war|#","URLs of some pages you vi|#","Privacy policy|#","Turn on enhanced protecti|#","Proceed to free.freezehos|#"]}
+[20:27:13] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[20:27:13] 代理连接失败 → 代理失效: 直连 -> socks5://127.0.0.1:40000
+[20:27:14] 浏览器重建 1/8（代理失效: 直连 -> socks5://127.0.0.1:40000）…
+[20:27:22] 启动浏览器…（代理: socks5://127.0.0.1:40000，实例 2/8）
+[20:27:22] 打开 FreezeHost…
+[20:27:47] 无服务条款弹窗
+[20:27:49] 当前地址: https://free.freezehost.pro/
+[20:27:49] 登录 OK！
+[20:27:49] 
+[20:27:49] === Session #2（浏览器实例 2）===
+[20:27:49] 加载 /earn…
+[20:28:11] 反广告拦截绕过已注入
+[20:28:11]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"free.freezehost.pro","text":"No internet There is something wrong with the proxy server, or the address is incorrect. Try: Contacting the system admin Checking the proxy address ERR_PROXY_CONNECTION_FAILED Details","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Details|#details-button|.secondary-button text-button\n           "],"links":["Checking the proxy addres|#buttons"]}
+[20:28:11] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[20:28:11] 代理连接失败 → 代理失效: socks5://127.0.0.1:40000 -> 直连
+[20:28:11] 浏览器重建 2/8（代理失效: socks5://127.0.0.1:40000 -> 直连）…
+[20:28:19] 启动浏览器…（代理: 直连，实例 3/8）
+[20:28:20] 打开 FreezeHost…
+[20:28:45] 无服务条款弹窗
+[20:28:47] 当前地址: https://free.freezehost.pro/
+[20:28:47] 登录 OK！
+[20:28:47] 
+[20:28:47] === Session #3（浏览器实例 3）===
+[20:28:47] 加载 /earn…
+[20:29:08] 反广告拦截绕过已注入
+[20:29:08]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"Privacy error","text":"Your connection is not private Attackers might be trying to steal your information from free.freezehost.pro (for example, passwords, messages, or credit cards). Learn more about this warning NET::ERR_CERT_COMMON_NAME_INVALID Turn on enhanced protection to get Chrome's highest level of security Back to safety Advanced","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Back to safety|#primary-button|.","?|#proceed-button|.secondary-button small-link hidden","Advanced|#details-button|.secondary-button small-link"],"links":["Learn more about this war|#","URLs of some pages you vi|#","Privacy policy|#","Turn on enhanced protecti|#","Proceed to free.freezehos|#"]}
+[20:29:08] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[20:29:08] 代理连接失败 → 代理失效: 直连 -> socks5://127.0.0.1:40000
+[20:29:09] 浏览器重建 3/8（代理失效: 直连 -> socks5://127.0.0.1:40000）…
+[20:29:17] 启动浏览器…（代理: socks5://127.0.0.1:40000，实例 4/8）
+[20:29:17] 打开 FreezeHost…
+[20:29:43] 无服务条款弹窗
+[20:29:45] 当前地址: https://free.freezehost.pro/
+[20:29:45] 登录 OK！
+[20:29:45] 
+[20:29:45] === Session #4（浏览器实例 4）===
+[20:29:45] 加载 /earn…
+[20:30:06] 反广告拦截绕过已注入
+[20:30:06]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"free.freezehost.pro","text":"No internet There is something wrong with the proxy server, or the address is incorrect. Try: Contacting the system admin Checking the proxy address ERR_PROXY_CONNECTION_FAILED Details","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Details|#details-button|.secondary-button text-button\n           "],"links":["Checking the proxy addres|#buttons"]}
+[20:30:06] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[20:30:06] 代理连接失败 → 代理失效: socks5://127.0.0.1:40000 -> 直连
+[20:30:07] 浏览器重建 4/8（代理失效: socks5://127.0.0.1:40000 -> 直连）…
+[20:30:15] 启动浏览器…（代理: 直连，实例 5/8）
+[20:30:15] 打开 FreezeHost…
+[20:30:40] 无服务条款弹窗
+[20:30:42] 当前地址: https://free.freezehost.pro/
+[20:30:42] 登录 OK！
+[20:30:42] 
+[20:30:42] === Session #5（浏览器实例 5）===
+[20:30:42] 加载 /earn…
+[20:31:04] 反广告拦截绕过已注入
+[20:31:04]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"Privacy error","text":"Your connection is not private Attackers might be trying to steal your information from free.freezehost.pro (for example, passwords, messages, or credit cards). Learn more about this warning NET::ERR_CERT_COMMON_NAME_INVALID Turn on enhanced protection to get Chrome's highest level of security Back to safety Advanced","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Back to safety|#primary-button|.","?|#proceed-button|.secondary-button small-link hidden","Advanced|#details-button|.secondary-button small-link"],"links":["Learn more about this war|#","URLs of some pages you vi|#","Privacy policy|#","Turn on enhanced protecti|#","Proceed to free.freezehos|#"]}
+[20:31:04] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[20:31:04] 代理连接失败 → 代理失效: 直连 -> socks5://127.0.0.1:40000
+[20:31:04] 浏览器重建 5/8（代理失效: 直连 -> socks5://127.0.0.1:40000）…
+[20:31:12] 启动浏览器…（代理: socks5://127.0.0.1:40000，实例 6/8）
+[20:31:13] 打开 FreezeHost…
+[20:31:38] 无服务条款弹窗
+[20:31:40] 当前地址: https://free.freezehost.pro/
+[20:31:40] 登录 OK！
+[20:31:40] 
+[20:31:40] === Session #6（浏览器实例 6）===
+[20:31:40] 加载 /earn…
+[20:32:01] 反广告拦截绕过已注入
+[20:32:01]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"free.freezehost.pro","text":"No internet There is something wrong with the proxy server, or the address is incorrect. Try: Contacting the system admin Checking the proxy address ERR_PROXY_CONNECTION_FAILED Details","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Details|#details-button|.secondary-button text-button\n           "],"links":["Checking the proxy addres|#buttons"]}
+[20:32:01] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[20:32:01] 代理连接失败 → 代理失效: socks5://127.0.0.1:40000 -> 直连
+[20:32:02] 浏览器重建 6/8（代理失效: socks5://127.0.0.1:40000 -> 直连）…
+[20:32:10] 启动浏览器…（代理: 直连，实例 7/8）
+[20:32:10] 打开 FreezeHost…
+[20:32:36] 无服务条款弹窗
+[20:32:38] 当前地址: https://free.freezehost.pro/
+[20:32:38] 登录 OK！
+[20:32:38] 
+[20:32:38] === Session #7（浏览器实例 7）===
+[20:32:38] 加载 /earn…
+[20:32:59] 反广告拦截绕过已注入
+[20:32:59]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"Privacy error","text":"Your connection is not private Attackers might be trying to steal your information from free.freezehost.pro (for example, passwords, messages, or credit cards). Learn more about this warning NET::ERR_CERT_COMMON_NAME_INVALID Turn on enhanced protection to get Chrome's highest level of security Back to safety Advanced","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Back to safety|#primary-button|.","?|#proceed-button|.secondary-button small-link hidden","Advanced|#details-button|.secondary-button small-link"],"links":["Learn more about this war|#","URLs of some pages you vi|#","Privacy policy|#","Turn on enhanced protecti|#","Proceed to free.freezehos|#"]}
+[20:32:59] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[20:32:59] 代理连接失败 → 代理失效: 直连 -> socks5://127.0.0.1:40000
+[20:33:00] 浏览器重建 7/8（代理失效: 直连 -> socks5://127.0.0.1:40000）…
+[20:33:08] 启动浏览器…（代理: socks5://127.0.0.1:40000，实例 8/8）
+[20:33:08] 打开 FreezeHost…
+[20:33:33] 无服务条款弹窗
+[20:33:35] 当前地址: https://free.freezehost.pro/
+[20:33:35] 登录 OK！
+[20:33:35] 
+[20:33:35] === Session #8（浏览器实例 8）===
+[20:33:35] 加载 /earn…
+[20:33:57] 反广告拦截绕过已注入
+[20:33:57]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"free.freezehost.pro","text":"No internet There is something wrong with the proxy server, or the address is incorrect. Try: Contacting the system admin Checking the proxy address ERR_PROXY_CONNECTION_FAILED Details","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Details|#details-button|.secondary-button text-button\n           "],"links":["Checking the proxy addres|#buttons"]}
+[20:33:57] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[20:33:57] 代理连接失败 → 代理失效: socks5://127.0.0.1:40000 -> 直连
+[20:33:57] 浏览器重建 8/8（代理失效: socks5://127.0.0.1:40000 -> 直连）…
+[20:34:05] 启动浏览器…（代理: 直连，实例 9/8）
+[20:34:06] 打开 FreezeHost…
+[20:34:31] 无服务条款弹窗
+[20:34:33] 当前地址: https://free.freezehost.pro/
+[20:34:33] 登录 OK！
+[20:34:33] 
+[20:34:33] === Session #9（浏览器实例 9）===
+[20:34:33] 加载 /earn…
+[20:34:54] 反广告拦截绕过已注入
+[20:34:54]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"Privacy error","text":"Your connection is not private Attackers might be trying to steal your information from free.freezehost.pro (for example, passwords, messages, or credit cards). Learn more about this warning NET::ERR_CERT_COMMON_NAME_INVALID Turn on enhanced protection to get Chrome's highest level of security Back to safety Advanced","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Back to safety|#primary-button|.","?|#proceed-button|.secondary-button small-link hidden","Advanced|#details-button|.secondary-button small-link"],"links":["Learn more about this war|#","URLs of some pages you vi|#","Privacy policy|#","Turn on enhanced protecti|#","Proceed to free.freezehos|#"]}
+[20:34:54] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[20:34:54] 代理连接失败 → 代理失效: 直连 -> socks5://127.0.0.1:40000
+[20:34:55] 浏览器重建 9/8（代理失效: 直连 -> socks5://127.0.0.1:40000）…
+[20:35:03] 浏览器重建次数超过上限（8），结束
+[20:35:03] 运行结束！
