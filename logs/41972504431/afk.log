@@ -1,0 +1,124 @@
+[05:13:04] ========================================================
+[05:13:04] FreezeHost AFK 修复版 v2.9 - 实例 #0
+[05:13:04] Token: NDIxODYxND...7Fit0
+[05:13:04] 代理顺序: ['direct', 'warp'] TRY_SOLVE=False RUSH_AFK_ON_FAIL=True UC_CDP=False
+[05:13:04] ========================================================
+[05:13:04] 启动浏览器…（代理: 直连，实例 1/8）
+[05:13:11] 打开 FreezeHost…
+[05:14:01] 无服务条款弹窗
+[05:14:03] 当前地址: https://free.freezehost.pro/
+[05:14:03] 登录 OK！
+[05:14:03] 
+[05:14:03] === Session #1（浏览器实例 1）===
+[05:14:03] 加载 /earn…
+[05:14:49] 反广告拦截绕过已注入
+[05:14:49]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"free.freezehost.pro","text":"This site can’t be reached free.freezehost.pro took too long to respond. Try: Checking the connection Checking the proxy and the firewall ERR_TIMED_OUT Reload Details","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Reload|#reload-button|.blue-button text-button","Details|#details-button|.secondary-button text-button\n           "],"links":["Checking the proxy and th|#buttons"]}
+[05:14:49] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[05:14:49] 代理连接失败 → 代理失效: 直连 -> socks5://127.0.0.1:40000
+[05:14:49] 浏览器重建 1/8（代理失效: 直连 -> socks5://127.0.0.1:40000）…
+[05:14:57] 启动浏览器…（代理: socks5://127.0.0.1:40000，实例 2/8）
+[05:14:57] 打开 FreezeHost…
+[05:15:23] 无服务条款弹窗
+[05:15:25] 当前地址: https://free.freezehost.pro/
+[05:15:25] 登录 OK！
+[05:15:25] 
+[05:15:25] === Session #2（浏览器实例 2）===
+[05:15:25] 加载 /earn…
+[05:15:46] 反广告拦截绕过已注入
+[05:15:46]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"free.freezehost.pro","text":"No internet There is something wrong with the proxy server, or the address is incorrect. Try: Contacting the system admin Checking the proxy address ERR_PROXY_CONNECTION_FAILED Details","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Details|#details-button|.secondary-button text-button\n           "],"links":["Checking the proxy addres|#buttons"]}
+[05:15:46] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[05:15:46] 代理连接失败 → 代理失效: socks5://127.0.0.1:40000 -> 直连
+[05:15:47] 浏览器重建 2/8（代理失效: socks5://127.0.0.1:40000 -> 直连）…
+[05:15:55] 启动浏览器…（代理: 直连，实例 3/8）
+[05:15:55] 打开 FreezeHost…
+[05:16:46] 无服务条款弹窗
+[05:16:48] 当前地址: https://free.freezehost.pro/
+[05:16:48] 登录 OK！
+[05:16:48] 
+[05:16:48] === Session #3（浏览器实例 3）===
+[05:16:48] 加载 /earn…
+[05:17:33] 反广告拦截绕过已注入
+[05:17:33]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"free.freezehost.pro","text":"This site can’t be reached free.freezehost.pro took too long to respond. Try: Checking the connection Checking the proxy and the firewall ERR_TIMED_OUT Reload Details","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Reload|#reload-button|.blue-button text-button","Details|#details-button|.secondary-button text-button\n           "],"links":["Checking the proxy and th|#buttons"]}
+[05:17:33] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[05:17:33] 代理连接失败 → 代理失效: 直连 -> socks5://127.0.0.1:40000
+[05:17:33] 浏览器重建 3/8（代理失效: 直连 -> socks5://127.0.0.1:40000）…
+[05:17:41] 启动浏览器…（代理: socks5://127.0.0.1:40000，实例 4/8）
+[05:17:42] 打开 FreezeHost…
+[05:18:07] 无服务条款弹窗
+[05:18:09] 当前地址: https://free.freezehost.pro/
+[05:18:09] 登录 OK！
+[05:18:09] 
+[05:18:09] === Session #4（浏览器实例 4）===
+[05:18:09] 加载 /earn…
+[05:18:31] 反广告拦截绕过已注入
+[05:18:31]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"free.freezehost.pro","text":"No internet There is something wrong with the proxy server, or the address is incorrect. Try: Contacting the system admin Checking the proxy address ERR_PROXY_CONNECTION_FAILED Details","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Details|#details-button|.secondary-button text-button\n           "],"links":["Checking the proxy addres|#buttons"]}
+[05:18:31] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[05:18:31] 代理连接失败 → 代理失效: socks5://127.0.0.1:40000 -> 直连
+[05:18:31] 浏览器重建 4/8（代理失效: socks5://127.0.0.1:40000 -> 直连）…
+[05:18:39] 启动浏览器…（代理: 直连，实例 5/8）
+[05:18:40] 打开 FreezeHost…
+[05:19:30] 无服务条款弹窗
+[05:19:32] 当前地址: https://free.freezehost.pro/
+[05:19:32] 登录 OK！
+[05:19:32] 
+[05:19:32] === Session #5（浏览器实例 5）===
+[05:19:32] 加载 /earn…
+[05:20:18] 反广告拦截绕过已注入
+[05:20:18]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"free.freezehost.pro","text":"This site can’t be reached free.freezehost.pro took too long to respond. Try: Checking the connection Checking the proxy and the firewall ERR_TIMED_OUT Reload Details","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Reload|#reload-button|.blue-button text-button","Details|#details-button|.secondary-button text-button\n           "],"links":["Checking the proxy and th|#buttons"]}
+[05:20:18] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[05:20:18] 代理连接失败 → 代理失效: 直连 -> socks5://127.0.0.1:40000
+[05:20:18] 浏览器重建 5/8（代理失效: 直连 -> socks5://127.0.0.1:40000）…
+[05:20:26] 启动浏览器…（代理: socks5://127.0.0.1:40000，实例 6/8）
+[05:20:27] 打开 FreezeHost…
+[05:20:52] 无服务条款弹窗
+[05:20:54] 当前地址: https://free.freezehost.pro/
+[05:20:54] 登录 OK！
+[05:20:54] 
+[05:20:54] === Session #6（浏览器实例 6）===
+[05:20:54] 加载 /earn…
+[05:21:16] 反广告拦截绕过已注入
+[05:21:16]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"free.freezehost.pro","text":"No internet There is something wrong with the proxy server, or the address is incorrect. Try: Contacting the system admin Checking the proxy address ERR_PROXY_CONNECTION_FAILED Details","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Details|#details-button|.secondary-button text-button\n           "],"links":["Checking the proxy addres|#buttons"]}
+[05:21:16] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[05:21:16] 代理连接失败 → 代理失效: socks5://127.0.0.1:40000 -> 直连
+[05:21:16] 浏览器重建 6/8（代理失效: socks5://127.0.0.1:40000 -> 直连）…
+[05:21:24] 启动浏览器…（代理: 直连，实例 7/8）
+[05:21:25] 打开 FreezeHost…
+[05:22:15] 无服务条款弹窗
+[05:22:17] 当前地址: https://free.freezehost.pro/
+[05:22:17] 登录 OK！
+[05:22:17] 
+[05:22:17] === Session #7（浏览器实例 7）===
+[05:22:17] 加载 /earn…
+[05:23:02] 反广告拦截绕过已注入
+[05:23:02]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"free.freezehost.pro","text":"This site can’t be reached free.freezehost.pro took too long to respond. Try: Checking the connection Checking the proxy and the firewall ERR_TIMED_OUT Reload Details","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Reload|#reload-button|.blue-button text-button","Details|#details-button|.secondary-button text-button\n           "],"links":["Checking the proxy and th|#buttons"]}
+[05:23:02] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[05:23:02] 代理连接失败 → 代理失效: 直连 -> socks5://127.0.0.1:40000
+[05:23:03] 浏览器重建 7/8（代理失效: 直连 -> socks5://127.0.0.1:40000）…
+[05:23:11] 启动浏览器…（代理: socks5://127.0.0.1:40000，实例 8/8）
+[05:23:12] 打开 FreezeHost…
+[05:23:37] 无服务条款弹窗
+[05:23:39] 当前地址: https://free.freezehost.pro/
+[05:23:39] 登录 OK！
+[05:23:39] 
+[05:23:39] === Session #8（浏览器实例 8）===
+[05:23:39] 加载 /earn…
+[05:24:00] 反广告拦截绕过已注入
+[05:24:00]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"free.freezehost.pro","text":"No internet There is something wrong with the proxy server, or the address is incorrect. Try: Contacting the system admin Checking the proxy address ERR_PROXY_CONNECTION_FAILED Details","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Details|#details-button|.secondary-button text-button\n           "],"links":["Checking the proxy addres|#buttons"]}
+[05:24:00] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[05:24:00] 代理连接失败 → 代理失效: socks5://127.0.0.1:40000 -> 直连
+[05:24:01] 浏览器重建 8/8（代理失效: socks5://127.0.0.1:40000 -> 直连）…
+[05:24:09] 启动浏览器…（代理: 直连，实例 9/8）
+[05:24:10] 打开 FreezeHost…
+[05:25:00] 无服务条款弹窗
+[05:25:02] 当前地址: https://free.freezehost.pro/
+[05:25:02] 登录 OK！
+[05:25:02] 
+[05:25:02] === Session #9（浏览器实例 9）===
+[05:25:02] 加载 /earn…
+[05:25:47] 反广告拦截绕过已注入
+[05:25:47]   [页面状态 earn加载后] {"url":"chrome-error://chromewebdata/","title":"free.freezehost.pro","text":"This site can’t be reached free.freezehost.pro took too long to respond. Try: Checking the connection Checking the proxy and the firewall ERR_TIMED_OUT Reload Details","iframes":[],"start_afk":false,"login_btn":false,"cf":false,"adb":false,"adb_active":false,"adb_flag":false,"ws":-1,"buttons":["Reload|#reload-button|.blue-button text-button","Details|#details-button|.secondary-button text-button\n           "],"links":["Checking the proxy and th|#buttons"]}
+[05:25:47] 代理连接失败（chrome-error 页）→ 本轮判代理死亡
+[05:25:47] 代理连接失败 → 代理失效: 直连 -> socks5://127.0.0.1:40000
+[05:25:48] 浏览器重建 9/8（代理失效: 直连 -> socks5://127.0.0.1:40000）…
+[05:25:56] 浏览器重建次数超过上限（8），结束
+[05:25:56] 运行结束！
